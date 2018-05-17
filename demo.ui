@@ -26,34 +26,6 @@
       </item>
      </layout>
     </item>
-    <item row="0" column="1">
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <property name="spacing">
-       <number>0</number>
-      </property>
-      <item>
-       <widget class="QPushButton" name="pushButton_add">
-        <property name="text">
-         <string>Add Row</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_selected">
-        <property name="text">
-         <string>remove selected</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_remove">
-        <property name="text">
-         <string>Remove last</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -62,7 +34,7 @@
      <x>0</x>
      <y>0</y>
      <width>808</width>
-     <height>23</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -85,6 +57,22 @@
     <property name="title">
      <string>Options</string>
     </property>
+    <widget class="QMenu" name="menuExport">
+     <property name="title">
+      <string>Export </string>
+     </property>
+     <addaction name="actionExcel"/>
+     <addaction name="actionXML"/>
+    </widget>
+    <widget class="QMenu" name="menuRegister">
+     <property name="title">
+      <string>Register</string>
+     </property>
+     <addaction name="actionAdd"/>
+     <addaction name="actionRemove"/>
+    </widget>
+    <addaction name="menuExport"/>
+    <addaction name="menuRegister"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuStructure"/>
@@ -128,6 +116,26 @@
    </property>
    <property name="shortcut">
     <string>Alt+E</string>
+   </property>
+  </action>
+  <action name="actionExcel">
+   <property name="text">
+    <string>Excel</string>
+   </property>
+  </action>
+  <action name="actionXML">
+   <property name="text">
+    <string>XML</string>
+   </property>
+  </action>
+  <action name="actionAdd">
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </action>
+  <action name="actionRemove">
+   <property name="text">
+    <string>Remove</string>
    </property>
   </action>
  </widget>

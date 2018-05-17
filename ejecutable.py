@@ -7,8 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
-import toolkit 
-from prueba2 import Ui_Dialog
+
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
@@ -23,19 +22,12 @@ except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
 
-class Ui_MainWindow(object):
-
-    def llamar_ventana(self):
-        self.otherDialog = QtGui.QDialog()
-        self.otherui = Ui_Dialog()
-        self.otherui.setupUi(self.otherDialog)
-        self.otherDialog.show()
-        
+class Ui_MainWindow2(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
         MainWindow.resize(808, 600)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8("Images/database.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8("database.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
@@ -76,8 +68,6 @@ class Ui_MainWindow(object):
         self.actionEdit_Structure.setObjectName(_fromUtf8("actionEdit_Structure"))
         self.actionExcel = QtGui.QAction(MainWindow)
         self.actionExcel.setObjectName(_fromUtf8("actionExcel"))
-        """el triggered es para los menus, el clicked es para botones :v"""
-        self.actionExcel.triggered.connect(self.llamar_ventana)
         self.actionXML = QtGui.QAction(MainWindow)
         self.actionXML.setObjectName(_fromUtf8("actionXML"))
         self.actionAdd = QtGui.QAction(MainWindow)
@@ -130,7 +120,7 @@ if __name__ == "__main__":
     import sys
     app = QtGui.QApplication(sys.argv)
     MainWindow = QtGui.QMainWindow()
-    ui = Ui_MainWindow()
+    ui = Ui_MainWindow2()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
