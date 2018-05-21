@@ -1,2 +1,2 @@
-# hotcake
+# Hotcake
 File Manager(Entrance)
