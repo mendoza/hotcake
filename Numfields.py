@@ -22,7 +22,7 @@ except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
 
-class Ui_Dialog(object):
+class Numfields(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName(_fromUtf8("Dialog"))
         Dialog.resize(379, 174)
@@ -34,13 +34,13 @@ class Ui_Dialog(object):
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
         self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
         self.buttonBox.setObjectName(_fromUtf8("buttonBox"))
+        self.buttonBox.button(QtGui.QDialogButtonBox.Ok).clicked.connect(self.getNum)
         self.spinBox = QtGui.QSpinBox(Dialog)
         self.spinBox.setGeometry(QtCore.QRect(230, 60, 141, 29))
         self.spinBox.setObjectName(_fromUtf8("spinBox"))
         self.label = QtGui.QLabel(Dialog)
         self.label.setGeometry(QtCore.QRect(20, 60, 201, 21))
         self.label.setObjectName(_fromUtf8("label"))
-
         self.retranslateUi(Dialog)
         QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL(_fromUtf8("accepted()")), Dialog.accept)
         QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL(_fromUtf8("rejected()")), Dialog.reject)
@@ -49,13 +49,14 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(_translate("Dialog", "How Many Fields", None))
         self.label.setText(_translate("Dialog", "How many fields do you need: ", None))
-
+    def getNum(self):
+        return int(self.spinBox.value())
 
 if __name__ == "__main__":
     import sys
     app = QtGui.QApplication(sys.argv)
     Dialog = QtGui.QDialog()
-    ui = Ui_Dialog()
+    ui = Numfields()
     ui.setupUi(Dialog)
     Dialog.show()
     sys.exit(app.exec_())

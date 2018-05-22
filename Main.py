@@ -6,9 +6,13 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt4 import QtCore, QtGui
-from toolkit import *
 from functools import partial
+
+from PyQt4 import QtCore, QtGui
+
+import toolkit
+from Numfields import Numfields
+
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
@@ -77,7 +81,7 @@ class Ui_MainWindow(object):
         self.actionRemove.setObjectName(_fromUtf8("actionRemove"))
         self.actionNew_File = QtGui.QAction(MainWindow)
         self.actionNew_File.setObjectName(_fromUtf8("actionNew_File"))
-        self.actionNew_File.triggered.connect(partial(new_file,MainWindow))
+        self.actionNew_File.triggered.connect(partial(self.new_file,MainWindow))
         self.menuFile.addAction(self.actionNew_File)
         self.menuFile.addAction(self.actionOpen)
         self.menuFile.addAction(self.actionSave)
@@ -121,7 +125,20 @@ class Ui_MainWindow(object):
         self.actionRemove.setText(_translate("MainWindow", "Remove", None))
         self.actionNew_File.setText(_translate("MainWindow", "New File", None))
         self.actionNew_File.setShortcut(_translate("MainWindow", "Ctrl+N", None))        
-
+    def new_file(self,window):
+        name = QtGui.QFileDialog.getSaveFileName(window, 'New File')
+        if not name.endsWith('.qls'):
+            name += '.qls'
+        file = open(name, 'w')
+        file.writelines(['[]\n'])
+        self.Dialog = QtGui.QDialog()
+        self.ui = Numfields()
+        self.ui.setupUi(self.Dialog)
+        self.Dialog.show()
+        if self.Dialog.exec_():
+            das = self.ui.getNum()
+        print(das)
+        file.close()
 
 if __name__ == "__main__":
     import sys
@@ -131,4 +148,3 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-
