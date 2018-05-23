@@ -6,14 +6,11 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from functools import partial
-
 from PyQt4 import QtCore, QtGui
-
-import toolkit
-from Type import Type
+from functools import partial
+import Toolkit
 from Numfields import Numfields
-
+from Type import Type
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
@@ -22,21 +19,18 @@ except AttributeError:
 
 try:
     _encoding = QtGui.QApplication.UnicodeUTF8
-
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig, _encoding)
 except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
 
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
         MainWindow.resize(808, 600)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8("Images/database.png")),
-                       QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8("Images/database.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
@@ -72,11 +66,9 @@ class Ui_MainWindow(object):
         self.actionSave = QtGui.QAction(MainWindow)
         self.actionSave.setObjectName(_fromUtf8("actionSave"))
         self.actionNew_Structure = QtGui.QAction(MainWindow)
-        self.actionNew_Structure.setObjectName(
-            _fromUtf8("actionNew_Structure"))
+        self.actionNew_Structure.setObjectName(_fromUtf8("actionNew_Structure"))
         self.actionEdit_Structure = QtGui.QAction(MainWindow)
-        self.actionEdit_Structure.setObjectName(
-            _fromUtf8("actionEdit_Structure"))
+        self.actionEdit_Structure.setObjectName(_fromUtf8("actionEdit_Structure"))
         self.actionExcel = QtGui.QAction(MainWindow)
         self.actionExcel.setObjectName(_fromUtf8("actionExcel"))
         self.actionXML = QtGui.QAction(MainWindow)
@@ -87,8 +79,7 @@ class Ui_MainWindow(object):
         self.actionRemove.setObjectName(_fromUtf8("actionRemove"))
         self.actionNew_File = QtGui.QAction(MainWindow)
         self.actionNew_File.setObjectName(_fromUtf8("actionNew_File"))
-        self.actionNew_File.triggered.connect(
-            partial(self.new_file, MainWindow))
+        self.actionNew_File.triggered.connect(partial(self.new_file,MainWindow));        
         self.menuFile.addAction(self.actionNew_File)
         self.menuFile.addAction(self.actionOpen)
         self.menuFile.addAction(self.actionSave)
@@ -112,8 +103,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "Entrance", None))
         self.menuFile.setTitle(_translate("MainWindow", "File", None))
-        self.menuStructure.setTitle(
-            _translate("MainWindow", "Structure", None))
+        self.menuStructure.setTitle(_translate("MainWindow", "Entry", None))
         self.menuOptions.setTitle(_translate("MainWindow", "Options", None))
         self.menuExport.setTitle(_translate("MainWindow", "Export ", None))
         self.menuRegister.setTitle(_translate("MainWindow", "Register", None))
@@ -123,21 +113,16 @@ class Ui_MainWindow(object):
         self.actionExit.setShortcut(_translate("MainWindow", "Ctrl+Q", None))
         self.actionSave.setText(_translate("MainWindow", "Save File", None))
         self.actionSave.setShortcut(_translate("MainWindow", "Ctrl+S", None))
-        self.actionNew_Structure.setText(
-            _translate("MainWindow", "New Structure", None))
-        self.actionNew_Structure.setShortcut(
-            _translate("MainWindow", "Alt+S", None))
-        self.actionEdit_Structure.setText(
-            _translate("MainWindow", "Edit Structure", None))
-        self.actionEdit_Structure.setShortcut(
-            _translate("MainWindow", "Alt+E", None))
+        self.actionNew_Structure.setText(_translate("MainWindow", "New Entry", None))
+        self.actionNew_Structure.setShortcut(_translate("MainWindow", "Alt+S", None))
+        self.actionEdit_Structure.setText(_translate("MainWindow", "Remove Entry", None))
+        self.actionEdit_Structure.setShortcut(_translate("MainWindow", "Alt+E", None))
+        self.actionNew_File.setShortcut(_translate("MainWindow","Ctrl+N",None))
         self.actionExcel.setText(_translate("MainWindow", "Excel", None))
         self.actionXML.setText(_translate("MainWindow", "XML", None))
         self.actionAdd.setText(_translate("MainWindow", "Add", None))
         self.actionRemove.setText(_translate("MainWindow", "Remove", None))
         self.actionNew_File.setText(_translate("MainWindow", "New File", None))
-        self.actionNew_File.setShortcut(
-            _translate("MainWindow", "Ctrl+N", None))
 
     def new_file(self, window):
         name = QtGui.QFileDialog.getSaveFileName(window, 'New File')
@@ -160,9 +145,12 @@ class Ui_MainWindow(object):
             if self.dialog2.exec_():
                 tipos.append(self.ui2.get_types())
                 nombres.append(self.ui2.get_name())
+        file.write(str(tipos))
+        file.write('\n')
+        file.write(str(nombres))
+        file.write('\n')
+        file.write('0\n')
         file.close()
-
-
 if __name__ == "__main__":
     import sys
     app = QtGui.QApplication(sys.argv)
@@ -171,3 +159,4 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
+
