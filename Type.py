@@ -40,6 +40,10 @@ class Type(object):
         self.comboBox = QtGui.QComboBox(Dialog)
         self.comboBox.setGeometry(QtCore.QRect(90, 70, 121, 25))
         self.comboBox.setObjectName(_fromUtf8("comboBox"))
+        self.comboBox.addItem(_fromUtf8(""))
+        self.comboBox.addItem(_fromUtf8(""))
+        self.comboBox.addItem(_fromUtf8(""))
+        self.comboBox.addItem(_fromUtf8(""))
         self.label = QtGui.QLabel(Dialog)
         self.label.setGeometry(QtCore.QRect(40, 30, 66, 17))
         self.label.setObjectName(_fromUtf8("label"))
@@ -54,9 +58,17 @@ class Type(object):
 
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(_translate("Dialog", "What Type", None))
+        self.comboBox.setItemText(0, _translate("Dialog", "Int", None))
+        self.comboBox.setItemText(1, _translate("Dialog", "Char", None))
+        self.comboBox.setItemText(2, _translate("Dialog", "String", None))
+        self.comboBox.setItemText(3, _translate("Dialog", "Double", None))
         self.label.setText(_translate("Dialog", "Name:", None))
         self.label_2.setText(_translate("Dialog", "Type:", None))
 
+    def get_types(self):
+        return str(self.comboBox.currentText())
+    def get_name(self):
+        return str(self.lineEdit.text())
 
 if __name__ == "__main__":
     import sys

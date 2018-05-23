@@ -52,6 +52,26 @@
      <height>25</height>
     </rect>
    </property>
+   <item>
+    <property name="text">
+     <string>Int</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Char</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>String</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Double</string>
+    </property>
+   </item>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
