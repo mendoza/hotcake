@@ -24,7 +24,6 @@ try:
 except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
@@ -97,8 +96,53 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuStructure.menuAction())
         self.menubar.addAction(self.menuOptions.menuAction())
 
+        self.actionOpen.triggered.connect(partial(self.open_File, MainWindow))
+
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def open_File(self, window ):
+        name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
+
+        f= open(name, "r+")
+        
+        cadena = f.readline()
+        cadena = cadena.replace("[","")
+        cadena = cadena.replace("]","")
+        cadena = cadena.replace("\'","")
+        cadena = cadena.replace("\n","")
+        self.lista_tipos = cadena.split(",")
+        
+        #######################
+        cadena = f.readline()
+        cadena = cadena.replace("[","")
+        cadena = cadena.replace("]","")
+        cadena = cadena.replace("\'","")
+        cadena = cadena.replace("\n","")
+        self.lista_nombres = cadena.split(",")
+
+        #######################
+        rows = f.readline()
+        rows = rows.replace("\n","")
+        self.cantidad = int(rows)
+        print(self.lista_tipos)
+        self.tableWidget.setColumnCount(len(self.lista_tipos))
+        self.tableWidget.setHorizontalHeaderLabels(self.lista_nombres)
+        self.tableWidget.setRowCount(self.cantidad)
+        for row in range(self.tableWidget.rowCount()):
+            for col in range(self.tableWidget.columnCount()):
+                if self.lista_tipos[col] == "Int":
+                    line = QtGui.QLineEdit()
+                    line.setFrame(False)
+                    line.setValidator(QtGui.QIntValidator(line))
+                    self.tableWidget.setCellWidget(row,col,line)
+                elif self.lista_tipos[col] == "Double":
+                    line = QtGui.QLineEdit()
+                    line.setFrame(False)
+                    line.setValidator(QtGui.QDoubleValidator(line))
+                    self.tableWidget.setCellWidget(row,col,line)
+
+        f.close()
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "Entrance", None))

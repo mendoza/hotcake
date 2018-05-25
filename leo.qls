@@ -1,3 +1,3 @@
-['Int', 'Int', 'Int']
-['10', '10', '012']
-0
+['Int', 'String', 'String']
+['ID', 'Nombre', 'Password']
+1
