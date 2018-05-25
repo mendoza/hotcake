@@ -30,6 +30,7 @@ class Ui_MainWindow(object):
         MainWindow.resize(808, 600)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(_fromUtf8("Images/database.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        QtGui.QApplication.setStyle(QtGui.QStyleFactory.create("plastique"))
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
@@ -97,9 +98,15 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuOptions.menuAction())
 
         self.actionOpen.triggered.connect(partial(self.open_File, MainWindow))
+        self.actionNew_Structure.triggered.connect(self.new_entry)
+        
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def new_entry(self):
+        self.tableWidget.setRowCount(self.tableWidget.rowCount()+1)
+
 
     def open_File(self, window ):
         name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
@@ -129,19 +136,14 @@ class Ui_MainWindow(object):
         self.tableWidget.setColumnCount(len(self.lista_tipos))
         self.tableWidget.setHorizontalHeaderLabels(self.lista_nombres)
         self.tableWidget.setRowCount(self.cantidad)
-        for row in range(self.tableWidget.rowCount()):
-            for col in range(self.tableWidget.columnCount()):
-                if self.lista_tipos[col] == "Int":
-                    line = QtGui.QLineEdit()
-                    line.setFrame(False)
-                    line.setValidator(QtGui.QIntValidator(line))
-                    self.tableWidget.setCellWidget(row,col,line)
-                elif self.lista_tipos[col] == "Double":
-                    line = QtGui.QLineEdit()
-                    line.setFrame(False)
-                    line.setValidator(QtGui.QDoubleValidator(line))
-                    self.tableWidget.setCellWidget(row,col,line)
-
+        
+        for i in range(self.cantidad):
+            temp = f.readline()   
+            temp = temp.replace("\n","")
+            temp = temp.replace(" ","")
+            aux = temp.split("|")
+            for j in range(self.tableWidget.columnCount()):
+                self.tableWidget.setItem(i,j,QtGui.QTableWidgetItem(aux[j]))
         f.close()
 
     def retranslateUi(self, MainWindow):
