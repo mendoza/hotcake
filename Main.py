@@ -136,7 +136,7 @@ class Ui_MainWindow(object):
         self.tableWidget.setColumnCount(len(self.lista_tipos))
         self.tableWidget.setHorizontalHeaderLabels(self.lista_nombres)
         self.tableWidget.setRowCount(self.cantidad)
-        
+
         for i in range(self.cantidad):
             temp = f.readline()   
             temp = temp.replace("\n","")

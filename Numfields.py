@@ -37,6 +37,8 @@ class Numfields(object):
         self.buttonBox.button(QtGui.QDialogButtonBox.Ok).clicked.connect(self.getNum)
         self.spinBox = QtGui.QSpinBox(Dialog)
         self.spinBox.setGeometry(QtCore.QRect(230, 60, 141, 29))
+        self.spinBox.setMaximum(10)
+        self.spinBox.setMinimum(1)
         self.spinBox.setObjectName(_fromUtf8("spinBox"))
         self.label = QtGui.QLabel(Dialog)
         self.label.setGeometry(QtCore.QRect(20, 60, 201, 21))

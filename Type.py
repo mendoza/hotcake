@@ -62,6 +62,7 @@ class Type(object):
         self.comboBox.setItemText(1, _translate("Dialog", "Char", None))
         self.comboBox.setItemText(2, _translate("Dialog", "String", None))
         self.comboBox.setItemText(3, _translate("Dialog", "Double", None))
+        self.comboBox.setItemText(4, _translate("Dialog", "Boolean", None))
         self.label.setText(_translate("Dialog", "Name:", None))
         self.label_2.setText(_translate("Dialog", "Type:", None))
 
