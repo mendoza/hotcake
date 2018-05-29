@@ -19,17 +19,21 @@ except AttributeError:
 
 try:
     _encoding = QtGui.QApplication.UnicodeUTF8
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig, _encoding)
 except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
+
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
         MainWindow.resize(808, 600)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8("Images/database.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8("Images/database.png")),
+                       QtGui.QIcon.Normal, QtGui.QIcon.Off)
         QtGui.QApplication.setStyle(QtGui.QStyleFactory.create("plastique"))
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtGui.QWidget(MainWindow)
@@ -66,9 +70,11 @@ class Ui_MainWindow(object):
         self.actionSave = QtGui.QAction(MainWindow)
         self.actionSave.setObjectName(_fromUtf8("actionSave"))
         self.actionNew_Structure = QtGui.QAction(MainWindow)
-        self.actionNew_Structure.setObjectName(_fromUtf8("actionNew_Structure"))
+        self.actionNew_Structure.setObjectName(
+            _fromUtf8("actionNew_Structure"))
         self.actionEdit_Structure = QtGui.QAction(MainWindow)
-        self.actionEdit_Structure.setObjectName(_fromUtf8("actionEdit_Structure"))
+        self.actionEdit_Structure.setObjectName(
+            _fromUtf8("actionEdit_Structure"))
         self.actionExcel = QtGui.QAction(MainWindow)
         self.actionExcel.setObjectName(_fromUtf8("actionExcel"))
         self.actionXML = QtGui.QAction(MainWindow)
@@ -79,7 +85,8 @@ class Ui_MainWindow(object):
         self.actionRemove.setObjectName(_fromUtf8("actionRemove"))
         self.actionNew_File = QtGui.QAction(MainWindow)
         self.actionNew_File.setObjectName(_fromUtf8("actionNew_File"))
-        self.actionNew_File.triggered.connect(partial(self.new_file,MainWindow));        
+        self.actionNew_File.triggered.connect(
+            partial(self.new_file, MainWindow))
         self.menuFile.addAction(self.actionNew_File)
         self.menuFile.addAction(self.actionOpen)
         self.menuFile.addAction(self.actionSave)
@@ -99,38 +106,37 @@ class Ui_MainWindow(object):
 
         self.actionOpen.triggered.connect(partial(self.open_File, MainWindow))
         self.actionNew_Structure.triggered.connect(self.new_entry)
-        
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def new_entry(self):
-        self.tableWidget.setRowCount(self.tableWidget.rowCount()+1)
+        rowPosition = self.tableWidget.rowCount()
+        self.tableWidget.insertRow(rowPosition)
 
-
-    def open_File(self, window ):
+    def open_File(self, window):
         name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
 
-        f= open(name, "r+")
-        
+        f = open(name, "r+")
+
         cadena = f.readline()
-        cadena = cadena.replace("[","")
-        cadena = cadena.replace("]","")
-        cadena = cadena.replace("\'","")
-        cadena = cadena.replace("\n","")
+        cadena = cadena.replace("[", "")
+        cadena = cadena.replace("]", "")
+        cadena = cadena.replace("\'", "")
+        cadena = cadena.replace("\n", "")
         self.lista_tipos = cadena.split(",")
-        
+
         #######################
         cadena = f.readline()
-        cadena = cadena.replace("[","")
-        cadena = cadena.replace("]","")
-        cadena = cadena.replace("\'","")
-        cadena = cadena.replace("\n","")
+        cadena = cadena.replace("[", "")
+        cadena = cadena.replace("]", "")
+        cadena = cadena.replace("\'", "")
+        cadena = cadena.replace("\n", "")
         self.lista_nombres = cadena.split(",")
 
         #######################
         rows = f.readline()
-        rows = rows.replace("\n","")
+        rows = rows.replace("\n", "")
         self.cantidad = int(rows)
         print(self.lista_tipos)
         self.tableWidget.setColumnCount(len(self.lista_tipos))
@@ -138,12 +144,12 @@ class Ui_MainWindow(object):
         self.tableWidget.setRowCount(self.cantidad)
 
         for i in range(self.cantidad):
-            temp = f.readline()   
-            temp = temp.replace("\n","")
-            temp = temp.replace(" ","")
+            temp = f.readline()
+            temp = temp.replace("\n", "")
+            temp = temp.replace(" ", "")
             aux = temp.split("|")
             for j in range(self.tableWidget.columnCount()):
-                self.tableWidget.setItem(i,j,QtGui.QTableWidgetItem(aux[j]))
+                self.tableWidget.setItem(i, j, QtGui.QTableWidgetItem(aux[j]))
         f.close()
 
     def retranslateUi(self, MainWindow):
@@ -159,11 +165,16 @@ class Ui_MainWindow(object):
         self.actionExit.setShortcut(_translate("MainWindow", "Ctrl+Q", None))
         self.actionSave.setText(_translate("MainWindow", "Save File", None))
         self.actionSave.setShortcut(_translate("MainWindow", "Ctrl+S", None))
-        self.actionNew_Structure.setText(_translate("MainWindow", "New Entry", None))
-        self.actionNew_Structure.setShortcut(_translate("MainWindow", "Alt+S", None))
-        self.actionEdit_Structure.setText(_translate("MainWindow", "Remove Entry", None))
-        self.actionEdit_Structure.setShortcut(_translate("MainWindow", "Alt+E", None))
-        self.actionNew_File.setShortcut(_translate("MainWindow","Ctrl+N",None))
+        self.actionNew_Structure.setText(
+            _translate("MainWindow", "New Entry", None))
+        self.actionNew_Structure.setShortcut(
+            _translate("MainWindow", "Alt+S", None))
+        self.actionEdit_Structure.setText(
+            _translate("MainWindow", "Remove Entry", None))
+        self.actionEdit_Structure.setShortcut(
+            _translate("MainWindow", "Alt+E", None))
+        self.actionNew_File.setShortcut(
+            _translate("MainWindow", "Ctrl+N", None))
         self.actionExcel.setText(_translate("MainWindow", "Excel", None))
         self.actionXML.setText(_translate("MainWindow", "XML", None))
         self.actionAdd.setText(_translate("MainWindow", "Add", None))
@@ -184,7 +195,7 @@ class Ui_MainWindow(object):
         tipos = []
         nombres = []
         for i in range(cant):
-            self.dialog2 =QtGui.QDialog()
+            self.dialog2 = QtGui.QDialog()
             self.ui2 = Type()
             self.ui2.setupUi(self.dialog2)
             self.dialog2.show()
@@ -197,6 +208,8 @@ class Ui_MainWindow(object):
         file.write('\n')
         file.write('0\n')
         file.close()
+
+
 if __name__ == "__main__":
     import sys
     app = QtGui.QApplication(sys.argv)
@@ -205,4 +218,3 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-
