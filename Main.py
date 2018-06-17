@@ -12,7 +12,7 @@ import Toolkit
 from Numfields import Numfields
 from Type import Type
 from xlsxwriter import Workbook
-import xml.etree.ElementTree as et
+from lxml import etree as et
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
@@ -141,16 +141,18 @@ class Ui_MainWindow(object):
         rows = f.readline()
         rows = rows.replace("\n", "")
         self.cantidad = int(rows)
-        root = et.Element("root")
+        root = et.Element("Root")
         for i in range(self.cantidad):
+            register = et.Element("Register")
             temp = f.readline()
             temp = temp.replace("\n", "")
             temp = temp.replace(" ", "")
             aux = temp.split("|")
             for j in range(len(self.lista_nombres)):
-                et.SubElement(root, str(self.lista_nombres[j])).text = aux[j]
+                et.SubElement(register, str(self.lista_nombres[j]).replace(" ","")).text = aux[j]
             del aux
             del temp
+            root.append(register)
         f.close()
         msg = QtGui.QMessageBox()
         msg.setIcon(QtGui.QMessageBox.Information)
@@ -160,7 +162,7 @@ class Ui_MainWindow(object):
         del cadena
         del retval
         tree = et.ElementTree(root)
-        tree.write(str(name).replace(".qls", ".XML"))
+        tree.write(str(name).replace(".qls", ".XML") ,pretty_print=True, xml_declaration=True,   encoding="utf-8")
 
     def exportxlsx(self, window):
         name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
