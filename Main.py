@@ -11,6 +11,8 @@ from functools import partial
 import Toolkit
 from Numfields import Numfields
 from Type import Type
+from xlsxwriter import Workbook
+import xml.etree.ElementTree as et
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
@@ -77,8 +79,11 @@ class Ui_MainWindow(object):
             _fromUtf8("actionEdit_Structure"))
         self.actionExcel = QtGui.QAction(MainWindow)
         self.actionExcel.setObjectName(_fromUtf8("actionExcel"))
+        self.actionExcel.triggered.connect(
+            partial(self.exportxlsx, MainWindow))
         self.actionXML = QtGui.QAction(MainWindow)
         self.actionXML.setObjectName(_fromUtf8("actionXML"))
+        self.actionXML.triggered.connect(partial(self.exportxml, MainWindow))
         self.actionAdd = QtGui.QAction(MainWindow)
         self.actionAdd.setObjectName(_fromUtf8("actionAdd"))
         self.actionRemove = QtGui.QAction(MainWindow)
@@ -113,6 +118,93 @@ class Ui_MainWindow(object):
     def new_entry(self):
         rowPosition = self.tableWidget.rowCount()
         self.tableWidget.insertRow(rowPosition)
+
+    def exportxml(self, window):
+        name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
+
+        f = open(name, "r+")
+        cadena = f.readline()
+        cadena = cadena.replace("[", "")
+        cadena = cadena.replace("]", "")
+        cadena = cadena.replace("\'", "")
+        cadena = cadena.replace("\n", "")
+        self.lista_tipos = cadena.split(",")
+
+        #######################
+        cadena = f.readline()
+        cadena = cadena.replace("[", "")
+        cadena = cadena.replace("]", "")
+        cadena = cadena.replace("\'", "")
+        cadena = cadena.replace("\n", "")
+        self.lista_nombres = cadena.split(",")
+        #######################
+        rows = f.readline()
+        rows = rows.replace("\n", "")
+        self.cantidad = int(rows)
+        root = et.Element("root")
+        for i in range(self.cantidad):
+            temp = f.readline()
+            temp = temp.replace("\n", "")
+            temp = temp.replace(" ", "")
+            aux = temp.split("|")
+            for j in range(len(self.lista_nombres)):
+                et.SubElement(root, str(self.lista_nombres[j])).text = aux[j]
+            del aux
+            del temp
+        f.close()
+        msg = QtGui.QMessageBox()
+        msg.setIcon(QtGui.QMessageBox.Information)
+        msg.setText("The export is done!")
+        msg.setWindowTitle("Export XML")
+        retval = msg.exec_()
+        del cadena
+        del retval
+        tree = et.ElementTree(root)
+        tree.write(str(name).replace(".qls", ".XML"))
+
+    def exportxlsx(self, window):
+        name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
+
+        f = open(name, "r+")
+        workbook = Workbook(str(name).replace(".qls", ".xlsx"))
+        worksheet = workbook.add_worksheet()
+        cadena = f.readline()
+        cadena = cadena.replace("[", "")
+        cadena = cadena.replace("]", "")
+        cadena = cadena.replace("\'", "")
+        cadena = cadena.replace("\n", "")
+        self.lista_tipos = cadena.split(",")
+
+        #######################
+        cadena = f.readline()
+        cadena = cadena.replace("[", "")
+        cadena = cadena.replace("]", "")
+        cadena = cadena.replace("\'", "")
+        cadena = cadena.replace("\n", "")
+        self.lista_nombres = cadena.split(",")
+        #######################
+        worksheet.write_row(0, 0, self.lista_nombres)
+        rows = f.readline()
+        rows = rows.replace("\n", "")
+        self.cantidad = int(rows)
+        for i in range(self.cantidad):
+            temp = f.readline()
+            temp = temp.replace("\n", "")
+            temp = temp.replace(" ", "")
+            aux = temp.split("|")
+            for j in range(len(self.lista_nombres)):
+                worksheet.write_string(i+1, j, aux[j])
+            del aux
+            del temp
+        f.close()
+        workbook.close()
+        msg = QtGui.QMessageBox()
+        msg.setIcon(QtGui.QMessageBox.Information)
+        msg.setText("The export is done!")
+        msg.setWindowTitle("Export Excel")
+        retval = msg.exec_()
+        del cadena
+        del retval
 
     def open_File(self, window):
         name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')

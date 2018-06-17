@@ -25,7 +25,7 @@ def generar_alfanumerico(num):
                     #print 'no encontro'
                     encontro=0
                 else:
-                    print 'no hizo ni pija'
+                   # print 'no hizo ni pija'
                     encontro=0
         print 'va por la ---- ', len(lista_alfa)
         #print lista_alfa
