@@ -141,7 +141,7 @@ class Ui_MainWindow(object):
         rows = f.readline()
         rows = rows.replace("\n", "")
         self.cantidad = int(rows)
-        root = et.Element("Root")
+        root = et.Element("File")
         for i in range(self.cantidad):
             register = et.Element("Register")
             temp = f.readline()

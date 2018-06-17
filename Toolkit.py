@@ -59,16 +59,18 @@ class toolkit(object):
         rows = f.readline()
         rows = rows.replace("\n", "")
         self.cantidad = int(rows)
-        root = et.Element("root")
+        root = et.Element("Root")
         for i in range(self.cantidad):
+            register = et.Element("Register")
             temp = f.readline()
             temp = temp.replace("\n", "")
             temp = temp.replace(" ", "")
             aux = temp.split("|")
             for j in range(len(self.lista_nombres)):
-                et.SubElement(root, str(self.lista_nombres[j])).text = aux[j]
+                et.SubElement(register, str(self.lista_nombres[j]).replace(" ","")).text = aux[j]
             del aux
             del temp
+            root.append(register)
         f.close()
         msg = QtGui.QMessageBox()
         msg.setIcon(QtGui.QMessageBox.Information)
@@ -78,7 +80,7 @@ class toolkit(object):
         del cadena
         del retval
         tree = et.ElementTree(root)
-        tree.write(str(name).replace(".qls", ".XML"))
+        tree.write(str(name).replace(".qls", ".XML") ,pretty_print=True, xml_declaration=True,   encoding="utf-8")
 
     def exportxlsx(self, window):
         name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
@@ -123,3 +125,41 @@ class toolkit(object):
         retval = msg.exec_()
         del cadena
         del retval
+
+    def open_File(self, window):
+        name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
+
+        f = open(name, "r+")
+
+        cadena = f.readline()
+        cadena = cadena.replace("[", "")
+        cadena = cadena.replace("]", "")
+        cadena = cadena.replace("\'", "")
+        cadena = cadena.replace("\n", "")
+        self.lista_tipos = cadena.split(",")
+
+        #######################
+        cadena = f.readline()
+        cadena = cadena.replace("[", "")
+        cadena = cadena.replace("]", "")
+        cadena = cadena.replace("\'", "")
+        cadena = cadena.replace("\n", "")
+        self.lista_nombres = cadena.split(",")
+
+        #######################
+        rows = f.readline()
+        rows = rows.replace("\n", "")
+        self.cantidad = int(rows)
+        print(self.lista_tipos)
+        self.tableWidget.setColumnCount(len(self.lista_tipos))
+        self.tableWidget.setHorizontalHeaderLabels(self.lista_nombres)
+        self.tableWidget.setRowCount(self.cantidad)
+
+        for i in range(self.cantidad):
+            temp = f.readline()
+            temp = temp.replace("\n", "")
+            temp = temp.replace(" ", "")
+            aux = temp.split("|")
+            for j in range(self.tableWidget.columnCount()):
+                self.tableWidget.setItem(i, j, QtGui.QTableWidgetItem(aux[j]))
+        f.close()
