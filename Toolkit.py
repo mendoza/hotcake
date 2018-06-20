@@ -1,7 +1,10 @@
 from PyQt4 import QtCore, QtGui
+from functools import partial
+import Toolkit
 from Numfields import Numfields
 from Type import Type
 from xlsxwriter import Workbook
+from lxml import etree as et
 
 
 class toolkit(object):
@@ -67,7 +70,8 @@ class toolkit(object):
             temp = temp.replace(" ", "")
             aux = temp.split("|")
             for j in range(len(self.lista_nombres)):
-                et.SubElement(register, str(self.lista_nombres[j]).replace(" ","")).text = aux[j]
+                et.SubElement(register, str(
+                    self.lista_nombres[j]).replace(" ", "")).text = aux[j]
             del aux
             del temp
             root.append(register)
@@ -80,7 +84,8 @@ class toolkit(object):
         del cadena
         del retval
         tree = et.ElementTree(root)
-        tree.write(str(name).replace(".qls", ".XML") ,pretty_print=True, xml_declaration=True,   encoding="utf-8")
+        tree.write(str(name).replace(".qls", ".XML"),
+                   pretty_print=True, xml_declaration=True,   encoding="utf-8")
 
     def exportxlsx(self, window):
         name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
@@ -113,7 +118,7 @@ class toolkit(object):
             temp = temp.replace(" ", "")
             aux = temp.split("|")
             for j in range(len(self.lista_nombres)):
-                worksheet.write_string(i+1, j, aux[j])
+                worksheet.write_string(i + 1, j, aux[j])
             del aux
             del temp
         f.close()
