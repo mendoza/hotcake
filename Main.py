@@ -31,10 +31,11 @@ except AttributeError:
 
 
 class Ui_MainWindow(object):
-    initial = int()
-    current = int()
-    final = int()
+    actual = 0
+    proximo = 0
+    stack = []
     direccion = ""
+    batch = 10
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
@@ -184,10 +185,11 @@ class Ui_MainWindow(object):
         file.write('0\n')
 
     def new_entry(self):
-        rowPosition = self.tableWidget.rowCount()
-        self.tableWidget.insertRow(rowPosition)
+        if (self.cantidad/self.batch) - 1 == len(self.stack):
+            rowPosition = self.tableWidget.rowCount()
+            self.tableWidget.insertRow(rowPosition)
 
-    def calculate_next_byte(self, file,lastbyte,batch):
+    def calculate_next_byte(self, file, lastbyte, batch):
         total = ""
         file.seek(0)
         file.seek(lastbyte)
@@ -196,6 +198,7 @@ class Ui_MainWindow(object):
             total += linea
         ret = len(total)
         return ret
+    """ asigna a la tabla la cantidad dada usandola desde el byte predeterminado en el file """
 
     def set_entries(self, file, cant):
         self.tableWidget.setRowCount(cant)
@@ -205,22 +208,32 @@ class Ui_MainWindow(object):
             aux = temp.split("|")
             for j in range(self.tableWidget.columnCount()):
                 self.tableWidget.setItem(i, j, QtGui.QTableWidgetItem(aux[j]))
+    """calcula la siguiente ronda de registros, junto con el byte que se agrega al stack"""
 
     def next_batch(self):
-        with open(self.direccion, "r+") as file:
-            self.current = self.final
-            self.final = self.calculate_next_byte(file,self.current, 10)
-            self.final +=self.current
-            file.seek(self.final)
-            self.set_entries(file, 10)
-    #Arreglar esto
+        try:
+            if (self.cantidad/self.batch) - 1 != len(self.stack):
+                with open(self.direccion, "r+") as file:
+                    file.seek(self.actual)
+                    proximo = self.calculate_next_byte(
+                        file, self.actual, self.batch)
+                    self.actual += proximo
+                    self.set_entries(file, self.batch)
+                    self.stack.append(proximo)
+        except:
+            print("Last One")
+    """calcula la anterior ronda de registros, consiguiendo el byte anterior del stack"""
+
     def previous_batch(self):
-        with open(self.direccion, "r+") as file:
-            self.current = self.final
-            self.final = self.calculate_next_byte(file,self.current, 10)
-            self.final +=self.current
-            file.seek(self.current)
-            self.set_entries(file, 10)
+        try:
+            with open(self.direccion, "r+") as file:
+                val = self.stack.pop()
+                self.actual -= val
+                file.seek(0)
+                file.seek(self.actual)
+                self.set_entries(file, self.batch)
+        except:
+            print("First One")
 
     def exportxml(self, window):
         f = open(self.direccion, "r+")
@@ -302,29 +315,34 @@ class Ui_MainWindow(object):
         return cadena
 
     def open_File(self, window):
-        self.current = 0
-        self.final = 0
-        self.initial = 0
+        self.actual = 0
+        self.proximo = 0
         name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
         self.direccion = str(name)
         f = open(name, "r+")
         cadena = f.readline()
-        self.current += len(cadena)
+        self.actual += len(cadena)
         cadena = self.remove_chars(["[", "]", "\'", "\n"], cadena)
         self.lista_tipos = cadena.split(",")
         #######################
         cadena = f.readline()
-        self.current += len(cadena)
+        self.actual += len(cadena)
         cadena = self.remove_chars(["[", "]", "\'", "\n"], cadena)
         self.lista_nombres = cadena.split(",")
         #######################
         rows = f.readline()
-        self.current += len(rows)
+        self.actual += len(rows)
         rows = self.remove_chars(["\n"], rows)
         self.tableWidget.setColumnCount(len(self.lista_tipos))
         self.tableWidget.setHorizontalHeaderLabels(self.lista_nombres)
         self.cantidad = int(rows)
-        self.set_entries(f,10)
+        if self.batch >= self.cantidad:
+            self.Previous_button.setVisible(False)
+            self.Next_button.setVisible(False)
+        else:
+            self.Previous_button.setVisible(True)
+            self.Next_button.setVisible(True)
+        self.set_entries(f, self.batch)
         f.close()
 
 

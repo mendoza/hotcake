@@ -8,6 +8,11 @@ from lxml import etree as et
 
 
 class toolkit(object):
+    actual = 0
+    proximo = 0
+    stack = []
+    direccion = ""
+    batch = 20
     @staticmethod
     def new_file(self, window):
         name = QtGui.QFileDialog.getSaveFileName(window, 'New File')
