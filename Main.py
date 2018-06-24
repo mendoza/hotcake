@@ -29,17 +29,18 @@ except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
 
-initial = int()
-current = int()
-final = int()
-
 
 class Ui_MainWindow(object):
+    initial = int()
+    current = int()
+    final = int()
+    direccion = ""
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
         MainWindow.resize(808, 600)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8("database.png")),
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8("Images/database.png")),
                        QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtGui.QWidget(MainWindow)
@@ -57,12 +58,14 @@ class Ui_MainWindow(object):
         self.horizontalLayout = QtGui.QHBoxLayout()
         self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
         self.Previous_button = QtGui.QPushButton(self.centralwidget)
+        self.Previous_button.clicked.connect(partial(self.previous_batch))
         self.Previous_button.setObjectName(_fromUtf8("Previous_button"))
         self.horizontalLayout.addWidget(self.Previous_button)
         spacerItem = QtGui.QSpacerItem(
             40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem)
         self.Next_button = QtGui.QPushButton(self.centralwidget)
+        self.Next_button.clicked.connect(partial(self.next_batch))
         self.Next_button.setObjectName(_fromUtf8("Next_button"))
         self.horizontalLayout.addWidget(self.Next_button)
         self.gridLayout_2.addLayout(self.horizontalLayout, 1, 0, 1, 1)
@@ -184,27 +187,53 @@ class Ui_MainWindow(object):
         rowPosition = self.tableWidget.rowCount()
         self.tableWidget.insertRow(rowPosition)
 
+    def calculate_next_byte(self, file,lastbyte,batch):
+        total = ""
+        file.seek(0)
+        file.seek(lastbyte)
+        for i in range(batch):
+            linea = file.readline()
+            total += linea
+        ret = len(total)
+        return ret
+
+    def set_entries(self, file, cant):
+        self.tableWidget.setRowCount(cant)
+        for i in range(cant):
+            temp = file.readline()
+            temp = self.remove_chars(["\n", " "], temp)
+            aux = temp.split("|")
+            for j in range(self.tableWidget.columnCount()):
+                self.tableWidget.setItem(i, j, QtGui.QTableWidgetItem(aux[j]))
+
+    def next_batch(self):
+        with open(self.direccion, "r+") as file:
+            self.current = self.final
+            self.final = self.calculate_next_byte(file,self.current, 10)
+            self.final +=self.current
+            file.seek(self.final)
+            self.set_entries(file, 10)
+    #Arreglar esto
+    def previous_batch(self):
+        with open(self.direccion, "r+") as file:
+            self.current = self.final
+            self.final = self.calculate_next_byte(file,self.current, 10)
+            self.final +=self.current
+            file.seek(self.current)
+            self.set_entries(file, 10)
+
     def exportxml(self, window):
-        name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
-
-        f = open(name, "r+")
+        f = open(self.direccion, "r+")
         cadena = f.readline()
-        cadena = cadena.replace("[", "")
-        cadena = cadena.replace("]", "")
-        cadena = cadena.replace("\'", "")
-        cadena = cadena.replace("\n", "")
+        cadena = self.remove_chars(["[", "]", "\'", "\n"], cadena)
         self.lista_tipos = cadena.split(",")
-
         #######################
         cadena = f.readline()
-        cadena = cadena.replace("[", "")
-        cadena = cadena.replace("]", "")
-        cadena = cadena.replace("\'", "")
-        cadena = cadena.replace("\n", "")
+        cadena = self.remove_chars(["[", "]", "\'", "\n"], cadena)
         self.lista_nombres = cadena.split(",")
         #######################
         rows = f.readline()
-        rows = rows.replace("\n", "")
+        rows = self.remove_chars(["\n"], rows)
         self.cantidad = int(rows)
         root = et.Element("Root")
         for i in range(self.cantidad):
@@ -228,33 +257,25 @@ class Ui_MainWindow(object):
         del cadena
         del retval
         tree = et.ElementTree(root)
-        tree.write(str(name).replace(".qls", ".XML"),
+        tree.write(str(self.direccion).replace(".qls", ".XML"),
                    pretty_print=True, xml_declaration=True,   encoding="utf-8")
 
     def exportxlsx(self, window):
-        name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
-
-        f = open(name, "r+")
-        workbook = Workbook(str(name).replace(".qls", ".xlsx"))
+        f = open(self.direccion, "r+")
+        workbook = Workbook(str(self.direccion).replace(".qls", ".xlsx"))
         worksheet = workbook.add_worksheet()
         cadena = f.readline()
-        cadena = cadena.replace("[", "")
-        cadena = cadena.replace("]", "")
-        cadena = cadena.replace("\'", "")
-        cadena = cadena.replace("\n", "")
+        cadena = self.remove_chars(["[", "]", "\'", "\n"], cadena)
         self.lista_tipos = cadena.split(",")
 
         #######################
         cadena = f.readline()
-        cadena = cadena.replace("[", "")
-        cadena = cadena.replace("]", "")
-        cadena = cadena.replace("\'", "")
-        cadena = cadena.replace("\n", "")
+        cadena = self.remove_chars(["[", "]", "\'", "\n"], cadena)
         self.lista_nombres = cadena.split(",")
         #######################
         worksheet.write_row(0, 0, self.lista_nombres)
         rows = f.readline()
-        rows = rows.replace("\n", "")
+        rows = self.remove_chars(["\n"], rows)
         self.cantidad = int(rows)
         for i in range(self.cantidad):
             temp = f.readline()
@@ -275,41 +296,35 @@ class Ui_MainWindow(object):
         del cadena
         del retval
 
+    def remove_chars(self, lista, cadena):
+        for char in lista:
+            cadena = cadena.replace(char, "")
+        return cadena
+
     def open_File(self, window):
+        self.current = 0
+        self.final = 0
+        self.initial = 0
         name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
-
+        self.direccion = str(name)
         f = open(name, "r+")
-
         cadena = f.readline()
-        cadena = cadena.replace("[", "")
-        cadena = cadena.replace("]", "")
-        cadena = cadena.replace("\'", "")
-        cadena = cadena.replace("\n", "")
+        self.current += len(cadena)
+        cadena = self.remove_chars(["[", "]", "\'", "\n"], cadena)
         self.lista_tipos = cadena.split(",")
-
         #######################
         cadena = f.readline()
-        cadena = cadena.replace("[", "")
-        cadena = cadena.replace("]", "")
-        cadena = cadena.replace("\'", "")
-        cadena = cadena.replace("\n", "")
+        self.current += len(cadena)
+        cadena = self.remove_chars(["[", "]", "\'", "\n"], cadena)
         self.lista_nombres = cadena.split(",")
-
         #######################
         rows = f.readline()
-        rows = rows.replace("\n", "")
-        self.cantidad = int(rows)
+        self.current += len(rows)
+        rows = self.remove_chars(["\n"], rows)
         self.tableWidget.setColumnCount(len(self.lista_tipos))
         self.tableWidget.setHorizontalHeaderLabels(self.lista_nombres)
-        self.tableWidget.setRowCount(self.cantidad)
-
-        for i in range(self.cantidad):
-            temp = f.readline()
-            temp = temp.replace("\n", "")
-            temp = temp.replace(" ", "")
-            aux = temp.split("|")
-            for j in range(self.tableWidget.columnCount()):
-                self.tableWidget.setItem(i, j, QtGui.QTableWidgetItem(aux[j]))
+        self.cantidad = int(rows)
+        self.set_entries(f,10)
         f.close()
 
 

@@ -40,6 +40,26 @@ class toolkit(object):
         rowPosition = self.tableWidget.rowCount()
         self.tableWidget.insertRow(rowPosition)
 
+    def calculate_next_byte(file,batch):
+        total = ""
+        for i in range(batch):
+            linea = file.readline()
+            total+=linea
+        ret = len(total)
+        print (ret)
+        return ret
+    
+    def set_entries(self,file,cant):
+        self.tableWidget.setColumnCount(len(self.lista_tipos))
+        self.tableWidget.setHorizontalHeaderLabels(self.lista_nombres)
+        self.tableWidget.setRowCount(cant)
+        for i in range(self.cantidad):
+            temp = file.readline()
+            temp = self.remove_chars(["\n"," "],temp)
+            aux = temp.split("|")
+            for j in range(self.tableWidget.columnCount()):
+                self.tableWidget.setItem(i, j, QtGui.QTableWidgetItem(aux[j]))
+
     def exportxml(self, window):
         name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
 
