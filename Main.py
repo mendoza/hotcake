@@ -208,6 +208,7 @@ class Ui_MainWindow(object):
             aux = temp.split("|")
             for j in range(self.tableWidget.columnCount()):
                 self.tableWidget.setItem(i, j, QtGui.QTableWidgetItem(aux[j]))
+        self.tableWidget.resizeColumnsToContents()
     """calcula la siguiente ronda de registros, junto con el byte que se agrega al stack"""
 
     def next_batch(self):
