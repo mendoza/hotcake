@@ -287,7 +287,8 @@ class Ui_MainWindow(object):
         cadena = self.remove_chars(["[", "]", "\'", "\n"], cadena)
         self.lista_nombres = cadena.split(",")
         #######################
-        worksheet.write_row(0, 0, self.lista_nombres)
+        bold = workbook.add_format({'bold': True})
+        worksheet.write_row(0, 0, self.lista_nombres,bold)
         rows = f.readline()
         rows = self.remove_chars(["\n"], rows)
         self.cantidad = int(rows)
