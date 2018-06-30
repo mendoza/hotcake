@@ -6,6 +6,8 @@
 #
 # WARNING! All changes made in this file will be lost!
 
+from Btree import BTree
+from Node import Node
 from PyQt4 import QtCore, QtGui
 from functools import partial
 import Toolkit
@@ -13,6 +15,7 @@ from Numfields import Numfields
 from Type import Type
 from xlsxwriter import Workbook
 from lxml import etree as et
+from file import File
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -86,6 +89,8 @@ class Ui_MainWindow(object):
         self.actionOpen = QtGui.QAction(MainWindow)
         self.actionOpen.setObjectName(_fromUtf8("actionOpen"))
         self.actionOpen.triggered.connect(partial(self.open_File, MainWindow))
+        #############
+        self.actionOpen.triggered.connect(self.indexando)
         self.actionExit = QtGui.QAction(MainWindow)
         self.actionExit.setObjectName(_fromUtf8("actionExit"))
         self.actionSave = QtGui.QAction(MainWindow)
@@ -156,6 +161,46 @@ class Ui_MainWindow(object):
         self.actionAdd.setText(_translate("MainWindow", "Add", None))
         self.actionRemove.setText(_translate("MainWindow", "Remove", None))
         self.actionNew_File.setText(_translate("MainWindow", "New File", None))
+
+#FUNCION QUE REALIZA LA INDEXACION CUANDO SELECCIONA UN ARCHIVO 
+    def indexando(self, window):
+        
+        try:
+            #ruta = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
+            #-------------------
+            #B_tree: Es el arbol 
+            B_tree= BTree(6)
+            #Abrimos el archivo seleccionado en forma de lectura
+            file = open(self.direccion, "r+")
+            #Seek: nos ayuda a posicionarnos al incio del archivo
+            file.seek(0)
+            #Realizamos 2 readline() porque esos contienen metadata y asi posicionarnos en los registros 
+            file.readline()
+            file.readline()
+            #3ra linea del archivo siempre es la cantidad de registros guardados 
+            totales = file.readline()
+            #realizamos n cantidad de repeticiones que dependen de la cantidad de registros guardados 
+            for i in range(int(totales)):
+                #temp: Es la variable que toma cada registro 
+                temp = file.readline()
+                #lista_temp: Hacemos una lista de los campos de los registros 
+                lista_temp= temp.split("|")
+                #Es aqui donde insertamos al nuestro arbol b 
+                B_tree.insert(lista_temp[0])
+                #--------------QUITAR COMENTARIO , Solo en caso de querer ver dato por dato ingresado en nuestro arbol
+                #print "Codigo---", lista_temp[0]
+            #print B_tree
+            #Creamos una instancia del objeto FILE
+            FILE = File()
+            #Mandamos a escribir el arbol en un archivo con la extension -> .qls
+            FILE.write_tree(B_tree)
+            
+            
+        except IOError:
+            print "NO SELECCIONO ARCHIVO ALGUNO"
+        
+       
+            
 
     def new_file(self, window):
         name = QtGui.QFileDialog.getSaveFileName(window, 'New File')
