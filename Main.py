@@ -16,6 +16,7 @@ from Type import Type
 from xlsxwriter import Workbook
 from lxml import etree as et
 from file import File
+from crossFiles import Ui_Dialog
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -111,12 +112,13 @@ class Ui_MainWindow(object):
         self.actionXML.triggered.connect(partial(self.exportxml, MainWindow))
         self.actionAdd = QtGui.QAction(MainWindow)
         self.actionAdd.setObjectName(_fromUtf8("actionAdd"))
+        #################3
+        self.actionNew_Structure.triggered.connect(self.PRUEBA)
         self.actionRemove = QtGui.QAction(MainWindow)
         self.actionRemove.setObjectName(_fromUtf8("actionRemove"))
         self.actionNew_File = QtGui.QAction(MainWindow)
         self.actionNew_File.setObjectName(_fromUtf8("actionNew_File"))
-        self.actionNew_File.triggered.connect(
-            partial(self.new_file, MainWindow))
+        self.actionNew_File.triggered.connect(partial(self.new_file, MainWindow))
         self.menuFile.addAction(self.actionNew_File)
         self.menuFile.addAction(self.actionOpen)
         self.menuFile.addAction(self.actionSave)
@@ -162,6 +164,22 @@ class Ui_MainWindow(object):
         self.actionRemove.setText(_translate("MainWindow", "Remove", None))
         self.actionNew_File.setText(_translate("MainWindow", "New File", None))
 
+
+    def PRUEBA(self, window):
+        
+        print "Hello"
+
+        Dialog = QtGui.QDialog()
+        ui = Ui_Dialog()
+        ui.setupUi(Dialog)
+        Dialog.show()
+        Dialog.exec_()
+        """
+        col= self.tableWidget.currentColumn()
+        row = self.tableWidget.currentRow()
+        cadena = self.tableWidget.item(row,col).text()
+        print row
+        """
 #FUNCION QUE REALIZA LA INDEXACION CUANDO SELECCIONA UN ARCHIVO 
     def indexando(self, window):
         
