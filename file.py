@@ -67,7 +67,7 @@ class File(object):
         file.readline()
         file.readline()
         cant= file.readline()
-        #print "FILE 1",cant
+        print "FILE 1",cant
         return int(cant)
 
     def getCantFile2(self):
@@ -75,8 +75,7 @@ class File(object):
         file.readline()
         file.readline()
         cant= file.readline()
-        #print "FILE 2",cant
-        file.close()
+        print "FILE 2",cant
         return int(cant)
 
     def createNewFile(self,tipos, campos, cantidad):
@@ -118,29 +117,54 @@ class File(object):
         lista_temp = []
         temp=[]
 
-            
+        for k in range((self.cant)/2):
+            temp=[]
         
-        for i in range(len(self.indexList1)):
-            
-            cadena = file1.readline()
-            cadena = cadena.split("|")
-            temp.append(cadena[self.indexList1[i]]+"|")
-    
+        
+            for i in range(len(self.indexList1)):
+                
+                cadena = file1.readline()
+                cadena = cadena.split("|")
+                temp.append(cadena[self.indexList1[i]]+"|")
+        
 
-        for i in range(len(self.indexList2)):
-            
-            cadena = file2.readline()
-            cadena = cadena.split("|")
-            temp.append(cadena[self.indexList2[i]]+"|")
-            
-        lista_temp.append(str(temp))
-        print lista_temp
+            for i in range(len(self.indexList2)):
+                
+                cadena = file2.readline()
+                cadena = cadena.split("|")
+                if i==len(self.indexList2)-1:
+                    temp.append(cadena[self.indexList2[i]])
+                else:
+                    temp.append(cadena[self.indexList2[i]]+"|")
+
+                        
+                
+            lista_temp.append(str(temp))
         
+
+        for i in range(len(lista_temp)):
+            print lista_temp[i]+"\n"
+        
+        self.write_Entrys(lista_temp)
 
         file.close()
         file2.close()
         file.close() 
 
+    def write_Entrys(self, registros):
+
+        file = open("mergeFile.qls", "r+")
+
+        file.readline()
+        file.readline()
+        file.readline()
+        
+        
+        for i in range(len(registros)):
+            cadena =  registros[i]
+            cadena = self.remove_chars(["[", "]", "'", ","], cadena)
+            file.write(str(cadena)+"\n")
+        
     
     def write_entry(self):
         print(self.buffer)

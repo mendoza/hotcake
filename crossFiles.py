@@ -102,12 +102,23 @@ class Ui_Dialog(QtGui.QDialog):
         reg_totales = cantFile1+cantFile2
 
     
-        print reg_totales
-        print self.NewFileTipos
-        print self.NewFileCampos 
+        #print reg_totales
+        #print self.NewFileTipos
+        #print self.NewFileCampos
+
+        if cantFile1 == cantFile2:
+            FILE.createNewFile(self.NewFileTipos, self.NewFileCampos, reg_totales)
+            FILE.write_in_newFile(self.indices_lista1, self.indices_lista2)
+        else:
+            msg = QtGui.QMessageBox()
+            msg.setIcon(QtGui.QMessageBox.Information)
+            msg.setText("NO PUEDE FUSIONAR ARCHIVOS DE TAMANOS DIFERENTES!")
+            msg.setWindowTitle("Merge Files")
+            retval = msg.exec_()
+            print "NO PUEDE FUSIONAR ARCHIVOS DE TAMAÑOS DIFERENTES!"
+            
+            
         
-        FILE.createNewFile(self.NewFileTipos, self.NewFileCampos, reg_totales)
-        FILE.write_in_newFile(self.indices_lista1, self.indices_lista2)
 
     def __init__ (self):
         self.ruta1 =""
