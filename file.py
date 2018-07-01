@@ -1,5 +1,6 @@
 import sys
 from Btree import BTree
+from dropdown import dropdown
 
 
 class File(object):
@@ -22,12 +23,48 @@ class File(object):
 
     def write_tree(self, BTree):
         B_tree = BTree
-        sys.stdout = open("Index_Tree.txt", "w+")
-        print (B_tree)
+        print("inicie  :v")
+        with open("Index_Tree.txt", "w+") as f:
+            f.write(str(B_tree))
+        #print (B_tree)
+        print("termine")
 
-    def imprimir(self):
-        print "ASABER PERRO"
+    def getRecords(self):
+        lista_records = []
 
+        with open(self.ruta1, "r+")as file: 
+            lista_tipos = file.readline()
+            lista_tipos = self.remove_chars(["[","]","'","\n"," "],lista_tipos)
+            lista_tipos = lista_tipos.split(",")
+            lista_nombres = file.readline()
+            lista_nombres = self.remove_chars(["[","]","'","\n"," "],lista_nombres)
+            lista_nombres = lista_nombres.split(",")
+            cant = int(file.readline())
+            windo = dropdown(lista_nombres)
+            windo.show()
+            if windo.exec_():
+                valor = windo.reto()
+            
+            indice = int(lista_nombres.index(valor))
+            aux = lista_nombres[0]
+            lista_nombres[0]= lista_nombres[indice]
+            lista_nombres[indice]= aux
+
+            aux = lista_tipos[0]
+            lista_tipos[0]= lista_tipos[indice]
+            lista_tipos[indice]= aux
+            for i in range(cant):
+                cadena = file.readline()
+                cadena = cadena.replace("\n","")
+                cadena = cadena.split("|")
+                aux = cadena[0]
+                cadena[0]= cadena[indice]
+                cadena[indice]= aux
+                lista_records.append(cadena)
+        return lista_records , [lista_tipos,lista_nombres,cant]
+
+            
+        
     def getTypeF1(self):
         file = open(self.ruta1, "r+")
         tipos = file.readline()

@@ -65,7 +65,7 @@
      <x>0</x>
      <y>0</y>
      <width>808</width>
-     <height>23</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -96,8 +96,15 @@
      <addaction name="actionExcel"/>
      <addaction name="actionXML"/>
     </widget>
+    <widget class="QMenu" name="menuIndex">
+     <property name="title">
+      <string>Index</string>
+     </property>
+     <addaction name="actionRe_Index_Files"/>
+    </widget>
     <addaction name="menuExport"/>
     <addaction name="actionMerge_Files"/>
+    <addaction name="menuIndex"/>
    </widget>
    <widget class="QMenu" name="menuFields">
     <property name="title">
@@ -189,6 +196,16 @@
   <action name="actionRemove_fields">
    <property name="text">
     <string>Remove Fields</string>
+   </property>
+  </action>
+  <action name="actionIndex_Files">
+   <property name="text">
+    <string>Index Files</string>
+   </property>
+  </action>
+  <action name="actionRe_Index_Files">
+   <property name="text">
+    <string>Re-Index Files</string>
    </property>
   </action>
  </widget>

@@ -12,7 +12,6 @@ from Node import Node
 from dropdown import dropdown
 from PyQt4 import QtCore, QtGui, uic
 from functools import partial
-import Toolkit
 from Numfields import Numfields
 from Type import Type
 from xlsxwriter import Workbook
@@ -116,6 +115,14 @@ class Ui_MainWindow(QtGui.QMainWindow):
             # B_tree: Es el arbol
             B_tree = BTree(6)
             # Abrimos el archivo seleccionado en forma de lectura
+
+            """
+            name=str(QtGui.QFileDialog.getOpenFileName(self, 'Index File'))
+            #name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
+            self.direccion = str(name)
+            """
+
+            #file = open(name, "r+")
             file = open(self.direccion, "r+")
             # Seek: nos ayuda a posicionarnos al incio del archivo
             file.seek(0)
@@ -134,7 +141,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
                 B_tree.insert(lista_temp[0])
                 # --------------QUITAR COMENTARIO , Solo en caso de querer ver dato por dato ingresado en nuestro arbol
                 #print "Codigo---", lista_temp[0]
-            #print B_tree
+            print B_tree
             # Creamos una instancia del objeto FILE
             FILE = File()
             # Mandamos a escribir el arbol en un archivo con la extension -> .qls
@@ -148,7 +155,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
             retval = msg.exec_()
 
     def save(self):
-        if len(file.buffer) != 0:
+        if len(file.buffer) != 0:   
             file.write_entry()
             msg = QtGui.QMessageBox()
             msg.setIcon(QtGui.QMessageBox.Information)
@@ -335,6 +342,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
             cadena = self.remove_chars(["[", "]", "\'", "\n"], cadena)
             self.lista_tipos = cadena.split(",")
             #######################
+            #################
             cadena = f.readline()
             self.actual += len(cadena)
             cadena = self.remove_chars(["[", "]", "\'", "\n"], cadena)
@@ -346,6 +354,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
             self.tableWidget.setColumnCount(len(self.lista_tipos))
             self.tableWidget.setHorizontalHeaderLabels(self.lista_nombres)
             self.cantidad = int(rows)
+            
             if self.batch >= self.cantidad:
                 self.Previous_button.setVisible(False)
                 self.Next_button.setVisible(False)
@@ -362,10 +371,41 @@ class Ui_MainWindow(QtGui.QMainWindow):
             msg.setWindowTitle("Error")
             retval = msg.exec_()
 
+    def esci(self):
+        msg = QtGui.QMessageBox()
+        msg.setIcon(QtGui.QMessageBox.Information)
+        msg.setText("Goodbye")
+        msg.setWindowTitle("Exit")
+        retval = msg.exec_()
+        sys.exit()
+
+    def reindexar(self):
+        FILE = File(self.direccion)
+        records,metadata = FILE.getRecords()
+        btree = BTree(6)
+        aux = []
+        for record in records:
+            cadena = ""
+            for i in range(len(record)):
+                if i == len(record)-1:
+                    cadena += str(record[i])+"\n"
+                else:
+                    cadena += str(record[i])+"|"
+            btree.insert(cadena)
+
+        with open(self.direccion,"w") as file:
+            for meta in metadata:
+                file.write(str(meta))
+                file.write("\n")
+            for i in btree:
+                file.write(str(i))
+        self.tableWidget.setHorizontalHeaderLabels(metadata[1])        
+        
     def __init__(self):
         QtGui.QMainWindow.__init__(self)
         uic.loadUi("Main.ui", self)
         self.actionOpen.triggered.connect(partial(self.open_File, self))
+        self.actionOpen.triggered.connect(self.indexando)
         self.actionNew_Structure.triggered.connect(partial(self.new_entry))
         self.actionXML.triggered.connect(partial(self.exportxml, self))
         self.actionNew_File.triggered.connect(
@@ -376,10 +416,10 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.actionSave.triggered.connect(self.save)
         self.actionModify_fields.triggered.connect(partial(self.mod_campos))
         self.actionRemove_fields.triggered.connect(partial(self.del_campos))
-
+        self.actionExit.triggered.connect(self.esci)
+        self.actionRe_Index_Files.triggered.connect(self.reindexar)
 
 if __name__ == "__main__":
-    import sys
     app = QtGui.QApplication(sys.argv)
     windo = Ui_MainWindow()
     windo.show()
