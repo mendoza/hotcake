@@ -6,7 +6,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt4 import QtCore, QtGui
+from PyQt4 import QtCore, QtGui,uic
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -22,7 +22,7 @@ except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
 
-class Type(object):
+class Type(QtGui.QDialog):
     def setupUi(self, Dialog):
         Dialog.setObjectName(_fromUtf8("Dialog"))
         Dialog.resize(284, 161)
@@ -73,13 +73,15 @@ class Type(object):
         return str(self.comboBox.currentText())
     def get_name(self):
         return str(self.lineEdit.text())
+    
+    def __init__(self):
+        QtGui.QDialog.__init__(self)
+        uic.loadUi("Type.ui", self)
 
 if __name__ == "__main__":
     import sys
     app = QtGui.QApplication(sys.argv)
-    Dialog = QtGui.QDialog()
-    ui = Type()
-    ui.setupUi(Dialog)
+    Dialog = Type()
     Dialog.show()
     sys.exit(app.exec_())
 

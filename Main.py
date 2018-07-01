@@ -8,7 +8,7 @@
 
 from Btree import BTree
 from Node import Node
-from PyQt4 import QtCore, QtGui
+from PyQt4 import QtCore, QtGui, uic
 from functools import partial
 import Toolkit
 from Numfields import Numfields
@@ -34,191 +34,79 @@ except AttributeError:
         return QtGui.QApplication.translate(context, text, disambig)
 
 
-class Ui_MainWindow(object):
+class Ui_MainWindow(QtGui.QMainWindow):
     actual = 0
     proximo = 0
     stack = []
     direccion = ""
-    batch = 10
+    batch = 20
+    file = None
 
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(808, 600)
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8("Images/database.png")),
-                       QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        MainWindow.setWindowIcon(icon)
-        self.centralwidget = QtGui.QWidget(MainWindow)
-        self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
-        self.gridLayout_2 = QtGui.QGridLayout(self.centralwidget)
-        self.gridLayout_2.setObjectName(_fromUtf8("gridLayout_2"))
-        self.gridLayout = QtGui.QGridLayout()
-        self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
-        self.tableWidget = QtGui.QTableWidget(self.centralwidget)
-        self.tableWidget.setObjectName(_fromUtf8("tableWidget"))
-        self.tableWidget.setColumnCount(0)
-        self.tableWidget.setRowCount(0)
-        self.gridLayout.addWidget(self.tableWidget, 1, 0, 1, 1)
-        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
-        self.horizontalLayout = QtGui.QHBoxLayout()
-        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
-        self.Previous_button = QtGui.QPushButton(self.centralwidget)
-        self.Previous_button.clicked.connect(partial(self.previous_batch))
-        self.Previous_button.setObjectName(_fromUtf8("Previous_button"))
-        self.horizontalLayout.addWidget(self.Previous_button)
-        spacerItem = QtGui.QSpacerItem(
-            40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem)
-        self.Next_button = QtGui.QPushButton(self.centralwidget)
-        self.Next_button.clicked.connect(partial(self.next_batch))
-        self.Next_button.setObjectName(_fromUtf8("Next_button"))
-        self.horizontalLayout.addWidget(self.Next_button)
-        self.gridLayout_2.addLayout(self.horizontalLayout, 1, 0, 1, 1)
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 808, 23))
-        self.menubar.setObjectName(_fromUtf8("menubar"))
-        self.menuFile = QtGui.QMenu(self.menubar)
-        self.menuFile.setObjectName(_fromUtf8("menuFile"))
-        self.menuStructure = QtGui.QMenu(self.menubar)
-        self.menuStructure.setObjectName(_fromUtf8("menuStructure"))
-        self.menuOptions = QtGui.QMenu(self.menubar)
-        self.menuOptions.setObjectName(_fromUtf8("menuOptions"))
-        self.menuExport = QtGui.QMenu(self.menuOptions)
-        self.menuExport.setObjectName(_fromUtf8("menuExport"))
-        MainWindow.setMenuBar(self.menubar)
-        self.actionOpen = QtGui.QAction(MainWindow)
-        self.actionOpen.setObjectName(_fromUtf8("actionOpen"))
-        self.actionOpen.triggered.connect(partial(self.open_File, MainWindow))
-        #############
-        self.actionOpen.triggered.connect(self.indexando)
-        self.actionExit = QtGui.QAction(MainWindow)
-        self.actionExit.setObjectName(_fromUtf8("actionExit"))
-        self.actionSave = QtGui.QAction(MainWindow)
-        self.actionSave.setObjectName(_fromUtf8("actionSave"))
-        self.actionNew_Structure = QtGui.QAction(MainWindow)
-        self.actionNew_Structure.setObjectName(
-            _fromUtf8("actionNew_Structure"))
-        self.actionNew_Structure.triggered.connect(partial(self.new_entry))
-        self.actionEdit_Structure = QtGui.QAction(MainWindow)
-        self.actionEdit_Structure.setObjectName(
-            _fromUtf8("actionEdit_Structure"))
-        self.actionExcel = QtGui.QAction(MainWindow)
-        self.actionExcel.setObjectName(_fromUtf8("actionExcel"))
-        self.actionExcel.triggered.connect(
-            partial(self.exportxlsx, MainWindow))
-        self.actionXML = QtGui.QAction(MainWindow)
-        self.actionXML.setObjectName(_fromUtf8("actionXML"))
-        self.actionXML.triggered.connect(partial(self.exportxml, MainWindow))
-        self.actionAdd = QtGui.QAction(MainWindow)
-        self.actionAdd.setObjectName(_fromUtf8("actionAdd"))
-        #################3
-        self.actionNew_Structure.triggered.connect(self.PRUEBA)
-        self.actionRemove = QtGui.QAction(MainWindow)
-        self.actionRemove.setObjectName(_fromUtf8("actionRemove"))
-        self.actionNew_File = QtGui.QAction(MainWindow)
-        self.actionNew_File.setObjectName(_fromUtf8("actionNew_File"))
-        self.actionNew_File.triggered.connect(partial(self.new_file, MainWindow))
-        self.menuFile.addAction(self.actionNew_File)
-        self.menuFile.addAction(self.actionOpen)
-        self.menuFile.addAction(self.actionSave)
-        self.menuFile.addSeparator()
-        self.menuFile.addAction(self.actionExit)
-        self.menuStructure.addAction(self.actionNew_Structure)
-        self.menuStructure.addAction(self.actionEdit_Structure)
-        self.menuExport.addAction(self.actionExcel)
-        self.menuExport.addAction(self.actionXML)
-        self.menuOptions.addAction(self.menuExport.menuAction())
-        self.menubar.addAction(self.menuFile.menuAction())
-        self.menubar.addAction(self.menuStructure.menuAction())
-        self.menubar.addAction(self.menuOptions.menuAction())
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+    def mod_campos(self):
+        if self.cantidad != 0:
+            msg = QtGui.QMessageBox()
+            msg.setIcon(QtGui.QMessageBox.Information)
+            msg.setText("Ya no puede editar sus campos")
+            msg.setWindowTitle("Error")
+            retval = msg.exec_()
+        else:
+            for i in range(len(self.lista_nombres)):
+                print(self.lista_nombre[i])
+            pass
 
-    def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(_translate("MainWindow", "Entrance", None))
-        self.Previous_button.setText(
-            _translate("MainWindow", "Previous", None))
-        self.Next_button.setText(_translate("MainWindow", "Next", None))
-        self.menuFile.setTitle(_translate("MainWindow", "File", None))
-        self.menuStructure.setTitle(_translate("MainWindow", "Entry", None))
-        self.menuOptions.setTitle(_translate("MainWindow", "Options", None))
-        self.menuExport.setTitle(_translate("MainWindow", "Export ", None))
-        self.actionOpen.setText(_translate("MainWindow", "Open File", None))
-        self.actionOpen.setShortcut(_translate("MainWindow", "Ctrl+O", None))
-        self.actionExit.setText(_translate("MainWindow", "Exit", None))
-        self.actionExit.setShortcut(_translate("MainWindow", "Ctrl+Q", None))
-        self.actionSave.setText(_translate("MainWindow", "Save File", None))
-        self.actionSave.setShortcut(_translate("MainWindow", "Ctrl+S", None))
-        self.actionNew_Structure.setText(
-            _translate("MainWindow", "New Entry", None))
-        self.actionNew_Structure.setShortcut(
-            _translate("MainWindow", "Alt+S", None))
-        self.actionEdit_Structure.setText(
-            _translate("MainWindow", "Remove Entry", None))
-        self.actionEdit_Structure.setShortcut(
-            _translate("MainWindow", "Alt+E", None))
-        self.actionExcel.setText(_translate("MainWindow", "Excel", None))
-        self.actionXML.setText(_translate("MainWindow", "XML", None))
-        self.actionAdd.setText(_translate("MainWindow", "Add", None))
-        self.actionRemove.setText(_translate("MainWindow", "Remove", None))
-        self.actionNew_File.setText(_translate("MainWindow", "New File", None))
-
-
-    def PRUEBA(self, window):
-        
-        print "Hello"
-
+    def merge_files(self, window):
         Dialog = QtGui.QDialog()
         ui = Ui_Dialog()
-        ui.setupUi(Dialog)
-        Dialog.show()
-        Dialog.exec_()
-        """
-        col= self.tableWidget.currentColumn()
-        row = self.tableWidget.currentRow()
-        cadena = self.tableWidget.item(row,col).text()
-        print row
-        """
-#FUNCION QUE REALIZA LA INDEXACION CUANDO SELECCIONA UN ARCHIVO 
+        ui.show()
+        ui.exec_()
+# FUNCION QUE REALIZA LA INDEXACION CUANDO SELECCIONA UN ARCHIVO
+
     def indexando(self, window):
-        
         try:
             #ruta = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
-            #-------------------
-            #B_tree: Es el arbol 
-            B_tree= BTree(6)
-            #Abrimos el archivo seleccionado en forma de lectura
+            # -------------------
+            # B_tree: Es el arbol
+            B_tree = BTree(6)
+            # Abrimos el archivo seleccionado en forma de lectura
             file = open(self.direccion, "r+")
-            #Seek: nos ayuda a posicionarnos al incio del archivo
+            # Seek: nos ayuda a posicionarnos al incio del archivo
             file.seek(0)
-            #Realizamos 2 readline() porque esos contienen metadata y asi posicionarnos en los registros 
+            # Realizamos 2 readline() porque esos contienen metadata y asi posicionarnos en los registros
             file.readline()
             file.readline()
-            #3ra linea del archivo siempre es la cantidad de registros guardados 
+            # 3ra linea del archivo siempre es la cantidad de registros guardados
             totales = file.readline()
-            #realizamos n cantidad de repeticiones que dependen de la cantidad de registros guardados 
+            # realizamos n cantidad de repeticiones que dependen de la cantidad de registros guardados
             for i in range(int(totales)):
-                #temp: Es la variable que toma cada registro 
+                # temp: Es la variable que toma cada registro
                 temp = file.readline()
-                #lista_temp: Hacemos una lista de los campos de los registros 
-                lista_temp= temp.split("|")
-                #Es aqui donde insertamos al nuestro arbol b 
+                # lista_temp: Hacemos una lista de los campos de los registros
+                lista_temp = temp.split("|")
+                # Es aqui donde insertamos al nuestro arbol b
                 B_tree.insert(lista_temp[0])
-                #--------------QUITAR COMENTARIO , Solo en caso de querer ver dato por dato ingresado en nuestro arbol
+                # --------------QUITAR COMENTARIO , Solo en caso de querer ver dato por dato ingresado en nuestro arbol
                 #print "Codigo---", lista_temp[0]
             #print B_tree
-            #Creamos una instancia del objeto FILE
+            # Creamos una instancia del objeto FILE
             FILE = File()
-            #Mandamos a escribir el arbol en un archivo con la extension -> .qls
+            # Mandamos a escribir el arbol en un archivo con la extension -> .qls
             FILE.write_tree(B_tree)
-            
-            
+
         except IOError:
-            print "NO SELECCIONO ARCHIVO ALGUNO"
-        
-       
-            
+            msg = QtGui.QMessageBox()
+            msg.setIcon(QtGui.QMessageBox.Information)
+            msg.setText("NO SELECCIONO ARCHIVO ALGUNO")
+            msg.setWindowTitle("Error")
+            retval = msg.exec_()
+
+    def save(self):
+        if len(file.buffer) != 0:
+            file.write_entry()
+            msg = QtGui.QMessageBox()
+            msg.setIcon(QtGui.QMessageBox.Information)
+            msg.setText("Saving Done")
+            msg.setWindowTitle("Save")
+            retval = msg.exec_()
 
     def new_file(self, window):
         name = QtGui.QFileDialog.getSaveFileName(window, 'New File')
@@ -245,12 +133,18 @@ class Ui_MainWindow(object):
         file.write('\n')
         file.write(str(nombres))
         file.write('\n')
-        file.write('0\n')
+        par = '%' + str(10) + 'd'
+        new_size = (par % 0)
+        file.write(new_size+'\n')
 
     def new_entry(self):
-        if (self.cantidad/self.batch) - 1 == len(self.stack):
-            rowPosition = self.tableWidget.rowCount()
-            self.tableWidget.insertRow(rowPosition)
+        nuevo = []
+        for _ in range(len(self.lista_nombres)):
+            text, ok = QtGui.QInputDialog.getText(
+                self, 'Text Input Dialog', 'Enter your new '+str(self.lista_nombres[_])+':')
+            nuevo.append(str(text))
+        self.cantidad += 1
+        self.file.buffer_add(nuevo)
 
     def calculate_next_byte(self, file, lastbyte, batch):
         total = ""
@@ -264,11 +158,13 @@ class Ui_MainWindow(object):
     """ asigna a la tabla la cantidad dada usandola desde el byte predeterminado en el file """
 
     def set_entries(self, file, cant):
+        self.tableWidget.setRowCount(0)
         self.tableWidget.setRowCount(cant)
         for i in range(cant):
             temp = file.readline()
             temp = self.remove_chars(["\n", " "], temp)
             aux = temp.split("|")
+            print(aux)
             for j in range(self.tableWidget.columnCount()):
                 self.tableWidget.setItem(i, j, QtGui.QTableWidgetItem(aux[j]))
         self.tableWidget.resizeColumnsToContents()
@@ -276,14 +172,13 @@ class Ui_MainWindow(object):
 
     def next_batch(self):
         try:
-            if (self.cantidad/self.batch) - 1 != len(self.stack):
-                with open(self.direccion, "r+") as file:
-                    file.seek(self.actual)
-                    proximo = self.calculate_next_byte(
-                        file, self.actual, self.batch)
-                    self.actual += proximo
-                    self.set_entries(file, self.batch)
-                    self.stack.append(proximo)
+            with open(self.direccion, "r+") as file:
+                file.seek(self.actual)
+                proximo = self.calculate_next_byte(
+                    file, self.actual, self.batch)
+                self.actual += proximo
+                self.stack.append(proximo)
+                self.set_entries(file, self.batch)
         except:
             print("Last One")
     """calcula la anterior ronda de registros, consiguiendo el byte anterior del stack"""
@@ -316,8 +211,7 @@ class Ui_MainWindow(object):
         for i in range(self.cantidad):
             register = et.Element("Register")
             temp = f.readline()
-            temp = temp.replace("\n", "")
-            temp = temp.replace(" ", "")
+            temp = self.remove_chars(["\n", " "], temp)
             aux = temp.split("|")
             for j in range(len(self.lista_nombres)):
                 et.SubElement(register, str(
@@ -351,14 +245,13 @@ class Ui_MainWindow(object):
         self.lista_nombres = cadena.split(",")
         #######################
         bold = workbook.add_format({'bold': True})
-        worksheet.write_row(0, 0, self.lista_nombres,bold)
+        worksheet.write_row(0, 0, self.lista_nombres, bold)
         rows = f.readline()
         rows = self.remove_chars(["\n"], rows)
         self.cantidad = int(rows)
         for i in range(self.cantidad):
             temp = f.readline()
-            temp = temp.replace("\n", "")
-            temp = temp.replace(" ", "")
+            temp = self.remove_chars(["\n", " "], temp)
             aux = temp.split("|")
             for j in range(len(self.lista_nombres)):
                 worksheet.write_string(i + 1, j, aux[j])
@@ -380,42 +273,65 @@ class Ui_MainWindow(object):
         return cadena
 
     def open_File(self, window):
-        self.actual = 0
-        self.proximo = 0
-        name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
-        self.direccion = str(name)
-        f = open(name, "r+")
-        cadena = f.readline()
-        self.actual += len(cadena)
-        cadena = self.remove_chars(["[", "]", "\'", "\n"], cadena)
-        self.lista_tipos = cadena.split(",")
-        #######################
-        cadena = f.readline()
-        self.actual += len(cadena)
-        cadena = self.remove_chars(["[", "]", "\'", "\n"], cadena)
-        self.lista_nombres = cadena.split(",")
-        #######################
-        rows = f.readline()
-        self.actual += len(rows)
-        rows = self.remove_chars(["\n"], rows)
-        self.tableWidget.setColumnCount(len(self.lista_tipos))
-        self.tableWidget.setHorizontalHeaderLabels(self.lista_nombres)
-        self.cantidad = int(rows)
-        if self.batch >= self.cantidad:
-            self.Previous_button.setVisible(False)
-            self.Next_button.setVisible(False)
-        else:
-            self.Previous_button.setVisible(True)
-            self.Next_button.setVisible(True)
-        self.set_entries(f, self.batch)
-        f.close()
+        try:
+            self.actual = 0
+            self.proximo = 0
+            self.stack = []
+            self.direccion = ""
+            self.batch = 20
+            self.file = None
+            name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
+            self.direccion = str(name)
+            f = open(name, "r+")
+            cadena = f.readline()
+            self.actual += len(cadena)
+            cadena = self.remove_chars(["[", "]", "\'", "\n"], cadena)
+            self.lista_tipos = cadena.split(",")
+            #######################
+            cadena = f.readline()
+            self.actual += len(cadena)
+            cadena = self.remove_chars(["[", "]", "\'", "\n"], cadena)
+            self.lista_nombres = cadena.split(",")
+            #######################
+            rows = f.readline()
+            self.actual += len(rows)
+            rows = self.remove_chars(["\n"], rows)
+            self.tableWidget.setColumnCount(len(self.lista_tipos))
+            self.tableWidget.setHorizontalHeaderLabels(self.lista_nombres)
+            self.cantidad = int(rows)
+            if self.batch >= self.cantidad:
+                self.Previous_button.setVisible(False)
+                self.Next_button.setVisible(False)
+            else:
+                self.Previous_button.setVisible(True)
+                self.Next_button.setVisible(True)
+            self.set_entries(f, self.batch)
+            self.file = File(self.direccion)
+            f.close()
+        except IOError:
+            msg = QtGui.QMessageBox()
+            msg.setIcon(QtGui.QMessageBox.Information)
+            msg.setText("NO SELECCIONO ARCHIVO ALGUNO")
+            msg.setWindowTitle("Error")
+            retval = msg.exec_()
+
+    def __init__(self):
+        QtGui.QMainWindow.__init__(self)
+        uic.loadUi("Main.ui", self)
+        self.actionOpen.triggered.connect(partial(self.open_File, self))
+        self.actionNew_Structure.triggered.connect(partial(self.new_entry))
+        self.actionXML.triggered.connect(partial(self.exportxml, self))
+        self.actionNew_File.triggered.connect(
+            partial(self.new_file, self))
+        self.Previous_button.clicked.connect(partial(self.previous_batch))
+        self.Next_button.clicked.connect(partial(self.next_batch))
+        self.actionMerge_Files.triggered.connect(self.merge_files)
+        self.actionSave.triggered.connect(self.save)
 
 
 if __name__ == "__main__":
     import sys
     app = QtGui.QApplication(sys.argv)
-    MainWindow = QtGui.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
+    windo = Ui_MainWindow()
+    windo.show()
     sys.exit(app.exec_())

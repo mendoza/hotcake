@@ -59,26 +59,6 @@
     </rect>
    </property>
   </widget>
-  <widget class="QListView" name="lista1">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>130</y>
-     <width>181</width>
-     <height>161</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QListView" name="lista2">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>130</y>
-     <width>181</width>
-     <height>161</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QPushButton" name="fusion">
    <property name="geometry">
     <rect>
@@ -90,6 +70,26 @@
    </property>
    <property name="text">
     <string>MAKE </string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="lista1">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>191</width>
+     <height>161</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="lista2">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>130</y>
+     <width>191</width>
+     <height>161</height>
+    </rect>
    </property>
   </widget>
  </widget>

@@ -65,7 +65,7 @@
      <x>0</x>
      <y>0</y>
      <width>808</width>
-     <height>23</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -97,6 +97,7 @@
      <addaction name="actionXML"/>
     </widget>
     <addaction name="menuExport"/>
+    <addaction name="actionMerge_Files"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuStructure"/>
@@ -165,6 +166,11 @@
   <action name="actionNew_File">
    <property name="text">
     <string>New File</string>
+   </property>
+  </action>
+  <action name="actionMerge_Files">
+   <property name="text">
+    <string>Merge Files</string>
    </property>
   </action>
  </widget>

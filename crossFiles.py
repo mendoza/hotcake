@@ -6,11 +6,10 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt4 import QtCore, QtGui
+from PyQt4 import QtCore, QtGui,uic
 
 import sys
 from file import File
-from PyQt4.QtGui import *
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -26,76 +25,114 @@ except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
 
-class Ui_Dialog(object):
-    def setupUi(self, Dialog):
-        Dialog.setObjectName(_fromUtf8("Dialog"))
-        Dialog.resize(537, 412)
-        self.select_file_1 = QtGui.QPushButton(Dialog)
-        self.select_file_1.setGeometry(QtCore.QRect(20, 30, 181, 21))
-        self.select_file_1.setObjectName(_fromUtf8("select_file_1"))
-        ###############
-        #self.select_file_1.clicked.connect(self.openDialog)
-        self.select_file_1.clicked.connect(self.File1)
-        self.select_file_2 = QtGui.QPushButton(Dialog)
-        self.select_file_2.setGeometry(QtCore.QRect(320, 30, 181, 21))
-        self.select_file_2.setObjectName(_fromUtf8("select_file_2"))
-        self.combo1 = QtGui.QComboBox(Dialog)
-        self.combo1.setGeometry(QtCore.QRect(20, 80, 181, 27))
-        self.combo1.setObjectName(_fromUtf8("combo1"))
-
-        self.combo2 = QtGui.QComboBox(Dialog)
-        self.combo2.setGeometry(QtCore.QRect(320, 80, 181, 27))
-        self.combo2.setObjectName(_fromUtf8("combo2"))
-        self.lista1 = QtGui.QListView(Dialog)
-        self.lista1.setGeometry(QtCore.QRect(20, 130, 181, 161))
-        self.lista1.setObjectName(_fromUtf8("lista1"))
-        self.lista2 = QtGui.QListView(Dialog)
-        self.lista2.setGeometry(QtCore.QRect(320, 130, 181, 161))
-        self.lista2.setObjectName(_fromUtf8("lista2"))
-        self.fusion = QtGui.QPushButton(Dialog)
-        self.fusion.setGeometry(QtCore.QRect(130, 330, 271, 27))
-        self.fusion.setObjectName(_fromUtf8("fusion"))
-
-        self.retranslateUi(Dialog)
-        QtCore.QMetaObject.connectSlotsByName(Dialog)
+class Ui_Dialog(QtGui.QDialog):
 
     def openDialog(self):
         print "hola"
     
     def File1(self):
-        ruta1= "Nuevo.qls"
-        ruta2= "Nuevo.qls"
-        FILE = File(ruta1,ruta2)
-        tiposF1= FILE.getTypeF1()
+        self.ruta1=str(QtGui.QFileDialog.getOpenFileName(self, 'Open File1'))
+        FILE = File(self.ruta1 ,None)
+        self.tiposFile1= FILE.getTypeF1()
         #tiposF2= FILE.getTypeF2()
-        celdasF1= FILE.getCeldasF1()
+        self.camposFile1= FILE.getCeldasF1()
         #celdasF2= FILE.getCeldasF2()
 
-        self.combo1.addItems(celdasF1)
+        self.combo1.addItems(self.camposFile1)
         #self.combo2.addItems(celdasF2)
         
         self.select_file_1.setEnabled(False)
 
-        self.combo1.activated.connect(self.fillList)
+        self.combo1.activated.connect(self.fillList1)
 
-    def fillList(self):
+    def File2(self):
+        self.ruta2= str(QtGui.QFileDialog.getOpenFileName(self, 'Open File2'))
+        FILE = File(None,self.ruta2)
+        #tiposF1= FILE.getTypeF1()
+        self.tiposFile2= FILE.getTypeF2()
+        #celdasF1= FILE.getCeldasF1()
+        self.camposFile2= FILE.getCeldasF2()
+
+        #self.combo1.addItems(celdasF1)
+        self.combo2.addItems(self.camposFile2)
+        
+        #self.select_file_1.setEnabled(False)
+        self.select_file_2.setEnabled(False)
+
+        self.combo2.activated.connect(self.fillList2)
+        #self.combo1.activated.connect(self.fillList1)
+
+    def fillList1(self):
         text = self.combo1.currentText()
+        self.lista1.addItems([text])
+        self.campos_lista1.append(str(text))
         print text
 
+
+        indice = self.combo1.currentIndex()
+        self.indices_lista1.append(indice)
+
+    def fillList2(self):
+        text = self.combo2.currentText()
+        self.lista2.addItems([text])
+        self.campos_lista2.append(str(text))
+        print text
+
+
+        indice = self.combo2.currentIndex()
+        self.indices_lista2.append(indice)
+
+    def make(self):
+        self.NewFileCampos=self.campos_lista1
+        self.NewFileCampos+=self.campos_lista2
+
+        for i in range(len(self.indices_lista1)):
+            self.NewFileTipos.append(self.tiposFile1[self.indices_lista1[i]])
+    
+        for i in range(len(self.indices_lista2)):
+            self.NewFileTipos.append(self.tiposFile2[self.indices_lista2[i]])
+
+        FILE = File(self.ruta1, self.ruta2)
+
+        cantFile1 = int
+        cantFile2 = int
+        cantFile1= FILE.getCantFile1()
+        cantFile2= FILE.getCantFile2()
+        reg_totales = int
+        reg_totales = cantFile1+cantFile2
+
+    
+        print reg_totales
+        print self.NewFileTipos
+        print self.NewFileCampos 
         
-    def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog", None))
-        self.select_file_1.setText(_translate("Dialog", "Select File", None))
-        self.select_file_2.setText(_translate("Dialog", "Select File", None))
-        self.fusion.setText(_translate("Dialog", "MAKE ", None))
+        FILE.createNewFile(self.NewFileTipos, self.NewFileCampos, reg_totales)
+        FILE.write_in_newFile(self.indices_lista1, self.indices_lista2)
+
+    def __init__ (self):
+        self.ruta1 =""
+        self.ruta2 =""
+        self.NewFileCampos= []
+        self.NewFileTipos=[]
+        self.indices_lista1 = []
+        self.campos_lista1 =[]
+        self.indices_lista2 = []
+        self.campos_lista2 =[]
+        self.tiposFile1 =[]
+        self.tiposFile2 =[]
+        self.camposFile1=[]
+        self.camposFile2=[]
+        QtGui.QDialog.__init__(self)
+        uic.loadUi("crossFiles.ui",self)
+        self.select_file_1.clicked.connect(self.File1)
+        self.select_file_2.clicked.connect(self.File2)
+        self.fusion.clicked.connect(self.make)
 
 
 if __name__ == "__main__":
     import sys
     app = QtGui.QApplication(sys.argv)
-    Dialog = QtGui.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
+    dialog = Ui_Dialog()
+    dialog.show()
     sys.exit(app.exec_())
 
