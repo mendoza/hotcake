@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [' String', ' Int']
 [' Nombre', ' Edad']
       1000
@@ -501,3 +502,8 @@ Deloras| 23
 Rheba| 63
 Richard| 77
 Valarie| 13
+=======
+[' String', ' String', ' String']
+[' Nombre', ' Apellido', ' Email']
+       500
+>>>>>>> master
