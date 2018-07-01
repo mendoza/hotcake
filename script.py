@@ -32,7 +32,7 @@ def generar_alfanumerico(num):
     return lista_alfa
 
         
-with open("Nuevo1.qls", "w") as file:
+with open("Nuevo.qls", "w") as file:
     file.write(str(["String", "String", "String", "Int", "String", "String"])+'\n')
     file.write(str(["ID", "Nombre", "Apellido", "Edad", "Email", "Sexo"])+'\n')
     par = '%' + str(10) + 'd'
