@@ -18,6 +18,7 @@ from xlsxwriter import Workbook
 from lxml import etree as et
 from file import File
 from crossFiles import Ui_Dialog
+from search_table import search_table
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -60,18 +61,21 @@ class Ui_MainWindow(QtGui.QMainWindow):
                 self.ui2.setupUi(self.dialog2)
                 self.dialog2.show()
                 if self.dialog2.exec_():
-                    self.lista_tipos[self.lista_nombres.index(elegido)] = self.ui2.get_types()
-                    self.lista_nombres[self.lista_nombres.index(elegido)] = self.ui2.get_name()
-                with open(self.direccion,'w') as file:
+                    self.lista_tipos[self.lista_nombres.index(
+                        elegido)] = self.ui2.get_types()
+                    self.lista_nombres[self.lista_nombres.index(
+                        elegido)] = self.ui2.get_name()
+                with open(self.direccion, 'w') as file:
                     file.write(str(self.lista_tipos))
                     file.write('\n')
                     file.write(str(self.lista_nombres))
-                    file.write('\n')                    
+                    file.write('\n')
                     par = '%' + str(10) + 'd'
                     new_size = (par % 0)
                     file.write(new_size)
                     file.write('\n')
-                    self.tableWidget.setHorizontalHeaderLabels(self.lista_nombres)
+                    self.tableWidget.setHorizontalHeaderLabels(
+                        self.lista_nombres)
 
     def del_campos(self):
         if self.cantidad != 0:
@@ -89,17 +93,18 @@ class Ui_MainWindow(QtGui.QMainWindow):
                 self.lista_nombres.pop(self.lista_nombres.index(elegido))
                 print(self.lista_nombres)
                 print(self.lista_tipos)
-                with open(self.direccion,'w') as file:
+                with open(self.direccion, 'w') as file:
                     file.write(str(self.lista_tipos))
                     file.write('\n')
                     file.write(str(self.lista_nombres))
-                    file.write('\n')                    
+                    file.write('\n')
                     par = '%' + str(10) + 'd'
                     new_size = (par % 0)
                     file.write(new_size)
                     file.write('\n')
                     self.tableWidget.setColumnCount(len(self.lista_nombres))
-                    self.tableWidget.setHorizontalHeaderLabels(self.lista_nombres)
+                    self.tableWidget.setHorizontalHeaderLabels(
+                        self.lista_nombres)
 
     def merge_files(self, window):
         Dialog = QtGui.QDialog()
@@ -113,11 +118,24 @@ class Ui_MainWindow(QtGui.QMainWindow):
             #ruta = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
             # -------------------
             # B_tree: Es el arbol
-            B_tree = BTree(6)
+            self.B_tree = BTree(6)
             # Abrimos el archivo seleccionado en forma de lectura
 
             """
-            name=str(QtGui.QFileDialog.getOpenFileName(self, 'Index File'))
+            name=str(QtGui.QFileDialog.getOpenFiltry:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)eName(self, 'Index File'))
             #name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
             self.direccion = str(name)
             """
@@ -136,16 +154,15 @@ class Ui_MainWindow(QtGui.QMainWindow):
                 # temp: Es la variable que toma cada registro
                 temp = file.readline()
                 # lista_temp: Hacemos una lista de los campos de los registros
-                lista_temp = temp.split("|")
+                #lista_temp = temp.split("|")
                 # Es aqui donde insertamos al nuestro arbol b
-                B_tree.insert(lista_temp[0])
+                self.B_tree.insert(temp)
                 # --------------QUITAR COMENTARIO , Solo en caso de querer ver dato por dato ingresado en nuestro arbol
                 #print "Codigo---", lista_temp[0]
-            print B_tree
             # Creamos una instancia del objeto FILE
             FILE = File()
             # Mandamos a escribir el arbol en un archivo con la extension -> .qls
-            FILE.write_tree(B_tree)
+            FILE.write_tree(self.B_tree)
 
         except IOError:
             msg = QtGui.QMessageBox()
@@ -155,7 +172,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
             retval = msg.exec_()
 
     def save(self):
-        if len(file.buffer) != 0:   
+        if len(file.buffer) != 0:
             file.write_entry()
             msg = QtGui.QMessageBox()
             msg.setIcon(QtGui.QMessageBox.Information)
@@ -326,7 +343,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
             cadena = cadena.replace(char, "")
         return cadena
 
-    def open_File(self, window,dire=None):
+    def open_File(self, window, dire=None):
         try:
             self.actual = 0
             self.proximo = 0
@@ -354,7 +371,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
             self.tableWidget.setColumnCount(len(self.lista_tipos))
             self.tableWidget.setHorizontalHeaderLabels(self.lista_nombres)
             self.cantidad = int(rows)
-            
+
             if self.batch >= self.cantidad:
                 self.Previous_button.setVisible(False)
                 self.Next_button.setVisible(False)
@@ -381,7 +398,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def reindexar(self):
         FILE = File(self.direccion)
-        records,metadata = FILE.getRecords()
+        records, metadata = FILE.getRecords()
         btree = BTree(6)
         aux = []
         for record in records:
@@ -393,14 +410,29 @@ class Ui_MainWindow(QtGui.QMainWindow):
                     cadena += str(record[i])+"|"
             btree.insert(cadena)
 
-        with open(self.direccion,"w") as file:
+        with open(self.direccion, "w") as file:
             for meta in metadata:
                 file.write(str(meta))
                 file.write("\n")
             for i in btree:
                 file.write(str(i))
-        self.tableWidget.setHorizontalHeaderLabels(metadata[1])        
+        self.tableWidget.setHorizontalHeaderLabels(metadata[1])
+
+    def search(self):
+        text, ok = QtGui.QInputDialog.getText(
+            self, 'Search', 'Enter the primary key of the entry you are searching:')
+        temp = []
+        for registro in self.B_tree:
+            aux = registro.split("|")
+            if aux[0] == text:
+                temp.append(registro)
+        windo = search_table()
+        windo.set_table(temp)
+        windo.show()
+        windo.exec_()
+
         
+
     def __init__(self):
         QtGui.QMainWindow.__init__(self)
         uic.loadUi("Main.ui", self)
@@ -418,6 +450,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.actionRemove_fields.triggered.connect(partial(self.del_campos))
         self.actionExit.triggered.connect(self.esci)
         self.actionRe_Index_Files.triggered.connect(self.reindexar)
+        self.actionSearch.triggered.connect(self.search)
+
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)

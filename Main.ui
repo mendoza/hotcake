@@ -65,7 +65,7 @@
      <x>0</x>
      <y>0</y>
      <width>808</width>
-     <height>25</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -84,6 +84,7 @@
     </property>
     <addaction name="actionNew_Structure"/>
     <addaction name="actionEdit_Structure"/>
+    <addaction name="actionSearch"/>
    </widget>
    <widget class="QMenu" name="menuOptions">
     <property name="title">
@@ -206,6 +207,11 @@
   <action name="actionRe_Index_Files">
    <property name="text">
     <string>Re-Index Files</string>
+   </property>
+  </action>
+  <action name="actionSearch">
+   <property name="text">
+    <string>Search</string>
    </property>
   </action>
  </widget>
