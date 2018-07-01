@@ -6,8 +6,10 @@
 #
 # WARNING! All changes made in this file will be lost!
 
+import sys
 from Btree import BTree
 from Node import Node
+from dropdown import dropdown
 from PyQt4 import QtCore, QtGui, uic
 from functools import partial
 import Toolkit
@@ -50,9 +52,55 @@ class Ui_MainWindow(QtGui.QMainWindow):
             msg.setWindowTitle("Error")
             retval = msg.exec_()
         else:
-            for i in range(len(self.lista_nombres)):
-                print(self.lista_nombre[i])
-            pass
+            windo = dropdown(self.lista_nombres)
+            windo.show()
+            if windo.exec_():
+                elegido = windo.reto()
+                self.dialog2 = QtGui.QDialog()
+                self.ui2 = Type()
+                self.ui2.setupUi(self.dialog2)
+                self.dialog2.show()
+                if self.dialog2.exec_():
+                    self.lista_tipos[self.lista_nombres.index(elegido)] = self.ui2.get_types()
+                    self.lista_nombres[self.lista_nombres.index(elegido)] = self.ui2.get_name()
+                with open(self.direccion,'w') as file:
+                    file.write(str(self.lista_tipos))
+                    file.write('\n')
+                    file.write(str(self.lista_nombres))
+                    file.write('\n')                    
+                    par = '%' + str(10) + 'd'
+                    new_size = (par % 0)
+                    file.write(new_size)
+                    file.write('\n')
+                    self.tableWidget.setHorizontalHeaderLabels(self.lista_nombres)
+
+    def del_campos(self):
+        if self.cantidad != 0:
+            msg = QtGui.QMessageBox()
+            msg.setIcon(QtGui.QMessageBox.Information)
+            msg.setText("Ya no puede editar sus campos")
+            msg.setWindowTitle("Error")
+            retval = msg.exec_()
+        else:
+            windo = dropdown(self.lista_nombres)
+            windo.show()
+            if windo.exec_():
+                elegido = windo.reto()
+                self.lista_tipos.pop(self.lista_nombres.index(elegido))
+                self.lista_nombres.pop(self.lista_nombres.index(elegido))
+                print(self.lista_nombres)
+                print(self.lista_tipos)
+                with open(self.direccion,'w') as file:
+                    file.write(str(self.lista_tipos))
+                    file.write('\n')
+                    file.write(str(self.lista_nombres))
+                    file.write('\n')                    
+                    par = '%' + str(10) + 'd'
+                    new_size = (par % 0)
+                    file.write(new_size)
+                    file.write('\n')
+                    self.tableWidget.setColumnCount(len(self.lista_nombres))
+                    self.tableWidget.setHorizontalHeaderLabels(self.lista_nombres)
 
     def merge_files(self, window):
         Dialog = QtGui.QDialog()
@@ -164,7 +212,6 @@ class Ui_MainWindow(QtGui.QMainWindow):
             temp = file.readline()
             temp = self.remove_chars(["\n", " "], temp)
             aux = temp.split("|")
-            print(aux)
             for j in range(self.tableWidget.columnCount()):
                 self.tableWidget.setItem(i, j, QtGui.QTableWidgetItem(aux[j]))
         self.tableWidget.resizeColumnsToContents()
@@ -272,7 +319,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
             cadena = cadena.replace(char, "")
         return cadena
 
-    def open_File(self, window):
+    def open_File(self, window,dire=None):
         try:
             self.actual = 0
             self.proximo = 0
@@ -327,6 +374,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.Next_button.clicked.connect(partial(self.next_batch))
         self.actionMerge_Files.triggered.connect(self.merge_files)
         self.actionSave.triggered.connect(self.save)
+        self.actionModify_fields.triggered.connect(partial(self.mod_campos))
+        self.actionRemove_fields.triggered.connect(partial(self.del_campos))
 
 
 if __name__ == "__main__":

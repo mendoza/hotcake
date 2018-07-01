@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>database.png</normaloff>database.png</iconset>
+    <normaloff>Images/database.png</normaloff>Images/database.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
@@ -65,7 +65,7 @@
      <x>0</x>
      <y>0</y>
      <width>808</width>
-     <height>25</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -99,8 +99,16 @@
     <addaction name="menuExport"/>
     <addaction name="actionMerge_Files"/>
    </widget>
+   <widget class="QMenu" name="menuFields">
+    <property name="title">
+     <string>Fields</string>
+    </property>
+    <addaction name="actionModify_fields"/>
+    <addaction name="actionRemove_fields"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuStructure"/>
+   <addaction name="menuFields"/>
    <addaction name="menuOptions"/>
   </widget>
   <action name="actionOpen">
@@ -171,6 +179,16 @@
   <action name="actionMerge_Files">
    <property name="text">
     <string>Merge Files</string>
+   </property>
+  </action>
+  <action name="actionModify_fields">
+   <property name="text">
+    <string>Modify Fields</string>
+   </property>
+  </action>
+  <action name="actionRemove_fields">
+   <property name="text">
+    <string>Remove Fields</string>
    </property>
   </action>
  </widget>
