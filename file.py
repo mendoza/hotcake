@@ -135,7 +135,7 @@ class File(object):
         print "-------"
         print self.indexList1
         print self.indexList2
-    
+        
         file = open("mergeFile.qls", "r+")
         file.readline()
         file.readline()
@@ -152,17 +152,19 @@ class File(object):
         file2.readline()
 
         lista_temp = []
-        temp=[]
 
-        for k in range((self.cant)/2):
+        contador = 500
+        acumulador=0
+
+        
+        for k in range(self.cant-10):
             temp=[]
-        
-        
-            for i in range(len(self.indexList1)):
+            for j in range(len(self.indexList1)):
                 
                 cadena = file1.readline()
                 cadena = cadena.split("|")
-                temp.append(cadena[self.indexList1[i]]+"|")
+                print "ESTO---",acumulador, cadena
+                temp.append(cadena[self.indexList1[j]]+"|")
         
 
             for i in range(len(self.indexList2)):
@@ -174,19 +176,22 @@ class File(object):
                 else:
                     temp.append(cadena[self.indexList2[i]]+"|")
 
-                        
-                
             lista_temp.append(str(temp))
-        
+            acumulador+=1
+
+        print "LENGTH", len(lista_temp)
 
         for i in range(len(lista_temp)):
-            print lista_temp[i]+"\n"
-        
+            print(i)
+            print lista_temp[i]
+        print("escribire entry")
         self.write_Entrys(lista_temp)
-
+        print("ya")
         file.close()
         file2.close()
         file.close() 
+        
+    
 
     def write_Entrys(self, registros):
 
@@ -201,7 +206,7 @@ class File(object):
             cadena =  registros[i]
             cadena = self.remove_chars(["[", "]", "'", ","], cadena)
             file.write(str(cadena)+"\n")
-        
+        print "FUCK YA-----------"
     
     def write_entry(self):
         print(self.buffer)

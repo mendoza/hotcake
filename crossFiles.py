@@ -107,8 +107,10 @@ class Ui_Dialog(QtGui.QDialog):
         #print self.NewFileCampos
 
         if cantFile1 == cantFile2:
-            FILE.createNewFile(self.NewFileTipos, self.NewFileCampos, reg_totales)
+            FILE.createNewFile(self.NewFileTipos, self.NewFileCampos, cantFile1)
+            print "presto a llamar"
             FILE.write_in_newFile(self.indices_lista1, self.indices_lista2)
+            print "deberia "
         else:
             msg = QtGui.QMessageBox()
             msg.setIcon(QtGui.QMessageBox.Information)
