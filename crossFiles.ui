@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>CrossFiles</class>
+ <widget class="QDialog" name="CrossFiles">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -25,6 +25,17 @@
    <property name="text">
     <string>Select File</string>
    </property>
+   <property name="icon">
+    <iconset>
+     <selectedon>../Python/Edd2/open-folder.png</selectedon>
+    </iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
   </widget>
   <widget class="QPushButton" name="select_file_2">
    <property name="geometry">
@@ -37,6 +48,10 @@
    </property>
    <property name="text">
     <string>Select File</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Python/Edd2/open-folder.png</normaloff>../Python/Edd2/open-folder.png</iconset>
    </property>
   </widget>
   <widget class="QComboBox" name="combo1">
@@ -70,6 +85,16 @@
    </property>
    <property name="text">
     <string>MAKE </string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Python/Edd2/icon.png</normaloff>../Python/Edd2/icon.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
    </property>
   </widget>
   <widget class="QListWidget" name="lista1">
