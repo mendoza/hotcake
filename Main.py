@@ -87,15 +87,12 @@ class Ui_MainWindow(QtGui.QMainWindow):
             metadata = file.readline()
             metadata = metadata.split("&")
             metadata = metadata[1]
-
-            print metadata
-            
-
             if int(metadata) < 0:
                 print "No hay HEAD"
             elif int(metadata) > 0:
                 self.avail_list.append(int(metadata))
                 self.agregar(metadata)
+
     def agregar(self, lastOne):
         file = open(self.direccion, "r+")
         file.seek(0)
@@ -103,22 +100,19 @@ class Ui_MainWindow(QtGui.QMainWindow):
         for i in range(3):
             file.readline()
 
-        nextOne =""
+        nextOne = ""
         for i in range(int(lastOne)):
             nextOne = file.readline()
-            if nextOne[0]=='*':
-                nextOne= nextOne.split("&")
-                nextOne= nextOne[0]
-                nextOne= nextOne.replace("*","")
-                nextOne= int(nextOne)
+            if nextOne[0] == '*':
+                nextOne = nextOne.split("&")
+                nextOne = nextOne[0]
+                nextOne = nextOne.replace("*", "")
+                nextOne = int(nextOne)
         self.avail_list.append(nextOne)
-        if nextOne!= -1:
+        if nextOne != -1:
             self.agregar(nextOne)
-        
-        file.close()
 
-        print "--------------------->"+str(self.avail_list)
-        print "--------------------->"+str(self.avail_list)
+        file.close()
 
     def del_campos(self):
         if self.cantidad != 0:
@@ -174,7 +168,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
             file.readline()
             # 3ra linea del archivo siempre es la cantidad de registros guardados
             aux = file.readline().split("&")
-            totales,head = aux[0],aux[1]
+            totales, head = aux[0], aux[1]
             # realizamos n cantidad de repeticiones que dependen de la cantidad de registros guardados
             for i in range(int(totales)):
                 # temp: Es la variable que toma cada registro
@@ -184,8 +178,6 @@ class Ui_MainWindow(QtGui.QMainWindow):
                 # Es aqui donde insertamos al nuestro arbol b
                 if '*' not in lista_temp[0]:
                     self.B_tree.insert(temp)
-                else:
-                    print "TENIA ASTERISCO"
                 # --------------QUITAR COMENTARIO , Solo en caso de querer ver dato por dato ingresado en nuestro arbol
                 #print "Codigo---", lista_temp[0]
             # Creamos una instancia del objeto FILE
@@ -201,8 +193,62 @@ class Ui_MainWindow(QtGui.QMainWindow):
             retval = msg.exec_()
 
     def save(self):
-        if len(self.archivo.buffer) != 0:
-            self.archivo.write_entry(buffer)
+        if len(self.buffer) != 0:
+            print("entre")
+            for registro in self.buffer:
+                if len(self.avail_list)-1 == 0:
+                    self.archivo.write_entry([registro])
+                else:
+                    print("entre2")
+                    with open(self.direccion, 'r+') as file:
+                        for offset in self.avail_list:
+                            if offset != -1:
+                                for i in range(offset+3):
+                                    aux = file.readline()
+                                    cade = ""
+                                    for j in range(len(registro)):
+                                        if j == len(registro)-1:
+                                            cade += registro[j]+"\n"
+                                        else:
+                                            cade += registro[j]+"|"
+                                if len(cade) == len(aux):
+                                    file.seek(-len(aux), 1)
+                                    file.write(cade)
+                                    indice = self.avail_list.index(offset)
+                                    anterior = self.avail_list.pop(indice)
+                                    print(indice, anterior)
+                                    print(self.avail_list)
+                                    if indice == 0:
+                                        file.seek(0)
+                                        file.readline()
+                                        file.readline()
+                                        era = file.readline()
+                                        eral = era.split('&')
+                                        par = '%' + str(10) + 'd'
+                                        valueint = int(eral[0])
+                                        valueint += 1
+                                        new_size = (par % valueint)
+                                        valueend = self.avail_list[indice+1]
+                                        new_end = (par % valueend)
+                                        file.seek(-22, 1)
+                                        file.write(new_size+'&'+new_end+"\n")
+                                        break
+                                    else:
+                                        file.seek(0)
+                                        print(self.avail_list)
+                                        for b in range(self.avail_list[indice-1]+3):
+                                            line = file.readline()
+                                        file.seek(-len(line), 1)
+                                        file.write(
+                                            "*"+str(self.avail_list[indice])+"&")
+                                        file.seek(0)
+                                        break
+
+                                    break
+                            else:
+                                self.archivo.write_entry([registro])
+                            file.seek(0)
+
             msg = QtGui.QMessageBox()
             msg.setIcon(QtGui.QMessageBox.Information)
             msg.setText("Saving Done")
@@ -236,9 +282,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
         file.write('\n')
         par = '%' + str(10) + 'd'
         new_size = (par % 0)
-        end = (par%-1)
+        end = (par % -1)
         file.write(new_size+'&'+end+'\n')
-        
 
     def new_entry(self):
         nuevo = []
@@ -247,17 +292,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
                 self, 'New Entry', 'Enter your new '+str(self.lista_nombres[_])+':')
             nuevo.append(str(text))
         self.cantidad += 1
-        if len(self.avail_list)-1 == 0:
-            self.archivo.write_entry([nuevo])
-        else:
-            with open(self.direccion,'r+') as file:
-                for offset in self.avail_list:
-                    if offset != -1:
-                        for i in range(offset+3):
-                            aux = file.readline()
-                        
-                        file.seek(0)
-
+        self.buffer.append(nuevo)
 
     def calculate_next_byte(self, file, lastbyte, batch):
         total = ""
@@ -397,7 +432,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def open_File(self, window, dire=None):
         try:
-            self.avail_list= []
+            self.avail_list = []
             self.actual = 0
             self.proximo = 0
             self.stack = []
@@ -491,7 +526,21 @@ class Ui_MainWindow(QtGui.QMainWindow):
             msg.setText("Theres no entry with that key")
             msg.setWindowTitle("Exit")
             retval = msg.exec_()
-
+    def mod_entry(self):
+        text, ok = QtGui.QInputDialog.getText(
+            self, 'Search', 'Enter the primary key of the entry you are searching:')
+        temp = []
+        for registro in self.B_tree:
+            aux = registro.split("|")
+            if aux[0] == text:
+                temp.append(registro)
+        windo = search_table()
+        if len(temp) != 0:
+            windo.set_table(temp)
+            windo.show()
+            if windo.exec_():
+                selected = windo.selected(temp)
+                
     def remove_entry(self):
         text, ok = QtGui.QInputDialog.getText(
             self, 'Search', 'Enter the primary key of the entry you are searching:')
@@ -508,9 +557,9 @@ class Ui_MainWindow(QtGui.QMainWindow):
             lista = tabla.selected(self.lista_tipos)
         for i in range(len(lista)):
             if i == len(lista)-1:
-                text+=lista[i]+"\n"
+                text += lista[i]+"\n"
             else:
-                text+=lista[i]+"|"
+                text += lista[i]+"|"
         line = 1
         with open(self.direccion, "r+") as file:
             aux = ""
@@ -527,12 +576,12 @@ class Ui_MainWindow(QtGui.QMainWindow):
             file.seek(0)
             for i in range(3):
                 aux = file.readline()
-            auxn,auxend = aux.split('&')[0],aux.split('&')[1]
+            auxn, auxend = aux.split('&')[0], aux.split('&')[1]
 
             file.seek(0)
             for j in range(line+3):
                 text = file.readline()
-            file.seek(-len(text), 1)            
+            file.seek(-len(text), 1)
             file.write("*"+str(int(auxend))+"&")
 
             file.seek(0)
@@ -543,7 +592,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
             par = '%' + str(10) + 'd'
             total = int(auxint)-1
             new_size = (par % total)
-            end = (par%line)
+            end = (par % line)
             file.seek(-22, 1)
             file.write(new_size+"&"+end)
 

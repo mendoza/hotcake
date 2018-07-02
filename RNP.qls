@@ -1,7 +1,7 @@
 ['String', 'String', 'Int', 'String', 'Int', 'Int', 'Int']
 ['No.Idenitdad', 'Nombre', 'CodigoPostal', 'EstadoCivil', 'Hijos', 'Casas', 'Carros']
        995&        15
-*1001&903-40872|Corrine|21301|Viudo(a)|8|2|3
+0801-1999-08200|Corrine|12345|Viudo(a)|1|2|3
 0101-1905-15136|Carla|13201|Soltero(a)|12|7|1
 0101-1908-12040|Buena|21112|Viudo(a)|24|2|6
 0101-1913-34397|Claudette|31301|Comprometido(a)|5|3|3
@@ -10,7 +10,7 @@
 0101-1922-35368|Jeanelle|12101|Casado(a)|3|5|5
 0101-1922-49898|Floretta|52102|Divorciado(a)|13|6|3
 0101-1922-83120|Arlette|52101|Casado(a)|4|3|10
-*1&1-1926-41920|Lakeesha|31101|Divorciado(a)|21|2|9
+*1001&926-41920|Lakeesha|31101|Divorciado(a)|21|2|9
 0101-1927-56884|Deloras|12101|Casado(a)|27|6|9
 0101-1938-89301|Suzan|52101|Soltero(a)|16|5|9
 0101-1941-45393|Hannelore|51201|Viudo(a)|23|1|6
