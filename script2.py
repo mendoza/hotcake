@@ -40,7 +40,8 @@ with open("RNP.qls", "w") as file:
     file.write(str(["No.Idenitdad", "Nombre", "CodigoPostal","EstadoCivil" ,"Hijos", "Casas", "Carros"])+'\n')
     par = '%' + str(10) + 'd'
     new_size = (par % num)
-    file.write(str(new_size)+"\n")
+    total = (par % -1)
+    file.write(str(new_size)+"&"+total+"\n")
     lista_nombres = ["Lakeesha","Yolonda","Robin","Mel","Laveta","Matilde","Augusta","Louella","Cyrstal","Nikki","Nidia","Floretta","Carla","Deloras","Nana","Corrine","Wilford","Richard","Suzan","Stacy","Adrianna","Olimpia","Darren","Latoya","Valarie","Collene","Walter","Arlette","Claudette","Eloisa","Rheba","Sunni","Hae","Hannelore","Roxane","Ela","Harrison","Allene","Malorie","Diane","Normand","Micheline","Rufina","Jeanelle","Adelia","Shirleen","Nestor","Edwina","Buena","Armanda"]
     lista_estadoCivil = ["Soltero(a)", "Casado(a)", "Viudo(a)", "Divorciado(a)","Comprometido(a)"]
     lista_postal = ["31101", "31301", "32101", "32301", "12101", "12111", "41101", "41202", "21101", "21102", "21103", "21104", "21301", "21112", "51101", "51201", "13101", "13201","11101","12101","33101","14101","14201","34101","15101","15201","42101","42201","43101","43201","16101","16201","22101","22114","52101","52102","23101","23201"]

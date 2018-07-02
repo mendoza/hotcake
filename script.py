@@ -32,12 +32,13 @@ def generar_alfanumerico(num):
     return lista_alfa
 
         
-with open("Nuevo.qls", "w") as file:
+with open("Nuevo1.qls", "w") as file:
     file.write(str(["String", "String", "String", "Int", "String", "String"])+'\n')
     file.write(str(["ID", "Nombre", "Apellido", "Edad", "Email", "Sexo"])+'\n')
     par = '%' + str(10) + 'd'
     new_size = (par % num)
-    file.write(str(new_size)+"\n")
+    total = (par % -1)
+    file.write(str(new_size)+"&"+total+"\n")
     lista_nombres = ["Lakeesha","Yolonda","Robin","Mel","Laveta","Matilde","Augusta","Louella","Cyrstal","Nikki","Nidia","Floretta","Carla","Deloras","Nana","Corrine","Wilford","Richard","Suzan","Stacy","Adrianna","Olimpia","Darren","Latoya","Valarie","Collene","Walter","Arlette","Claudette","Eloisa","Rheba","Sunni","Hae","Hannelore","Roxane","Ela","Harrison","Allene","Malorie","Diane","Normand","Micheline","Rufina","Jeanelle","Adelia","Shirleen","Nestor","Edwina","Buena","Armanda"]
     lista_apellidos = ["Robles", "Maldonado", "House", "Dunlap", "Dudley", "Rowe", "Howell", "Phelps", "Mcgrath", "Watkins", "Mitchell", "Davila", "Marshall", "Church", "Henson", "Bright", "Wilson", "Lynn","Cohen","Strickland","Landry","Parker","Adams","Avery","Galvan","Pope","Tate","Ortiz","Rivera","Bailey","Goodwin","Reed","Bond","Mendoza","Morrow","Bradshaw","Page","Hess","Baker","Rodgers","Ritter","Fritz","Vaughan","Mclean","Montgomery","Huynh","Montes","Crawford","Durham","Chase"]
     print("Empieza el ciclo")

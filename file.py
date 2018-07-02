@@ -14,10 +14,6 @@ class File(object):
             cadena = cadena.replace(char, "")
         return cadena
 
-    def buffer_add(self, cos):
-        self.buffer.append(cos)
-        if len(self.buffer) >= 5:
-            self.write_entry()
 
     def write_tree(self, BTree):
         B_tree = BTree
@@ -100,16 +96,19 @@ class File(object):
         file.readline()
         file.readline()
         cant= file.readline()
-        print "FILE 1",cant
-        return int(cant)
+        cant= cant.split("&")
+        #totales,head = aux[0],aux[1]
+        print "FILE 1",cant[0]
+        return int(cant[0])
 
     def getCantFile2(self):
         file = open(self.ruta2, "r+")
         file.readline()
         file.readline()
         cant= file.readline()
-        print "FILE 2",cant
-        return int(cant)
+        cant = cant.split("&")
+        print "FILE 2",cant[0]
+        return int(cant[0])
 
     def createNewFile(self,tipos, campos, cantidad):
         self.tipos= tipos
@@ -121,7 +120,8 @@ class File(object):
         file.write(str(self.campos)+"\n")
         par = '%' + str(10) + 'd'
         new_size = (par % self.cant)
-        file.write(str(new_size)+"\n")
+    
+        file.write(str(new_size)+"&"+str(000000-1)+"\n")
         file.close()
 
     def write_in_newFile(self, indexList1, indexList2):
@@ -149,31 +149,27 @@ class File(object):
 
         lista_temp = []
 
-        contador = 500
-        acumulador=0
 
-        
-        for k in range(self.cant-10):
+        print("este es cant" +str(self.cant))
+        for k in range(self.cant):
             temp=[]
+            #print(k)
+            cadena1 = file1.readline()
+            cadena1 = cadena1.split("|")
+            cadena2 = file2.readline()
+            cadena2 = cadena2.split("|")
             for j in range(len(self.indexList1)):
-                
-                cadena = file1.readline()
-                cadena = cadena.split("|")
-                print "ESTO---",acumulador, cadena
-                temp.append(cadena[self.indexList1[j]]+"|")
-        
+                #print(str(cadena)+"--------------------i")
+                temp.append(cadena1[self.indexList1[j]]+"|")
 
+            print(len(self.indexList2))
             for i in range(len(self.indexList2)):
-                
-                cadena = file2.readline()
-                cadena = cadena.split("|")
+                #print(str(cadena)+"--------------------j")
                 if i==len(self.indexList2)-1:
-                    temp.append(cadena[self.indexList2[i]])
+                    temp.append(cadena2[self.indexList2[i]])
                 else:
-                    temp.append(cadena[self.indexList2[i]]+"|")
-
+                    temp.append(cadena2[self.indexList2[i]]+"|")
             lista_temp.append(str(temp))
-            acumulador+=1
 
         print "LENGTH", len(lista_temp)
 
@@ -204,8 +200,8 @@ class File(object):
             file.write(str(cadena)+"\n")
         print "FUCK YA-----------"
     
-    def write_entry(self):
-        print(self.buffer)
+    def write_entry(self,buffer):
+        self.buffer = buffer
         for registro in self.buffer:
             with open(self.ruta1, "a+") as file:
                 cadena = ""
@@ -219,10 +215,10 @@ class File(object):
             aux = ""
             for i in range(3):
                 aux = file.readline()
-            aux = int(aux)
             par = '%' + str(10) + 'd'
-            total = int(aux)+len(self.buffer)
+            total = int(aux.split("&")[0])+len(self.buffer)
             new_size = (par % total)
-            file.seek(-11, 1)
-            file.write(new_size)
+            end = (par%int(aux.split("&")[1]))
+            file.seek(-22, 1)
+            file.write(new_size+"&"+end+"\n")
         self.buffer = []
