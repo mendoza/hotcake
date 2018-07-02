@@ -81,25 +81,26 @@ class Ui_MainWindow(QtGui.QMainWindow):
                         self.lista_nombres)
 
     def getAvailList(self):
-        with open(self.direccion, "r+") as file:
-            file.readline()
-            file.readline()
-            metadata = file.readline()
-            metadata = metadata.split("&")
-            metadata = metadata[1]
-            if int(metadata) < 0:
-                print "No hay HEAD"
-            elif int(metadata) > 0:
-                self.avail_list.append(int(metadata))
-                self.agregar(metadata)
+        try:
+            with open(self.direccion, "r+") as file:
+                file.readline()
+                file.readline()
+                metadata = file.readline()
+                metadata = metadata.split("&")
+                metadata = metadata[1]
+                if int(metadata) < 0:
+                    print "No hay HEAD"
+                elif int(metadata) > 0:
+                    self.avail_list.append(int(metadata))
+                    self.agregar(metadata)
+        except:
+            pass
 
     def agregar(self, lastOne):
         file = open(self.direccion, "r+")
         file.seek(0)
-
         for i in range(3):
             file.readline()
-
         nextOne = ""
         for i in range(int(lastOne)):
             nextOne = file.readline()
@@ -128,8 +129,6 @@ class Ui_MainWindow(QtGui.QMainWindow):
                 elegido = windo.reto()
                 self.lista_tipos.pop(self.lista_nombres.index(elegido))
                 self.lista_nombres.pop(self.lista_nombres.index(elegido))
-                print(self.lista_nombres)
-                print(self.lista_tipos)
                 with open(self.direccion, 'w') as file:
                     file.write(str(self.lista_tipos))
                     file.write('\n')
@@ -186,11 +185,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
             FILE.write_tree(self.B_tree)
 
         except IOError:
-            msg = QtGui.QMessageBox()
-            msg.setIcon(QtGui.QMessageBox.Information)
-            msg.setText("NO SELECCIONO ARCHIVO ALGUNO")
-            msg.setWindowTitle("Error")
-            retval = msg.exec_()
+            pass
 
     def save(self):
         if len(self.buffer) != 0:
@@ -215,9 +210,6 @@ class Ui_MainWindow(QtGui.QMainWindow):
                                     file.seek(-len(aux), 1)
                                     file.write(cade)
                                     indice = self.avail_list.index(offset)
-                                    anterior = self.avail_list.pop(indice)
-                                    print(indice, anterior)
-                                    print(self.avail_list)
                                     if indice == 0:
                                         file.seek(0)
                                         file.readline()
@@ -235,7 +227,6 @@ class Ui_MainWindow(QtGui.QMainWindow):
                                         break
                                     else:
                                         file.seek(0)
-                                        print(self.avail_list)
                                         for b in range(self.avail_list[indice-1]+3):
                                             line = file.readline()
                                         file.seek(-len(line), 1)
@@ -309,7 +300,6 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.tableWidget.setRowCount(0)
         self.tableWidget.setRowCount(cant)
         n = 0
-        lastn = 0
         for i in range(cant):
             temp = file.readline()
             temp = self.remove_chars(["\n", " "], temp)
@@ -526,6 +516,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
             msg.setText("Theres no entry with that key")
             msg.setWindowTitle("Exit")
             retval = msg.exec_()
+
     def mod_entry(self):
         text, ok = QtGui.QInputDialog.getText(
             self, 'Search', 'Enter the primary key of the entry you are searching:')
@@ -534,13 +525,67 @@ class Ui_MainWindow(QtGui.QMainWindow):
             aux = registro.split("|")
             if aux[0] == text:
                 temp.append(registro)
-        windo = search_table()
-        if len(temp) != 0:
-            windo.set_table(temp)
-            windo.show()
-            if windo.exec_():
-                selected = windo.selected(temp)
-                
+        tabla = search_table()
+        tabla.set_table(temp)
+        tabla.show()
+        if tabla.exec_():
+            lista = tabla.selected(self.lista_tipos)
+        resultados = []
+        for _ in range(len(self.lista_nombres)):
+            text, ok = QtGui.QInputDialog.getText(
+                self, 'New Entry', 'Enter your new '+str(self.lista_nombres[_])+':')
+            resultados.append(str(text))
+        for i in range(len(lista)):
+            if resultados[i] == "":
+                resultados[i] = lista[i]
+        cadena = ""
+        for j in range(len(lista)):
+            if j == len(lista)-1:
+                cadena += lista[j]+"\n"
+            else:
+                cadena += lista[j]+"|"
+        
+        cadena1 = ""
+        for j in range(len(resultados)):
+            if j == len(resultados)-1:
+                cadena1 += resultados[j]+"\n"
+            else:
+                cadena1 += resultados[j]+"|"
+        self.buffer.append(resultados)
+        line = 1
+        with open(self.direccion, "r+") as file:
+            aux = ""
+            file.readline()
+            file.readline()
+            file.readline()
+            self.B_tree.insert(cadena)
+            for value in self.B_tree:
+                valor = file.readline()
+                if  valor != cadena:
+                    line += 1
+                else:
+                    break
+            file.seek(0)
+            for i in range(3):
+                aux = file.readline()
+            auxn, auxend = aux.split('&')[0], aux.split('&')[1]
+            file.seek(0)
+            for j in range(line+3):
+                text = file.readline()
+            file.seek(-len(text), 1)
+            file.write("*"+str(int(auxend))+"&")
+            file.seek(0)
+            aux = ""
+            for i in range(3):
+                aux = file.readline()
+            auxint = int(auxn)
+            par = '%' + str(10) + 'd'
+            total = int(auxint)
+            new_size = (par % total)
+            end = (par % line)
+            file.seek(-22, 1)
+            file.write(new_size+"&"+end)
+
     def remove_entry(self):
         text, ok = QtGui.QInputDialog.getText(
             self, 'Search', 'Enter the primary key of the entry you are searching:')
@@ -572,7 +617,6 @@ class Ui_MainWindow(QtGui.QMainWindow):
                     line += 1
                 else:
                     break
-            print(line)
             file.seek(0)
             for i in range(3):
                 aux = file.readline()
@@ -618,6 +662,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.bSearch.clicked.connect(self.search)
         self.bRemoveEntry.clicked.connect(self.remove_entry)
         self.bOpenFile.clicked.connect(self.getAvailList)
+        self.actionOpen.triggered.connect(self.mod_entry)
 
 
 if __name__ == "__main__":

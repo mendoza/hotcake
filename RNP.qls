@@ -1,7 +1,7 @@
 ['String', 'String', 'Int', 'String', 'Int', 'Int', 'Int']
 ['No.Idenitdad', 'Nombre', 'CodigoPostal', 'EstadoCivil', 'Hijos', 'Casas', 'Carros']
-       995&        15
-0801-1999-08200|Corrine|12345|Viudo(a)|1|2|3
+       995&         1
+*15&-1999-08200|Corrine|12345|Viudo(a)|1|2|3
 0101-1905-15136|Carla|13201|Soltero(a)|12|7|1
 0101-1908-12040|Buena|21112|Viudo(a)|24|2|6
 0101-1913-34397|Claudette|31301|Comprometido(a)|5|3|3
