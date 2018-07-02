@@ -39,7 +39,7 @@ with open("PersonFile.qls", "w") as file:
     new_size = (par % num)
     total = (par % -1)
     file.write(str(new_size)+"&"+total+"\n")
-    lista_city=["Tokio","Nueva York", "Armanda",]
+    lista_city=["Tokio","Nueva York","Armanda","Jerusalen","Kiev","Estambul","Helsinki","Atenas","Budapest","Berlin","Copenhague","Roma","Oslo"]
     lista_nombres = ["Lakeesha","Yolonda","Robin","Mel","Laveta","Matilde","Augusta","Louella","Cyrstal","Nikki","Nidia","Floretta","Carla","Deloras","Nana","Corrine","Wilford","Richard","Suzan","Stacy","Adrianna","Olimpia","Darren","Latoya","Valarie","Collene","Walter","Arlette","Claudette","Eloisa","Rheba","Sunni","Hae","Hannelore","Roxane","Ela","Harrison","Allene","Malorie","Diane","Normand","Micheline","Rufina","Jeanelle","Adelia","Shirleen","Nestor","Edwina","Buena","Armanda"]
     lista_apellidos = ["Robles", "Maldonado", "House", "Dunlap", "Dudley", "Rowe", "Howell", "Phelps", "Mcgrath", "Watkins", "Mitchell", "Davila", "Marshall", "Church", "Henson", "Bright", "Wilson", "Lynn","Cohen","Strickland","Landry","Parker","Adams","Avery","Galvan","Pope","Tate","Ortiz","Rivera","Bailey","Goodwin","Reed","Bond","Mendoza","Morrow","Bradshaw","Page","Hess","Baker","Rodgers","Ritter","Fritz","Vaughan","Mclean","Montgomery","Huynh","Montes","Crawford","Durham","Chase"]
     print("Empieza el ciclo")
