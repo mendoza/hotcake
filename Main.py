@@ -662,7 +662,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.bSearch.clicked.connect(self.search)
         self.bRemoveEntry.clicked.connect(self.remove_entry)
         self.bOpenFile.clicked.connect(self.getAvailList)
-        self.actionOpen.triggered.connect(self.mod_entry)
+        self.bModifyEntry.clicked.connect(self.mod_entry)
 
 
 if __name__ == "__main__":

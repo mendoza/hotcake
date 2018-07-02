@@ -18,593 +18,479 @@
     <normaloff>Images/database.png</normaloff>Images/database.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="bNewFile">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>KacstPen</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>NEW FILE</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>Images/open-add-folder.png</normaloff>Images/open-add-folder.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>28</width>
-      <height>28</height>
-     </size>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bNewFile_2">
-    <property name="geometry">
-     <rect>
-      <x>590</x>
-      <y>560</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bOpenFile">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>40</y>
-      <width>151</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>KacstPen</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>OPEN FILE</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>Images/open-folder.png</normaloff>Images/open-folder.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>28</width>
-      <height>28</height>
-     </size>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bSave">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>80</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>KacstPen</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>SAVE</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>Images/save.png</normaloff>Images/save.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>28</width>
-      <height>28</height>
-     </size>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bExit">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>540</y>
-      <width>131</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>KacstPen</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>EXIT</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>Images/emergency-exit (1).png</normaloff>Images/emergency-exit (1).png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>34</width>
-      <height>34</height>
-     </size>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QTableWidget" name="tableWidget">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>0</y>
-      <width>621</width>
-      <height>541</height>
-     </rect>
-    </property>
-    <property name="editTriggers">
-     <set>QAbstractItemView::NoEditTriggers</set>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="Next_button">
-    <property name="geometry">
-     <rect>
-      <x>700</x>
-      <y>550</y>
-      <width>101</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Nimbus Mono L</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Next</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>Images/3d-forward-arrow.png</normaloff>Images/3d-forward-arrow.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>24</width>
-      <height>24</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="Previous_button">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>550</y>
-      <width>111</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Nimbus Mono L</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Previous</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>Images/left-arrow-sketch.png</normaloff>Images/left-arrow-sketch.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>24</width>
-      <height>24</height>
-     </size>
-    </property>
-    <property name="autoDefault">
-     <bool>false</bool>
-    </property>
-    <property name="default">
-     <bool>false</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bNewEntry">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>130</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>KacstPen</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>NEW ENTRY</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>Images/round-add-button.png</normaloff>Images/round-add-button.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>24</width>
-      <height>24</height>
-     </size>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bRemoveEntry">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>160</y>
-      <width>151</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>KacstPen</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>REMOVE ENTRY</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>Images/round-remove-button.png</normaloff>Images/round-remove-button.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>24</width>
-      <height>24</height>
-     </size>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bSearch">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>200</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>KacstOne</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>SEARCH </string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>Images/musica-searcher.png</normaloff>Images/musica-searcher.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>24</width>
-      <height>24</height>
-     </size>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bModifyField">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>260</y>
-      <width>151</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>KacstPen</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>MODIFY FIELD</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>Images/edit.png</normaloff>Images/edit.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>24</width>
-      <height>24</height>
-     </size>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bRemoveField">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>290</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>KacstPen</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>REMOVE FIELD</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>Images/rubbish.png</normaloff>Images/rubbish.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>24</width>
-      <height>24</height>
-     </size>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bExportExcel">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>430</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>KacstPen</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>EXPORT TO EXCEL</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>Images/excel.png</normaloff>Images/excel.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>24</width>
-      <height>24</height>
-     </size>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bExportXml">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>470</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>KacstPen</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>EXPORT TO XML</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>Images/xml.png</normaloff>Images/xml.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>24</width>
-      <height>24</height>
-     </size>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bMergeFiles">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>390</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>KacstPen</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>MERGE FILES</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>Images/archive.png</normaloff>Images/archive.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>24</width>
-      <height>24</height>
-     </size>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bReIndexBtree">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>350</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>KacstPen</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>RE-INDEX B-TREE</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>Images/algorithm.png</normaloff>Images/algorithm.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>24</width>
-      <height>24</height>
-     </size>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>826</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuFile">
-    <property name="title">
-     <string>File</string>
-    </property>
-    <addaction name="actionNew_File"/>
-    <addaction name="actionOpen"/>
-    <addaction name="actionSave"/>
-    <addaction name="separator"/>
-    <addaction name="actionExit"/>
-   </widget>
-   <widget class="QMenu" name="menuStructure">
-    <property name="title">
-     <string>Entry</string>
-    </property>
-    <addaction name="actionNew_Structure"/>
-    <addaction name="actionEdit_Structure"/>
-    <addaction name="actionSearch"/>
-   </widget>
-   <widget class="QMenu" name="menuOptions">
-    <property name="title">
-     <string>Options</string>
-    </property>
-    <widget class="QMenu" name="menuExport">
-     <property name="title">
-      <string>Export </string>
-     </property>
-     <addaction name="actionExcel"/>
-     <addaction name="actionXML"/>
-    </widget>
-    <widget class="QMenu" name="menuIndex">
-     <property name="title">
-      <string>Index</string>
-     </property>
-     <addaction name="actionRe_Index_Files"/>
-    </widget>
-    <addaction name="menuExport"/>
-    <addaction name="actionMerge_Files"/>
-    <addaction name="menuIndex"/>
-   </widget>
-   <widget class="QMenu" name="menuFields">
-    <property name="title">
-     <string>Fields</string>
-    </property>
-    <addaction name="actionModify_fields"/>
-    <addaction name="actionRemove_fields"/>
-   </widget>
-   <addaction name="menuFile"/>
-   <addaction name="menuStructure"/>
-   <addaction name="menuFields"/>
-   <addaction name="menuOptions"/>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="bNewFile">
+        <property name="font">
+         <font>
+          <family>KacstPen</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>NEW FILE</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/open-add-folder.png</normaloff>Images/open-add-folder.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>28</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bOpenFile">
+        <property name="font">
+         <font>
+          <family>KacstPen</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>OPEN FILE</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/open-folder.png</normaloff>Images/open-folder.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>28</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bSave">
+        <property name="font">
+         <font>
+          <family>KacstPen</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>SAVE</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/save.png</normaloff>Images/save.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>28</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bNewEntry">
+        <property name="font">
+         <font>
+          <family>KacstPen</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>NEW ENTRY</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/round-add-button.png</normaloff>Images/round-add-button.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bRemoveEntry">
+        <property name="font">
+         <font>
+          <family>KacstPen</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>REMOVE ENTRY</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/round-remove-button.png</normaloff>Images/round-remove-button.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bModifyEntry">
+        <property name="font">
+         <font>
+          <family>KacstPen</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>MODIFY ENTRY</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/edit.png</normaloff>Images/edit.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bSearch">
+        <property name="font">
+         <font>
+          <family>KacstOne</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>SEARCH </string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/musica-searcher.png</normaloff>Images/musica-searcher.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bModifyField">
+        <property name="font">
+         <font>
+          <family>KacstPen</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>MODIFY FIELD</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/edit.png</normaloff>Images/edit.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bRemoveField">
+        <property name="font">
+         <font>
+          <family>KacstPen</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>REMOVE FIELD</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/rubbish.png</normaloff>Images/rubbish.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bReIndexBtree">
+        <property name="font">
+         <font>
+          <family>KacstPen</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>RE-INDEX B-TREE</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/algorithm.png</normaloff>Images/algorithm.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bMergeFiles">
+        <property name="font">
+         <font>
+          <family>KacstPen</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>MERGE FILES</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/archive.png</normaloff>Images/archive.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bExportExcel">
+        <property name="font">
+         <font>
+          <family>KacstPen</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>EXPORT TO EXCEL</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/excel.png</normaloff>Images/excel.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bExportXml">
+        <property name="font">
+         <font>
+          <family>KacstPen</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>EXPORT TO XML</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/xml.png</normaloff>Images/xml.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bExit">
+        <property name="font">
+         <font>
+          <family>KacstPen</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>EXIT</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/emergency-exit (1).png</normaloff>Images/emergency-exit (1).png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>34</width>
+          <height>34</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QTableWidget" name="tableWidget">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPushButton" name="Previous_button">
+          <property name="font">
+           <font>
+            <family>Nimbus Mono L</family>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Previous</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>Images/left-arrow-sketch.png</normaloff>Images/left-arrow-sketch.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>24</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="default">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="Next_button">
+          <property name="font">
+           <font>
+            <family>Nimbus Mono L</family>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Next</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>Images/3d-forward-arrow.png</normaloff>Images/3d-forward-arrow.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>24</width>
+            <height>24</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <action name="actionOpen">
    <property name="text">
