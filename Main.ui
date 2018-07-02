@@ -88,7 +88,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../Python/Edd2/open-folder.png</normaloff>../Python/Edd2/open-folder.png</iconset>
+      <normaloff>Images/open-folder.png</normaloff>Images/open-folder.png</iconset>
     </property>
     <property name="iconSize">
      <size>
