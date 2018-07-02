@@ -21,7 +21,7 @@
    <widget class="QPushButton" name="bNewFile">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>10</y>
       <width>151</width>
       <height>31</height>
@@ -70,7 +70,7 @@
    <widget class="QPushButton" name="bOpenFile">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>30</x>
       <y>40</y>
       <width>151</width>
       <height>41</height>
@@ -103,7 +103,7 @@
    <widget class="QPushButton" name="bSave">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>80</y>
       <width>151</width>
       <height>31</height>
@@ -136,7 +136,7 @@
    <widget class="QPushButton" name="bExit">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>540</y>
       <width>131</width>
       <height>41</height>
@@ -172,7 +172,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>0</y>
       <width>621</width>
       <height>541</height>
@@ -185,8 +185,8 @@
    <widget class="QPushButton" name="Next_button">
     <property name="geometry">
      <rect>
-      <x>690</x>
-      <y>556</y>
+      <x>700</x>
+      <y>550</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -215,8 +215,8 @@
    <widget class="QPushButton" name="Previous_button">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>556</y>
+      <x>180</x>
+      <y>550</y>
       <width>111</width>
       <height>31</height>
      </rect>
@@ -251,7 +251,7 @@
    <widget class="QPushButton" name="bNewEntry">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>30</x>
       <y>130</y>
       <width>151</width>
       <height>31</height>
@@ -284,7 +284,7 @@
    <widget class="QPushButton" name="bRemoveEntry">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>160</y>
       <width>151</width>
       <height>41</height>
@@ -317,7 +317,7 @@
    <widget class="QPushButton" name="bSearch">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>30</x>
       <y>200</y>
       <width>151</width>
       <height>31</height>
@@ -350,7 +350,7 @@
    <widget class="QPushButton" name="bModifyField">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>30</x>
       <y>260</y>
       <width>151</width>
       <height>27</height>
@@ -383,7 +383,7 @@
    <widget class="QPushButton" name="bRemoveField">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>290</y>
       <width>151</width>
       <height>31</height>
@@ -416,7 +416,7 @@
    <widget class="QPushButton" name="bExportExcel">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>30</x>
       <y>430</y>
       <width>151</width>
       <height>31</height>
@@ -449,7 +449,7 @@
    <widget class="QPushButton" name="bExportXml">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>470</y>
       <width>151</width>
       <height>31</height>
@@ -482,7 +482,7 @@
    <widget class="QPushButton" name="bMergeFiles">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>30</x>
       <y>390</y>
       <width>151</width>
       <height>31</height>
@@ -515,7 +515,7 @@
    <widget class="QPushButton" name="bReIndexBtree">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>30</x>
       <y>350</y>
       <width>151</width>
       <height>31</height>
