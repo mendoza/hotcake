@@ -10,6 +10,12 @@ class search_table(QtGui.QDialog):
             cadena = cadena.replace(char, "")
         return cadena
 
+    def selected(self,lista):
+        liste = []
+        for i in range(len(lista)):
+            liste.append(str(self.tableWidget.item(self.tableWidget.currentRow(), i).text()))
+        return liste
+
     def set_table(self,lista):
         self.tableWidget.setRowCount(0)
         self.tableWidget.setRowCount(len(lista))

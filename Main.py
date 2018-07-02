@@ -120,26 +120,6 @@ class Ui_MainWindow(QtGui.QMainWindow):
             # B_tree: Es el arbol
             self.B_tree = BTree(6)
             # Abrimos el archivo seleccionado en forma de lectura
-
-            """
-            name=str(QtGui.QFileDialog.getOpenFiltry:
-    _fromUtf8 = QtCore.QString.fromUtf8
-except AttributeError:
-    def _fromUtf8(s):
-        return s
-
-try:
-    _encoding = QtGui.QApplication.UnicodeUTF8
-
-    def _translate(context, text, disambig):
-        return QtGui.QApplication.translate(context, text, disambig, _encoding)
-except AttributeError:
-    def _translate(context, text, disambig):
-        return QtGui.QApplication.translate(context, text, disambig)eName(self, 'Index File'))
-            #name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
-            self.direccion = str(name)
-            """
-
             #file = open(name, "r+")
             file = open(self.direccion, "r+")
             # Seek: nos ayuda a posicionarnos al incio del archivo
@@ -154,9 +134,12 @@ except AttributeError:
                 # temp: Es la variable que toma cada registro
                 temp = file.readline()
                 # lista_temp: Hacemos una lista de los campos de los registros
-                #lista_temp = temp.split("|")
+                lista_temp = temp.split("|")
                 # Es aqui donde insertamos al nuestro arbol b
-                self.B_tree.insert(temp)
+                if '*' not in lista_temp[0]:
+                    self.B_tree.insert(temp)
+                else:
+                    print "TENIA ASTERISCO"
                 # --------------QUITAR COMENTARIO , Solo en caso de querer ver dato por dato ingresado en nuestro arbol
                 #print "Codigo---", lista_temp[0]
             # Creamos una instancia del objeto FILE
@@ -232,12 +215,17 @@ except AttributeError:
     def set_entries(self, file, cant):
         self.tableWidget.setRowCount(0)
         self.tableWidget.setRowCount(cant)
+        n=0
+        lastn = 0
         for i in range(cant):
             temp = file.readline()
             temp = self.remove_chars(["\n", " "], temp)
             aux = temp.split("|")
+            if '*' in aux[0]:
+                n+=1
             for j in range(self.tableWidget.columnCount()):
-                self.tableWidget.setItem(i, j, QtGui.QTableWidgetItem(aux[j]))
+                if '*' not in aux[0]:
+                    self.tableWidget.setItem(i-n, j, QtGui.QTableWidgetItem(aux[j]))
         self.tableWidget.resizeColumnsToContents()
     """calcula la siguiente ronda de registros, junto con el byte que se agrega al stack"""
 
@@ -263,7 +251,7 @@ except AttributeError:
                 file.seek(self.actual)
                 self.set_entries(file, self.batch)
         except:
-            print("First One")
+            print("first one")
 
     def exportxml(self, window):
         f = open(self.direccion, "r+")
@@ -372,10 +360,10 @@ except AttributeError:
             self.tableWidget.setColumnCount(len(self.lista_tipos))
             self.tableWidget.setHorizontalHeaderLabels(self.lista_nombres)
             self.cantidad = int(rows)
-
             if self.batch >= self.cantidad:
                 self.Previous_button.setVisible(False)
                 self.Next_button.setVisible(False)
+                self.batch = self.cantidad
             else:
                 self.Previous_button.setVisible(True)
                 self.Next_button.setVisible(True)
@@ -428,11 +416,40 @@ except AttributeError:
             if aux[0] == text:
                 temp.append(registro)
         windo = search_table()
-        windo.set_table(temp)
-        windo.show()
-        windo.exec_()
+        if len(temp) != 0:
+            windo.set_table(temp)
+            windo.show()
+            windo.exec_()
+        else:
+            msg = QtGui.QMessageBox()
+            msg.setIcon(QtGui.QMessageBox.Information)
+            msg.setText("Theres no entry with that key")
+            msg.setWindowTitle("Exit")
+            retval = msg.exec_()
 
         
+    def remove_entry(self):
+        text, ok = QtGui.QInputDialog.getText(
+            self, 'Search', 'Enter the primary key of the entry you are searching:')
+        temp = []
+        for registro in self.B_tree:
+            aux = registro.split("|")
+            if aux[0] == text:
+                temp.append(registro)
+        tabla = search_table()
+        tabla.set_table(temp)
+        tabla.show()
+        if tabla.exec_():
+            lista = tabla.selected(self.lista_tipos)
+        i = 0
+        for value in self.B_tree:
+            if value != text:
+                i+=1
+        with open(self.direccion,"r+") as file:
+            for j in range(i+3):
+                text = file.readline()
+            file.seek(-len(text),1)
+            file.write("*")
 
     def __init__(self):
         QtGui.QMainWindow.__init__(self)
@@ -452,6 +469,7 @@ except AttributeError:
         self.actionExit.triggered.connect(self.esci)
         self.actionRe_Index_Files.triggered.connect(self.reindexar)
         self.actionSearch.triggered.connect(self.search)
+        self.actionEdit_Structure.triggered.connect(self.remove_entry)
 
 
 if __name__ == "__main__":
