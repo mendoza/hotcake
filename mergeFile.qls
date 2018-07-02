@@ -1,1003 +1,1003 @@
-[' String', ' String', ' Int', ' String', 'String', ' Int', ' String', ' Int']
-[' Nombre', ' Apellido', ' Edad', ' Email', 'No.Idenitdad', ' CodigoPostal', ' EstadoCivil', ' Hijos']
+[' String', ' String']
+[' Nombre', ' Apellido']
       1000&-1
-Buena| Rowe| 18| Buena@unitec.edu| 0101-1903-40872| 21301| Viudo(a)| 8
-Eloisa| Howell| 25| Eloisa@unitec.edu| 0101-1905-15136| 13201| Soltero(a)| 12
-Arlette| Ortiz| 65| Arlette@unitec.edu| 0101-1908-12040| 21112| Viudo(a)| 24
-Nana| Mitchell| 36| Nana@unitec.edu| 0101-1913-34397| 31301| Comprometido(a)| 5
-Louella| Avery| 62| Louella@unitec.edu| 0101-1916-86798| 22114| Soltero(a)| 5
-Rheba| Landry| 12| Rheba@unitec.edu| 0101-1920-15652| 21103| Divorciado(a)| 20
-Augusta| Galvan| 61| Augusta@unitec.edu| 0101-1922-35368| 12101| Casado(a)| 3
-Hannelore| Baker| 44| Hannelore@unitec.edu| 0101-1922-49898| 52102| Divorciado(a)| 13
-Arlette| Lynn| 64| Arlette@unitec.edu| 0101-1922-83120| 52101| Casado(a)| 4
-Allene| Goodwin| 38| Allene@unitec.edu| 0101-1926-41920| 31101| Divorciado(a)| 21
-Jeanelle| Phelps| 23| Jeanelle@unitec.edu| 0101-1927-56884| 12101| Casado(a)| 27
-Augusta| Watkins| 57| Augusta@unitec.edu| 0101-1938-89301| 52101| Soltero(a)| 16
-Carla| Pope| 7| Carla@unitec.edu| 0101-1941-45393| 51201| Viudo(a)| 23
-Olimpia| Robles| 76| Olimpia@unitec.edu| 0101-1945-19194| 14101| Viudo(a)| 30
-Valarie| Goodwin| 32| Valarie@unitec.edu| 0101-1948-14357| 22101| Divorciado(a)| 12
-Rufina| Watkins| 27| Rufina@unitec.edu| 0101-1948-66050| 34101| Comprometido(a)| 10
-Stacy| Huynh| 57| Stacy@unitec.edu| 0101-1949-27800| 21101| Soltero(a)| 28
-Harrison| Ritter| 24| Harrison@unitec.edu| 0101-1950-19645| 21103| Comprometido(a)| 20
-Carla| Mitchell| 79| Carla@unitec.edu| 0101-1953-72992| 16101| Casado(a)| 22
-Wilford| Goodwin| 87| Wilford@unitec.edu| 0101-1953-91777| 52101| Viudo(a)| 15
-Latoya| Church| 86| Latoya@unitec.edu| 0101-1957-67800| 41101| Soltero(a)| 20
-Richard| Davila| 76| Richard@unitec.edu| 0101-1968-13672| 11101| Comprometido(a)| 26
-Rufina| Bailey| 70| Rufina@unitec.edu| 0101-1968-93833| 13201| Comprometido(a)| 26
-Jeanelle| Avery| 59| Jeanelle@unitec.edu| 0101-1970-43137| 21301| Viudo(a)| 23
-Richard| Maldonado| 44| Richard@unitec.edu| 0101-1977-80244| 31101| Soltero(a)| 11
-Mel| Lynn| 5| Mel@unitec.edu| 0101-1984-42164| 21103| Divorciado(a)| 18
-Lakeesha| Rivera| 2| Lakeesha@unitec.edu| 0101-1984-96413| 14201| Divorciado(a)| 29
-Hannelore| Goodwin| 41| Hannelore@unitec.edu| 0101-1985-50911| 41101| Viudo(a)| 4
-Normand| Dudley| 13| Normand@unitec.edu| 0101-1987-49525| 14101| Divorciado(a)| 3
-Mel| Bright| 33| Mel@unitec.edu| 0101-1987-78557| 22101| Casado(a)| 12
-Eloisa| Rowe| 47| Eloisa@unitec.edu| 0101-1992-89367| 31101| Soltero(a)| 4
-Stacy| Dunlap| 19| Stacy@unitec.edu| 0101-1993-14853| 52101| Divorciado(a)| 23
-Yolonda| Mitchell| 25| Yolonda@unitec.edu| 0101-2003-13352| 23201| Comprometido(a)| 19
-Corrine| Watkins| 76| Corrine@unitec.edu| 0101-2004-20911| 16101| Viudo(a)| 5
-Darren| Morrow| 19| Darren@unitec.edu| 0101-2005-81607| 43201| Casado(a)| 7
-Buena| Baker| 17| Buena@unitec.edu| 0101-2009-94786| 16201| Soltero(a)| 3
-Valarie| Chase| 67| Valarie@unitec.edu| 0102-1901-47441| 31101| Soltero(a)| 3
-Eloisa| Mcgrath| 55| Eloisa@unitec.edu| 0102-1907-52761| 21103| Soltero(a)| 24
-Rufina| Adams| 7| Rufina@unitec.edu| 0102-1907-63420| 12101| Divorciado(a)| 28
-Edwina| Davila| 46| Edwina@unitec.edu| 0102-1910-63785| 23201| Comprometido(a)| 7
-Jeanelle| Hess| 48| Jeanelle@unitec.edu| 0102-1911-64964| 21104| Viudo(a)| 15
-Jeanelle| Church| 49| Jeanelle@unitec.edu| 0102-1912-97486| 31101| Casado(a)| 25
-Robin| Dunlap| 13| Robin@unitec.edu| 0102-1914-45308| 52101| Divorciado(a)| 24
-Yolonda| Dudley| 49| Yolonda@unitec.edu| 0102-1914-54546| 16101| Soltero(a)| 25
-Hae| Bright| 2| Hae@unitec.edu| 0102-1914-94541| 21112| Viudo(a)| 24
-Lakeesha| Mendoza| 80| Lakeesha@unitec.edu| 0102-1915-37328| 15101| Viudo(a)| 22
-Edwina| Davila| 60| Edwina@unitec.edu| 0102-1918-17166| 21103| Soltero(a)| 16
-Diane| Bond| 11| Diane@unitec.edu| 0102-1922-23388| 22101| Soltero(a)| 13
-Allene| Baker| 79| Allene@unitec.edu| 0102-1926-89400| 51101| Casado(a)| 2
-Arlette| Goodwin| 68| Arlette@unitec.edu| 0102-1931-61915| 14101| Divorciado(a)| 18
-Robin| Bradshaw| 61| Robin@unitec.edu| 0102-1931-94657| 32301| Casado(a)| 14
-Rheba| Wilson| 57| Rheba@unitec.edu| 0102-1933-30735| 13201| Viudo(a)| 20
-Arlette| Morrow| 74| Arlette@unitec.edu| 0102-1937-26013| 51101| Viudo(a)| 26
-Stacy| Vaughan| 14| Stacy@unitec.edu| 0102-1937-74864| 31301| Soltero(a)| 5
-Wilford| Galvan| 71| Wilford@unitec.edu| 0102-1939-33267| 21103| Casado(a)| 9
-Deloras| Cohen| 81| Deloras@unitec.edu| 0102-1950-79815| 22114| Soltero(a)| 24
-Arlette| Ritter| 55| Arlette@unitec.edu| 0102-1952-18284| 21102| Soltero(a)| 19
-Cyrstal| Davila| 41| Cyrstal@unitec.edu| 0102-1965-91455| 21104| Comprometido(a)| 22
-Corrine| Dunlap| 84| Corrine@unitec.edu| 0102-1972-27423| 15201| Comprometido(a)| 9
-Collene| Page| 54| Collene@unitec.edu| 0102-1977-17948| 23101| Soltero(a)| 28
-Lakeesha| Dunlap| 32| Lakeesha@unitec.edu| 0102-1981-66786| 31101| Casado(a)| 1
-Suzan| Marshall| 78| Suzan@unitec.edu| 0102-1984-15395| 41202| Comprometido(a)| 9
-Diane| Mclean| 8| Diane@unitec.edu| 0102-1984-20024| 32301| Viudo(a)| 1
-Buena| Mclean| 36| Buena@unitec.edu| 0102-1984-81506| 42201| Comprometido(a)| 12
-Mel| Mclean| 45| Mel@unitec.edu| 0102-1986-51919| 14101| Soltero(a)| 6
-Jeanelle| Mclean| 79| Jeanelle@unitec.edu| 0102-1995-75070| 21102| Comprometido(a)| 29
-Rufina| Bradshaw| 67| Rufina@unitec.edu| 0102-1996-94275| 12111| Divorciado(a)| 24
-Malorie| Watkins| 28| Malorie@unitec.edu| 0102-1997-38375| 33101| Soltero(a)| 22
-Armanda| Pope| 19| Armanda@unitec.edu| 0102-1998-93545| 43101| Soltero(a)| 15
-Harrison| Bright| 74| Harrison@unitec.edu| 0102-2001-97896| 15101| Comprometido(a)| 1
-Nidia| Dunlap| 19| Nidia@unitec.edu| 0102-2008-93677| 14201| Divorciado(a)| 15
-Malorie| Bailey| 34| Malorie@unitec.edu| 0102-2012-78394| 16201| Viudo(a)| 27
-Carla| Avery| 55| Carla@unitec.edu| 0102-2017-29466| 51201| Viudo(a)| 15
-Collene| Church| 26| Collene@unitec.edu| 0107-1900-16158| 21301| Soltero(a)| 14
-Deloras| Page| 2| Deloras@unitec.edu| 0107-1901-77418| 13101| Comprometido(a)| 15
-Allene| Montgomery| 86| Allene@unitec.edu| 0107-1904-47377| 22114| Viudo(a)| 29
-Edwina| Vaughan| 82| Edwina@unitec.edu| 0107-1920-20876| 32301| Casado(a)| 20
-Adelia| Maldonado| 57| Adelia@unitec.edu| 0107-1920-73657| 21102| Soltero(a)| 17
-Eloisa| House| 6| Eloisa@unitec.edu| 0107-1923-72027| 32301| Casado(a)| 10
-Claudette| Galvan| 85| Claudette@unitec.edu| 0107-1924-69983| 15101| Viudo(a)| 5
-Jeanelle| Maldonado| 43| Jeanelle@unitec.edu| 0107-1925-51320| 15101| Viudo(a)| 23
-Robin| Howell| 80| Robin@unitec.edu| 0107-1926-50721| 21103| Casado(a)| 29
-Robin| Landry| 4| Robin@unitec.edu| 0107-1930-49723| 13201| Casado(a)| 5
-Mel| Montes| 87| Mel@unitec.edu| 0107-1931-32003| 22101| Casado(a)| 29
-Hannelore| Adams| 34| Hannelore@unitec.edu| 0107-1934-94682| 42101| Divorciado(a)| 8
-Adrianna| Ortiz| 46| Adrianna@unitec.edu| 0107-1936-44946| 51101| Casado(a)| 21
-Jeanelle| Maldonado| 6| Jeanelle@unitec.edu| 0107-1936-68363| 13201| Divorciado(a)| 27
-Carla| Davila| 45| Carla@unitec.edu| 0107-1939-34888| 21101| Viudo(a)| 4
-Buena| Marshall| 85| Buena@unitec.edu| 0107-1939-55186| 16101| Comprometido(a)| 8
-Harrison| Montes| 32| Harrison@unitec.edu| 0107-1939-93841| 21103| Soltero(a)| 22
-Adrianna| Montgomery| 33| Adrianna@unitec.edu| 0107-1942-72967| 43101| Viudo(a)| 25
-Nikki| Howell| 62| Nikki@unitec.edu| 0107-1943-99126| 13201| Soltero(a)| 6
-Arlette| Adams| 51| Arlette@unitec.edu| 0107-1945-69440| 42101| Viudo(a)| 27
-Malorie| Phelps| 28| Malorie@unitec.edu| 0107-1947-98537| 14101| Casado(a)| 11
-Laveta| Fritz| 3| Laveta@unitec.edu| 0107-1949-38210| 32301| Viudo(a)| 1
-Augusta| Wilson| 84| Augusta@unitec.edu| 0107-1950-52382| 41202| Soltero(a)| 7
-Eloisa| Bond| 8| Eloisa@unitec.edu| 0107-1950-54565| 31301| Soltero(a)| 19
-Olimpia| Baker| 86| Olimpia@unitec.edu| 0107-1953-51908| 31301| Comprometido(a)| 15
-Nikki| Goodwin| 54| Nikki@unitec.edu| 0107-1955-91204| 12111| Comprometido(a)| 14
-Armanda| Reed| 5| Armanda@unitec.edu| 0107-1959-62041| 31301| Soltero(a)| 11
-Valarie| Fritz| 2| Valarie@unitec.edu| 0107-1965-26212| 51201| Divorciado(a)| 9
-Eloisa| Tate| 78| Eloisa@unitec.edu| 0107-1972-45480| 32301| Comprometido(a)| 9
-Walter| Galvan| 52| Walter@unitec.edu| 0107-1973-45952| 31301| Viudo(a)| 8
-Hannelore| Crawford| 9| Hannelore@unitec.edu| 0107-1978-97075| 11101| Casado(a)| 20
-Nidia| Chase| 63| Nidia@unitec.edu| 0107-1984-26531| 15201| Casado(a)| 19
-Darren| Howell| 72| Darren@unitec.edu| 0107-1985-59492| 21301| Comprometido(a)| 10
-Latoya| Page| 15| Latoya@unitec.edu| 0107-1989-55162| 12111| Casado(a)| 19
-Floretta| Lynn| 27| Floretta@unitec.edu| 0107-1994-62544| 52102| Comprometido(a)| 7
-Collene| Lynn| 15| Collene@unitec.edu| 0107-1995-96762| 43201| Soltero(a)| 12
-Malorie| Montes| 5| Malorie@unitec.edu| 0107-1998-72257| 42101| Soltero(a)| 26
-Claudette| Mcgrath| 12| Claudette@unitec.edu| 0107-2002-57650| 15101| Viudo(a)| 18
-Micheline| Dudley| 24| Micheline@unitec.edu| 0107-2002-95265| 11101| Comprometido(a)| 15
-Robin| Montgomery| 57| Robin@unitec.edu| 0107-2004-34509| 12101| Soltero(a)| 23
-Buena| Landry| 51| Buena@unitec.edu| 0107-2005-25690| 16101| Casado(a)| 2
-Normand| Phelps| 27| Normand@unitec.edu| 0107-2008-61561| 11101| Comprometido(a)| 23
-Deloras| Rivera| 71| Deloras@unitec.edu| 0107-2009-71194| 14101| Viudo(a)| 10
-Sunni| House| 63| Sunni@unitec.edu| 0107-2010-26630| 51101| Soltero(a)| 15
-Floretta| Tate| 58| Floretta@unitec.edu| 0107-2013-21927| 33101| Casado(a)| 18
-Ela| Tate| 27| Ela@unitec.edu| 0107-2013-94209| 21102| Comprometido(a)| 17
-Buena| Rowe| 2| Buena@unitec.edu| 0107-2015-47133| 12111| Soltero(a)| 11
-Darren| Bright| 87| Darren@unitec.edu| 0107-2016-71076| 21301| Casado(a)| 19
-Valarie| Rodgers| 43| Valarie@unitec.edu| 0301-1902-51481| 14101| Viudo(a)| 27
-Claudette| Avery| 86| Claudette@unitec.edu| 0301-1912-77220| 51101| Viudo(a)| 10
-Corrine| Robles| 28| Corrine@unitec.edu| 0301-1913-53420| 22101| Comprometido(a)| 4
-Rheba| Robles| 60| Rheba@unitec.edu| 0301-1921-73704| 43101| Divorciado(a)| 3
-Wilford| Bailey| 77| Wilford@unitec.edu| 0301-1922-61535| 43201| Divorciado(a)| 22
-Latoya| Church| 3| Latoya@unitec.edu| 0301-1926-73539| 52102| Soltero(a)| 28
-Claudette| Chase| 19| Claudette@unitec.edu| 0301-1931-78280| 22114| Casado(a)| 14
-Carla| Landry| 18| Carla@unitec.edu| 0301-1942-26591| 51101| Divorciado(a)| 13
-Laveta| Parker| 65| Laveta@unitec.edu| 0301-1945-50555| 21101| Divorciado(a)| 28
-Cyrstal| Maldonado| 48| Cyrstal@unitec.edu| 0301-1948-20407| 16101| Divorciado(a)| 16
-Ela| Dudley| 57| Ela@unitec.edu| 0301-1948-48803| 21101| Divorciado(a)| 26
-Cyrstal| Montgomery| 7| Cyrstal@unitec.edu| 0301-1952-59862| 22101| Divorciado(a)| 7
-Rheba| Mendoza| 81| Rheba@unitec.edu| 0301-1953-68159| 15101| Casado(a)| 14
-Adelia| Crawford| 25| Adelia@unitec.edu| 0301-1955-17707| 12101| Casado(a)| 25
-Hae| Watkins| 12| Hae@unitec.edu| 0301-1956-46708| 41101| Casado(a)| 2
-Edwina| Wilson| 67| Edwina@unitec.edu| 0301-1956-57269| 16101| Casado(a)| 18
-Collene| Mitchell| 86| Collene@unitec.edu| 0301-1956-94371| 21101| Casado(a)| 22
-Robin| Montes| 89| Robin@unitec.edu| 0301-1964-14301| 13201| Comprometido(a)| 3
-Olimpia| Parker| 48| Olimpia@unitec.edu| 0301-1970-19069| 12101| Comprometido(a)| 19
-Lakeesha| Fritz| 25| Lakeesha@unitec.edu| 0301-1980-69355| 21301| Divorciado(a)| 26
-Micheline| Avery| 2| Micheline@unitec.edu| 0301-1982-42832| 31101| Viudo(a)| 30
-Jeanelle| Montes| 77| Jeanelle@unitec.edu| 0301-1989-15278| 21101| Viudo(a)| 18
-Micheline| Marshall| 58| Micheline@unitec.edu| 0301-1995-84977| 22114| Comprometido(a)| 17
-Diane| Hess| 10| Diane@unitec.edu| 0301-1999-84211| 31101| Soltero(a)| 28
-Walter| Lynn| 70| Walter@unitec.edu| 0301-2000-83123| 43101| Divorciado(a)| 28
-Buena| Lynn| 2| Buena@unitec.edu| 0301-2001-24181| 12101| Comprometido(a)| 23
-Robin| Durham| 48| Robin@unitec.edu| 0301-2001-69326| 43101| Comprometido(a)| 15
-Nidia| Henson| 54| Nidia@unitec.edu| 0301-2003-41134| 41202| Casado(a)| 29
-Augusta| Galvan| 28| Augusta@unitec.edu| 0301-2004-83263| 43201| Soltero(a)| 7
-Walter| Baker| 6| Walter@unitec.edu| 0301-2010-82681| 52101| Divorciado(a)| 27
-Yolonda| Rowe| 16| Yolonda@unitec.edu| 0301-2011-69281| 21112| Casado(a)| 10
-Armanda| Mclean| 68| Armanda@unitec.edu| 0301-2012-66622| 23101| Divorciado(a)| 11
-Ela| House| 19| Ela@unitec.edu| 0301-2014-29003| 32101| Divorciado(a)| 26
-Hae| Tate| 22| Hae@unitec.edu| 0301-2014-40224| 41101| Casado(a)| 27
-Carla| Morrow| 43| Carla@unitec.edu| 0301-2016-56202| 15201| Casado(a)| 8
-Suzan| Crawford| 62| Suzan@unitec.edu| 0404-1905-58298| 15101| Soltero(a)| 26
-Suzan| Fritz| 52| Suzan@unitec.edu| 0404-1909-54111| 21101| Divorciado(a)| 27
-Allene| Mcgrath| 42| Allene@unitec.edu| 0404-1913-77718| 14201| Divorciado(a)| 19
-Arlette| Mcgrath| 2| Arlette@unitec.edu| 0404-1915-76036| 43101| Casado(a)| 7
-Adrianna| Phelps| 2| Adrianna@unitec.edu| 0404-1926-58184| 21112| Divorciado(a)| 19
-Malorie| Huynh| 52| Malorie@unitec.edu| 0404-1929-14143| 43201| Divorciado(a)| 1
-Floretta| Morrow| 25| Floretta@unitec.edu| 0404-1930-13107| 16101| Divorciado(a)| 17
-Nana| Rodgers| 28| Nana@unitec.edu| 0404-1939-78875| 11101| Comprometido(a)| 30
-Stacy| Church| 68| Stacy@unitec.edu| 0404-1944-51345| 32101| Soltero(a)| 16
-Yolonda| Reed| 41| Yolonda@unitec.edu| 0404-1945-20291| 51101| Casado(a)| 13
-Yolonda| Mcgrath| 67| Yolonda@unitec.edu| 0404-1946-30457| 21103| Casado(a)| 9
-Floretta| Crawford| 88| Floretta@unitec.edu| 0404-1951-46134| 15101| Viudo(a)| 10
-Floretta| Marshall| 87| Floretta@unitec.edu| 0404-1958-68402| 14201| Soltero(a)| 26
-Allene| Adams| 56| Allene@unitec.edu| 0404-1958-79886| 31301| Comprometido(a)| 21
-Walter| Rivera| 41| Walter@unitec.edu| 0404-1960-93148| 22101| Viudo(a)| 4
-Micheline| Galvan| 74| Micheline@unitec.edu| 0404-1962-45651| 13201| Viudo(a)| 17
-Edwina| Pope| 33| Edwina@unitec.edu| 0404-1962-95743| 15101| Viudo(a)| 12
-Eloisa| Davila| 84| Eloisa@unitec.edu| 0404-1972-82940| 41202| Comprometido(a)| 21
-Shirleen| Chase| 33| Shirleen@unitec.edu| 0404-1979-14672| 21301| Comprometido(a)| 24
-Augusta| Parker| 51| Augusta@unitec.edu| 0404-1981-13809| 42101| Divorciado(a)| 11
-Olimpia| Morrow| 56| Olimpia@unitec.edu| 0404-1989-14046| 21104| Divorciado(a)| 25
-Rheba| Rowe| 20| Rheba@unitec.edu| 0404-1993-26029| 52101| Comprometido(a)| 1
-Deloras| Ritter| 5| Deloras@unitec.edu| 0404-1993-91816| 14201| Divorciado(a)| 22
-Cyrstal| Lynn| 61| Cyrstal@unitec.edu| 0404-1996-22280| 16201| Casado(a)| 27
-Edwina| Strickland| 54| Edwina@unitec.edu| 0404-1996-99708| 31101| Divorciado(a)| 17
-Claudette| Page| 68| Claudette@unitec.edu| 0404-1998-40407| 23201| Soltero(a)| 7
-Latoya| Parker| 8| Latoya@unitec.edu| 0404-2014-58791| 32301| Viudo(a)| 29
-Roxane| Rowe| 27| Roxane@unitec.edu| 0420-1902-15033| 41202| Comprometido(a)| 22
-Allene| Cohen| 8| Allene@unitec.edu| 0420-1907-16710| 16101| Casado(a)| 7
-Wilford| House| 61| Wilford@unitec.edu| 0420-1919-43772| 31301| Divorciado(a)| 22
-Normand| Pope| 47| Normand@unitec.edu| 0420-1922-43071| 21112| Viudo(a)| 25
-Corrine| House| 60| Corrine@unitec.edu| 0420-1922-87925| 16201| Viudo(a)| 16
-Latoya| Mclean| 75| Latoya@unitec.edu| 0420-1924-66638| 22101| Viudo(a)| 9
-Arlette| Lynn| 54| Arlette@unitec.edu| 0420-1926-39819| 52102| Viudo(a)| 12
-Harrison| Howell| 10| Harrison@unitec.edu| 0420-1926-53668| 52102| Casado(a)| 28
-Mel| Bond| 70| Mel@unitec.edu| 0420-1928-84338| 31301| Comprometido(a)| 15
-Yolonda| Rivera| 71| Yolonda@unitec.edu| 0420-1931-73555| 43101| Casado(a)| 12
-Mel| Bright| 83| Mel@unitec.edu| 0420-1931-81172| 43201| Divorciado(a)| 6
-Armanda| Ortiz| 26| Armanda@unitec.edu| 0420-1932-19626| 15201| Comprometido(a)| 18
-Darren| Durham| 56| Darren@unitec.edu| 0420-1938-88961| 31301| Comprometido(a)| 11
-Nestor| Page| 47| Nestor@unitec.edu| 0420-1939-58240| 21112| Casado(a)| 17
-Yolonda| Landry| 20| Yolonda@unitec.edu| 0420-1942-56734| 51101| Divorciado(a)| 16
-Adrianna| Montes| 10| Adrianna@unitec.edu| 0420-1948-97699| 14101| Comprometido(a)| 27
-Claudette| Crawford| 7| Claudette@unitec.edu| 0420-1949-53270| 12101| Divorciado(a)| 1
-Micheline| Mitchell| 26| Micheline@unitec.edu| 0420-1949-55220| 22114| Divorciado(a)| 13
-Rufina| Wilson| 73| Rufina@unitec.edu| 0420-1950-51925| 12101| Divorciado(a)| 28
-Wilford| Bond| 3| Wilford@unitec.edu| 0420-1951-59524| 43201| Comprometido(a)| 6
-Roxane| Robles| 1| Roxane@unitec.edu| 0420-1958-97753| 12101| Viudo(a)| 19
-Ela| Watkins| 35| Ela@unitec.edu| 0420-1960-65027| 14101| Comprometido(a)| 10
-Armanda| Mcgrath| 14| Armanda@unitec.edu| 0420-1961-42086| 11101| Casado(a)| 6
-Nana| Rowe| 79| Nana@unitec.edu| 0420-1965-14068| 22114| Comprometido(a)| 4
-Carla| Durham| 4| Carla@unitec.edu| 0420-1967-91477| 22101| Casado(a)| 27
-Adelia| Huynh| 5| Adelia@unitec.edu| 0420-1970-99777| 31101| Casado(a)| 20
-Hae| Chase| 75| Hae@unitec.edu| 0420-1971-81442| 12101| Soltero(a)| 15
-Allene| Howell| 5| Allene@unitec.edu| 0420-1972-76056| 12111| Soltero(a)| 20
-Ela| Page| 28| Ela@unitec.edu| 0420-1974-45143| 12101| Viudo(a)| 29
-Normand| Landry| 36| Normand@unitec.edu| 0420-1974-55193| 52102| Casado(a)| 19
-Normand| Rodgers| 54| Normand@unitec.edu| 0420-1975-29942| 21301| Soltero(a)| 11
-Arlette| Rowe| 68| Arlette@unitec.edu| 0420-1978-50451| 31301| Viudo(a)| 12
-Louella| Mclean| 57| Louella@unitec.edu| 0420-1983-25549| 16101| Soltero(a)| 14
-Hae| Chase| 57| Hae@unitec.edu| 0420-1983-61456| 11101| Soltero(a)| 17
-Arlette| Pope| 64| Arlette@unitec.edu| 0420-1986-86959| 14201| Viudo(a)| 26
-Micheline| Ritter| 13| Micheline@unitec.edu| 0420-1991-33662| 22101| Divorciado(a)| 23
-Walter| Bond| 19| Walter@unitec.edu| 0420-1998-32144| 22114| Casado(a)| 4
-Valarie| Rivera| 86| Valarie@unitec.edu| 0420-2004-94411| 22101| Viudo(a)| 26
-Rufina| Lynn| 2| Rufina@unitec.edu| 0420-2013-39077| 21104| Comprometido(a)| 12
-Cyrstal| Bond| 24| Cyrstal@unitec.edu| 0420-2013-84479| 11101| Viudo(a)| 18
-Mel| Wilson| 61| Mel@unitec.edu| 0501-1901-78429| 31301| Divorciado(a)| 20
-Claudette| Pope| 53| Claudette@unitec.edu| 0501-1907-79592| 32101| Casado(a)| 20
-Buena| Cohen| 9| Buena@unitec.edu| 0501-1914-13011| 31101| Soltero(a)| 1
-Lakeesha| Bradshaw| 85| Lakeesha@unitec.edu| 0501-1916-36844| 52101| Comprometido(a)| 14
-Harrison| Goodwin| 28| Harrison@unitec.edu| 0501-1917-90905| 21103| Soltero(a)| 13
-Normand| Adams| 2| Normand@unitec.edu| 0501-1919-73981| 21102| Divorciado(a)| 10
-Adelia| Pope| 64| Adelia@unitec.edu| 0501-1922-23711| 42101| Divorciado(a)| 12
-Latoya| Huynh| 70| Latoya@unitec.edu| 0501-1928-28522| 21103| Casado(a)| 28
-Floretta| Pope| 11| Floretta@unitec.edu| 0501-1936-68784| 32101| Comprometido(a)| 15
-Armanda| Tate| 60| Armanda@unitec.edu| 0501-1936-71793| 32301| Viudo(a)| 7
-Laveta| Goodwin| 85| Laveta@unitec.edu| 0501-1941-22728| 31301| Comprometido(a)| 23
-Edwina| Chase| 86| Edwina@unitec.edu| 0501-1941-48545| 21101| Divorciado(a)| 12
-Nidia| Maldonado| 70| Nidia@unitec.edu| 0501-1943-75589| 12111| Casado(a)| 28
-Laveta| Maldonado| 12| Laveta@unitec.edu| 0501-1952-99538| 14201| Comprometido(a)| 21
-Carla| Montes| 4| Carla@unitec.edu| 0501-1960-57570| 41202| Comprometido(a)| 3
-Walter| Robles| 5| Walter@unitec.edu| 0501-1966-75362| 14201| Comprometido(a)| 11
-Wilford| Phelps| 58| Wilford@unitec.edu| 0501-1968-62422| 52101| Soltero(a)| 20
-Deloras| Howell| 66| Deloras@unitec.edu| 0501-1971-77525| 33101| Viudo(a)| 1
-Rheba| Watkins| 55| Rheba@unitec.edu| 0501-1973-17975| 22114| Casado(a)| 5
-Buena| Howell| 64| Buena@unitec.edu| 0501-1973-84410| 21102| Divorciado(a)| 1
-Yolonda| Bailey| 47| Yolonda@unitec.edu| 0501-1979-48050| 52101| Soltero(a)| 10
-Latoya| Church| 27| Latoya@unitec.edu| 0501-1990-69815| 52101| Divorciado(a)| 8
-Stacy| Tate| 88| Stacy@unitec.edu| 0501-1994-98977| 12101| Divorciado(a)| 29
-Malorie| Marshall| 76| Malorie@unitec.edu| 0501-1997-62785| 21102| Viudo(a)| 14
-Augusta| Adams| 88| Augusta@unitec.edu| 0501-1999-83935| 21301| Soltero(a)| 24
-Eloisa| Rivera| 72| Eloisa@unitec.edu| 0501-2002-37908| 23201| Viudo(a)| 22
-Olimpia| Lynn| 38| Olimpia@unitec.edu| 0501-2004-21788| 41101| Soltero(a)| 22
-Eloisa| Montes| 66| Eloisa@unitec.edu| 0501-2006-57091| 12101| Comprometido(a)| 19
-Roxane| Crawford| 59| Roxane@unitec.edu| 0501-2007-67581| 41202| Casado(a)| 27
-Armanda| Pope| 89| Armanda@unitec.edu| 0501-2008-34676| 21103| Viudo(a)| 30
-Armanda| Dudley| 62| Armanda@unitec.edu| 0501-2018-64805| 33101| Soltero(a)| 18
-Arlette| Baker| 5| Arlette@unitec.edu| 0501-2018-84335| 31301| Viudo(a)| 1
-Corrine| Bright| 82| Corrine@unitec.edu| 0502-1901-23915| 31301| Comprometido(a)| 12
-Adrianna| Page| 4| Adrianna@unitec.edu| 0502-1903-73053| 52101| Divorciado(a)| 2
-Malorie| Bond| 55| Malorie@unitec.edu| 0502-1906-68396| 41202| Divorciado(a)| 22
-Arlette| Parker| 48| Arlette@unitec.edu| 0502-1912-77294| 21101| Comprometido(a)| 30
-Latoya| Galvan| 2| Latoya@unitec.edu| 0502-1914-65698| 51201| Soltero(a)| 1
-Corrine| Dunlap| 74| Corrine@unitec.edu| 0502-1914-86606| 23201| Comprometido(a)| 8
-Diane| Dudley| 8| Diane@unitec.edu| 0502-1916-80922| 32301| Comprometido(a)| 21
-Malorie| Rodgers| 6| Malorie@unitec.edu| 0502-1919-42033| 51201| Comprometido(a)| 27
-Claudette| Rodgers| 6| Claudette@unitec.edu| 0502-1923-47469| 12111| Casado(a)| 18
-Allene| Rivera| 27| Allene@unitec.edu| 0502-1924-72614| 41202| Comprometido(a)| 28
-Collene| Dunlap| 77| Collene@unitec.edu| 0502-1927-79524| 22114| Soltero(a)| 25
-Matilde| Rodgers| 53| Matilde@unitec.edu| 0502-1934-66481| 32301| Comprometido(a)| 4
-Nidia| Phelps| 34| Nidia@unitec.edu| 0502-1943-37177| 15201| Soltero(a)| 1
-Carla| Reed| 59| Carla@unitec.edu| 0502-1943-66094| 13101| Casado(a)| 6
-Malorie| Mitchell| 25| Malorie@unitec.edu| 0502-1949-12362| 22114| Soltero(a)| 30
-Hae| Mendoza| 3| Hae@unitec.edu| 0502-1950-38110| 11101| Comprometido(a)| 23
-Deloras| Henson| 68| Deloras@unitec.edu| 0502-1950-60036| 31101| Divorciado(a)| 23
-Ela| Montes| 37| Ela@unitec.edu| 0502-1953-20396| 15101| Viudo(a)| 19
-Valarie| Fritz| 51| Valarie@unitec.edu| 0502-1958-70318| 13201| Viudo(a)| 29
-Hae| Huynh| 9| Hae@unitec.edu| 0502-1963-24150| 13201| Viudo(a)| 5
-Mel| Church| 26| Mel@unitec.edu| 0502-1964-53626| 33101| Soltero(a)| 15
-Rheba| Bradshaw| 13| Rheba@unitec.edu| 0502-1970-77044| 31101| Divorciado(a)| 18
-Matilde| Huynh| 63| Matilde@unitec.edu| 0502-1977-28648| 34101| Soltero(a)| 20
-Valarie| Page| 88| Valarie@unitec.edu| 0502-1988-24349| 51101| Divorciado(a)| 22
-Nikki| Mitchell| 56| Nikki@unitec.edu| 0502-1988-40484| 13201| Casado(a)| 4
-Floretta| Bailey| 41| Floretta@unitec.edu| 0502-1988-98427| 32101| Viudo(a)| 3
-Deloras| Parker| 33| Deloras@unitec.edu| 0502-1994-63427| 14101| Divorciado(a)| 5
-Robin| Bright| 43| Robin@unitec.edu| 0502-1998-53146| 41202| Casado(a)| 24
-Nana| Rodgers| 31| Nana@unitec.edu| 0502-2008-61968| 52102| Viudo(a)| 6
-Malorie| Vaughan| 62| Malorie@unitec.edu| 0502-2010-35581| 21103| Divorciado(a)| 16
-Nidia| Hess| 40| Nidia@unitec.edu| 0502-2011-93944| 42201| Casado(a)| 6
-Wilford| Fritz| 20| Wilford@unitec.edu| 0502-2012-88380| 42201| Divorciado(a)| 5
-Yolonda| Baker| 34| Yolonda@unitec.edu| 0502-2013-84975| 13201| Viudo(a)| 14
-Hannelore| Henson| 75| Hannelore@unitec.edu| 0502-2015-74608| 12101| Comprometido(a)| 20
-Nana| Avery| 50| Nana@unitec.edu| 0503-1902-18602| 12111| Casado(a)| 10
-Rheba| Pope| 62| Rheba@unitec.edu| 0503-1909-67642| 13201| Divorciado(a)| 10
-Yolonda| Henson| 81| Yolonda@unitec.edu| 0503-1914-93088| 43201| Casado(a)| 5
-Jeanelle| Watkins| 37| Jeanelle@unitec.edu| 0503-1932-40972| 43101| Comprometido(a)| 23
-Wilford| Adams| 54| Wilford@unitec.edu| 0503-1939-45832| 52101| Viudo(a)| 8
-Wilford| Fritz| 7| Wilford@unitec.edu| 0503-1944-17151| 21103| Soltero(a)| 1
-Robin| Landry| 73| Robin@unitec.edu| 0503-1946-80959| 11101| Soltero(a)| 30
-Walter| Cohen| 59| Walter@unitec.edu| 0503-1947-13535| 52101| Viudo(a)| 26
-Nestor| Ritter| 75| Nestor@unitec.edu| 0503-1947-62649| 23101| Comprometido(a)| 27
-Claudette| Ritter| 54| Claudette@unitec.edu| 0503-1950-34144| 14201| Divorciado(a)| 28
-Claudette| Durham| 17| Claudette@unitec.edu| 0503-1951-13714| 22114| Divorciado(a)| 9
-Rheba| Morrow| 7| Rheba@unitec.edu| 0503-1955-69954| 34101| Viudo(a)| 7
-Valarie| Dunlap| 60| Valarie@unitec.edu| 0503-1957-14761| 13101| Soltero(a)| 12
-Adrianna| Tate| 28| Adrianna@unitec.edu| 0503-1957-78624| 13201| Soltero(a)| 27
-Suzan| Henson| 3| Suzan@unitec.edu| 0503-1958-43529| 43101| Viudo(a)| 1
-Rufina| Mitchell| 79| Rufina@unitec.edu| 0503-1963-94641| 33101| Comprometido(a)| 27
-Arlette| Landry| 44| Arlette@unitec.edu| 0503-1968-70359| 42101| Casado(a)| 23
-Harrison| Marshall| 60| Harrison@unitec.edu| 0503-1970-58681| 42201| Divorciado(a)| 3
-Richard| Crawford| 36| Richard@unitec.edu| 0503-1973-41720| 16101| Viudo(a)| 14
-Micheline| Henson| 84| Micheline@unitec.edu| 0503-1974-35660| 42201| Casado(a)| 26
-Normand| Landry| 70| Normand@unitec.edu| 0503-1977-23712| 43201| Soltero(a)| 5
-Collene| Reed| 54| Collene@unitec.edu| 0503-1978-84488| 32301| Divorciado(a)| 18
-Micheline| Watkins| 36| Micheline@unitec.edu| 0503-1984-15870| 31301| Divorciado(a)| 20
-Hae| Maldonado| 71| Hae@unitec.edu| 0503-1984-99165| 12111| Casado(a)| 17
-Richard| Montgomery| 49| Richard@unitec.edu| 0503-1990-18175| 14201| Divorciado(a)| 15
-Malorie| Robles| 18| Malorie@unitec.edu| 0503-1996-21490| 43101| Casado(a)| 22
-Nestor| Rivera| 67| Nestor@unitec.edu| 0503-1996-69722| 23201| Viudo(a)| 16
-Matilde| Goodwin| 71| Matilde@unitec.edu| 0503-2001-84638| 31301| Casado(a)| 28
-Wilford| Bradshaw| 10| Wilford@unitec.edu| 0503-2002-13557| 51101| Soltero(a)| 15
-Normand| Landry| 78| Normand@unitec.edu| 0503-2003-43646| 43201| Casado(a)| 23
-Hae| Dudley| 54| Hae@unitec.edu| 0503-2003-78099| 21101| Comprometido(a)| 27
-Olimpia| Hess| 31| Olimpia@unitec.edu| 0503-2014-63235| 14201| Soltero(a)| 22
-Sunni| Rodgers| 48| Sunni@unitec.edu| 0503-2017-33704| 51201| Divorciado(a)| 2
-Hannelore| Maldonado| 15| Hannelore@unitec.edu| 0511-1904-80248| 21103| Divorciado(a)| 6
-Stacy| Huynh| 44| Stacy@unitec.edu| 0511-1905-78037| 32301| Viudo(a)| 10
-Valarie| Dunlap| 71| Valarie@unitec.edu| 0511-1907-17017| 15201| Soltero(a)| 15
-Laveta| Reed| 53| Laveta@unitec.edu| 0511-1907-85542| 21112| Divorciado(a)| 24
-Deloras| Dudley| 74| Deloras@unitec.edu| 0511-1914-65607| 21301| Comprometido(a)| 3
-Normand| Goodwin| 69| Normand@unitec.edu| 0511-1915-30045| 31101| Soltero(a)| 3
-Roxane| Dunlap| 76| Roxane@unitec.edu| 0511-1921-69310| 42101| Comprometido(a)| 8
-Mel| Ortiz| 5| Mel@unitec.edu| 0511-1928-58848| 14201| Casado(a)| 29
-Hae| Pope| 15| Hae@unitec.edu| 0511-1929-33729| 41202| Soltero(a)| 22
-Malorie| Baker| 85| Malorie@unitec.edu| 0511-1929-81910| 41202| Soltero(a)| 15
-Malorie| Rivera| 80| Malorie@unitec.edu| 0511-1935-19342| 51201| Casado(a)| 1
-Ela| Huynh| 7| Ela@unitec.edu| 0511-1936-64636| 14101| Viudo(a)| 23
-Allene| Pope| 2| Allene@unitec.edu| 0511-1950-10441| 41101| Viudo(a)| 18
-Diane| Marshall| 9| Diane@unitec.edu| 0511-1951-28157| 21301| Viudo(a)| 7
-Latoya| Ritter| 49| Latoya@unitec.edu| 0511-1954-18279| 15101| Comprometido(a)| 3
-Diane| Maldonado| 18| Diane@unitec.edu| 0511-1955-46421| 21112| Comprometido(a)| 20
-Laveta| Cohen| 24| Laveta@unitec.edu| 0511-1960-11427| 16101| Soltero(a)| 15
-Nana| Pope| 68| Nana@unitec.edu| 0511-1969-54224| 31101| Viudo(a)| 26
-Augusta| Montes| 8| Augusta@unitec.edu| 0511-1973-96531| 14101| Viudo(a)| 28
-Claudette| Cohen| 54| Claudette@unitec.edu| 0511-1976-50249| 23101| Divorciado(a)| 2
-Cyrstal| Tate| 60| Cyrstal@unitec.edu| 0511-1979-63200| 52102| Divorciado(a)| 17
-Rufina| Bradshaw| 46| Rufina@unitec.edu| 0511-1983-58714| 51201| Divorciado(a)| 13
-Lakeesha| Mitchell| 45| Lakeesha@unitec.edu| 0511-1986-80434| 11101| Comprometido(a)| 28
-Carla| Vaughan| 51| Carla@unitec.edu| 0511-1989-42539| 31101| Casado(a)| 5
-Adelia| Mcgrath| 18| Adelia@unitec.edu| 0511-1991-21541| 12101| Viudo(a)| 17
-Armanda| Bradshaw| 3| Armanda@unitec.edu| 0511-1991-51996| 41202| Soltero(a)| 11
-Collene| Church| 49| Collene@unitec.edu| 0511-1991-75069| 21112| Viudo(a)| 28
-Armanda| Galvan| 27| Armanda@unitec.edu| 0511-2000-23348| 15201| Casado(a)| 29
-Nana| Dudley| 32| Nana@unitec.edu| 0511-2004-32742| 15201| Comprometido(a)| 2
-Lakeesha| Tate| 6| Lakeesha@unitec.edu| 0511-2010-23212| 16201| Divorciado(a)| 9
-Rufina| Galvan| 18| Rufina@unitec.edu| 0511-2011-28844| 43101| Soltero(a)| 8
-Adelia| Mitchell| 46| Adelia@unitec.edu| 0511-2013-56408| 21102| Casado(a)| 2
-Floretta| House| 19| Floretta@unitec.edu| 0511-2014-22926| 12101| Casado(a)| 4
-Yolonda| Mendoza| 85| Yolonda@unitec.edu| 0511-2017-70279| 12101| Casado(a)| 15
-Adelia| Howell| 57| Adelia@unitec.edu| 0601-1901-77930| 51101| Divorciado(a)| 27
-Rufina| Durham| 38| Rufina@unitec.edu| 0601-1902-40972| 12101| Soltero(a)| 21
-Normand| Lynn| 61| Normand@unitec.edu| 0601-1903-47661| 14101| Comprometido(a)| 18
-Malorie| Davila| 40| Malorie@unitec.edu| 0601-1903-74424| 21301| Divorciado(a)| 14
-Darren| Galvan| 16| Darren@unitec.edu| 0601-1905-66342| 12111| Viudo(a)| 17
-Sunni| Rowe| 85| Sunni@unitec.edu| 0601-1908-87383| 23201| Casado(a)| 3
-Ela| Robles| 64| Ela@unitec.edu| 0601-1911-34316| 14101| Soltero(a)| 30
-Robin| Phelps| 70| Robin@unitec.edu| 0601-1915-65942| 15101| Comprometido(a)| 27
-Harrison| Reed| 37| Harrison@unitec.edu| 0601-1919-66683| 16201| Soltero(a)| 7
-Latoya| House| 51| Latoya@unitec.edu| 0601-1919-99355| 11101| Divorciado(a)| 13
-Rheba| Lynn| 83| Rheba@unitec.edu| 0601-1920-90237| 42201| Viudo(a)| 19
-Rheba| Durham| 43| Rheba@unitec.edu| 0601-1922-55352| 51101| Casado(a)| 17
-Shirleen| Morrow| 86| Shirleen@unitec.edu| 0601-1925-25202| 21102| Soltero(a)| 21
-Adelia| Adams| 70| Adelia@unitec.edu| 0601-1925-32761| 34101| Divorciado(a)| 4
-Ela| Galvan| 18| Ela@unitec.edu| 0601-1932-47006| 13201| Comprometido(a)| 8
-Floretta| Maldonado| 8| Floretta@unitec.edu| 0601-1934-35688| 32101| Soltero(a)| 18
-Arlette| Parker| 66| Arlette@unitec.edu| 0601-1935-51533| 22101| Soltero(a)| 24
-Hae| Mendoza| 59| Hae@unitec.edu| 0601-1939-84841| 15201| Soltero(a)| 19
-Collene| Bradshaw| 77| Collene@unitec.edu| 0601-1942-19928| 15201| Viudo(a)| 14
-Floretta| Lynn| 59| Floretta@unitec.edu| 0601-1944-41320| 21104| Casado(a)| 21
-Hae| Galvan| 41| Hae@unitec.edu| 0601-1945-59611| 14201| Comprometido(a)| 3
-Edwina| Watkins| 15| Edwina@unitec.edu| 0601-1952-74720| 15201| Casado(a)| 6
-Eloisa| Maldonado| 7| Eloisa@unitec.edu| 0601-1953-57356| 23101| Divorciado(a)| 12
-Rufina| Page| 3| Rufina@unitec.edu| 0601-1955-57433| 13101| Viudo(a)| 26
-Arlette| Reed| 53| Arlette@unitec.edu| 0601-1957-12624| 21101| Casado(a)| 11
-Roxane| Crawford| 62| Roxane@unitec.edu| 0601-1959-44705| 14101| Viudo(a)| 20
-Diane| Maldonado| 44| Diane@unitec.edu| 0601-1963-60300| 32301| Viudo(a)| 4
-Jeanelle| Cohen| 45| Jeanelle@unitec.edu| 0601-1966-83459| 31101| Comprometido(a)| 15
-Nestor| Henson| 27| Nestor@unitec.edu| 0601-1970-81440| 42201| Casado(a)| 29
-Normand| Ortiz| 85| Normand@unitec.edu| 0601-1971-57749| 32301| Soltero(a)| 7
-Deloras| Page| 69| Deloras@unitec.edu| 0601-1973-41375| 42201| Soltero(a)| 8
-Harrison| Henson| 24| Harrison@unitec.edu| 0601-1979-90561| 42101| Casado(a)| 4
-Nestor| Tate| 75| Nestor@unitec.edu| 0601-1980-86565| 12111| Viudo(a)| 19
-Walter| Reed| 45| Walter@unitec.edu| 0601-1984-68017| 33101| Soltero(a)| 8
-Jeanelle| Maldonado| 80| Jeanelle@unitec.edu| 0601-1989-20200| 16101| Divorciado(a)| 5
-Stacy| Mcgrath| 22| Stacy@unitec.edu| 0601-1989-22853| 16201| Comprometido(a)| 6
-Adelia| Davila| 48| Adelia@unitec.edu| 0601-1996-39908| 14201| Casado(a)| 11
-Claudette| Mclean| 37| Claudette@unitec.edu| 0601-1997-66935| 23101| Divorciado(a)| 6
-Buena| Mclean| 46| Buena@unitec.edu| 0601-2001-12669| 22114| Viudo(a)| 12
-Carla| Wilson| 44| Carla@unitec.edu| 0601-2009-78074| 51201| Divorciado(a)| 3
-Roxane| Ortiz| 74| Roxane@unitec.edu| 0601-2010-60666| 21104| Viudo(a)| 18
-Floretta| Mclean| 50| Floretta@unitec.edu| 0601-2010-95406| 43201| Casado(a)| 16
-Ela| Galvan| 21| Ela@unitec.edu| 0601-2012-66521| 22101| Comprometido(a)| 27
-Collene| Mendoza| 47| Collene@unitec.edu| 0601-2015-82703| 16201| Viudo(a)| 6
-Allene| Ritter| 33| Allene@unitec.edu| 0601-2016-46773| 42101| Soltero(a)| 26
-Matilde| Watkins| 36| Matilde@unitec.edu| 0601-2017-25471| 12101| Soltero(a)| 23
-Deloras| Wilson| 25| Deloras@unitec.edu| 0703-1903-83796| 51201| Divorciado(a)| 16
-Latoya| Wilson| 72| Latoya@unitec.edu| 0703-1911-72799| 15101| Comprometido(a)| 10
-Adelia| Durham| 13| Adelia@unitec.edu| 0703-1916-16329| 21104| Soltero(a)| 7
-Cyrstal| Goodwin| 89| Cyrstal@unitec.edu| 0703-1917-62445| 32301| Comprometido(a)| 25
-Cyrstal| Avery| 72| Cyrstal@unitec.edu| 0703-1920-75788| 31101| Comprometido(a)| 21
-Diane| Tate| 34| Diane@unitec.edu| 0703-1920-92760| 21103| Soltero(a)| 11
-Rheba| Rodgers| 4| Rheba@unitec.edu| 0703-1921-89087| 21101| Viudo(a)| 17
-Olimpia| Howell| 69| Olimpia@unitec.edu| 0703-1936-22538| 41202| Casado(a)| 6
-Latoya| Durham| 13| Latoya@unitec.edu| 0703-1937-28175| 14101| Soltero(a)| 2
-Matilde| Tate| 25| Matilde@unitec.edu| 0703-1938-29328| 43101| Soltero(a)| 28
-Augusta| Durham| 35| Augusta@unitec.edu| 0703-1940-44076| 13201| Viudo(a)| 3
-Adelia| Dunlap| 47| Adelia@unitec.edu| 0703-1940-83094| 43201| Casado(a)| 6
-Adrianna| Pope| 66| Adrianna@unitec.edu| 0703-1948-86008| 51201| Casado(a)| 27
-Stacy| Chase| 4| Stacy@unitec.edu| 0703-1955-15617| 12111| Casado(a)| 12
-Arlette| Chase| 71| Arlette@unitec.edu| 0703-1956-86356| 51101| Divorciado(a)| 12
-Stacy| Watkins| 53| Stacy@unitec.edu| 0703-1964-33636| 21103| Viudo(a)| 12
-Allene| Robles| 67| Allene@unitec.edu| 0703-1965-78897| 42201| Soltero(a)| 17
-Cyrstal| Galvan| 53| Cyrstal@unitec.edu| 0703-1967-88880| 15101| Casado(a)| 29
-Armanda| Tate| 12| Armanda@unitec.edu| 0703-1967-93596| 23201| Soltero(a)| 14
-Normand| Vaughan| 36| Normand@unitec.edu| 0703-1972-17108| 14201| Divorciado(a)| 27
-Olimpia| Adams| 33| Olimpia@unitec.edu| 0703-1979-92090| 12101| Divorciado(a)| 28
-Armanda| Wilson| 32| Armanda@unitec.edu| 0703-1983-11341| 51201| Comprometido(a)| 7
-Hannelore| Ritter| 55| Hannelore@unitec.edu| 0703-1984-10941| 52102| Divorciado(a)| 17
-Rufina| Bailey| 4| Rufina@unitec.edu| 0703-1985-30639| 31101| Casado(a)| 2
-Jeanelle| Maldonado| 89| Jeanelle@unitec.edu| 0703-1994-35753| 15201| Casado(a)| 13
-Darren| Adams| 40| Darren@unitec.edu| 0703-1994-86150| 21101| Soltero(a)| 15
-Harrison| Wilson| 39| Harrison@unitec.edu| 0703-1996-89014| 31101| Comprometido(a)| 28
-Buena| Fritz| 63| Buena@unitec.edu| 0703-1997-74101| 12101| Comprometido(a)| 10
-Hae| Bailey| 65| Hae@unitec.edu| 0703-2001-86657| 31301| Casado(a)| 2
-Claudette| Wilson| 31| Claudette@unitec.edu| 0801-1905-57112| 43101| Viudo(a)| 7
-Matilde| Bond| 74| Matilde@unitec.edu| 0801-1906-32353| 32301| Viudo(a)| 17
-Sunni| Reed| 13| Sunni@unitec.edu| 0801-1908-45710| 43201| Viudo(a)| 8
-Adrianna| Baker| 59| Adrianna@unitec.edu| 0801-1912-11441| 14201| Viudo(a)| 6
-Floretta| Ortiz| 76| Floretta@unitec.edu| 0801-1914-71443| 21102| Divorciado(a)| 5
-Claudette| Mcgrath| 13| Claudette@unitec.edu| 0801-1917-72851| 14101| Divorciado(a)| 3
-Carla| Chase| 32| Carla@unitec.edu| 0801-1918-36882| 52101| Soltero(a)| 16
-Armanda| Montgomery| 16| Armanda@unitec.edu| 0801-1922-25918| 51201| Divorciado(a)| 1
-Shirleen| Mendoza| 42| Shirleen@unitec.edu| 0801-1930-74392| 15201| Casado(a)| 16
-Stacy| Avery| 14| Stacy@unitec.edu| 0801-1930-99045| 21112| Divorciado(a)| 19
-Jeanelle| Mcgrath| 6| Jeanelle@unitec.edu| 0801-1931-24908| 22101| Casado(a)| 24
-Ela| Henson| 74| Ela@unitec.edu| 0801-1933-52056| 32101| Divorciado(a)| 26
-Malorie| Mitchell| 12| Malorie@unitec.edu| 0801-1933-82574| 34101| Divorciado(a)| 25
-Nikki| Hess| 4| Nikki@unitec.edu| 0801-1935-74172| 13201| Viudo(a)| 22
-Augusta| Maldonado| 69| Augusta@unitec.edu| 0801-1935-90467| 33101| Viudo(a)| 3
-Rufina| Fritz| 83| Rufina@unitec.edu| 0801-1940-73362| 22114| Casado(a)| 15
-Rufina| Tate| 61| Rufina@unitec.edu| 0801-1943-34795| 32101| Comprometido(a)| 23
-Nidia| Galvan| 81| Nidia@unitec.edu| 0801-1944-34332| 33101| Comprometido(a)| 4
-Nana| Bailey| 6| Nana@unitec.edu| 0801-1946-74755| 21104| Viudo(a)| 8
-Nidia| Mcgrath| 9| Nidia@unitec.edu| 0801-1947-55883| 51101| Soltero(a)| 1
-Normand| Huynh| 27| Normand@unitec.edu| 0801-1953-43811| 41202| Viudo(a)| 5
-Buena| Chase| 47| Buena@unitec.edu| 0801-1953-83279| 12101| Soltero(a)| 28
-Deloras| Bright| 10| Deloras@unitec.edu| 0801-1954-80248| 32301| Casado(a)| 1
-Nikki| Fritz| 73| Nikki@unitec.edu| 0801-1954-88152| 42201| Divorciado(a)| 14
-Nikki| Cohen| 67| Nikki@unitec.edu| 0801-1957-10661| 16201| Comprometido(a)| 8
-Buena| Ortiz| 9| Buena@unitec.edu| 0801-1962-63408| 51101| Comprometido(a)| 9
-Claudette| Tate| 73| Claudette@unitec.edu| 0801-1966-99823| 16101| Comprometido(a)| 3
-Augusta| Bradshaw| 20| Augusta@unitec.edu| 0801-1966-99944| 13101| Casado(a)| 4
-Olimpia| Galvan| 83| Olimpia@unitec.edu| 0801-1970-49117| 15101| Viudo(a)| 11
-Claudette| Wilson| 23| Claudette@unitec.edu| 0801-1970-90705| 11101| Soltero(a)| 5
-Mel| Rivera| 30| Mel@unitec.edu| 0801-1973-32872| 22114| Divorciado(a)| 4
-Floretta| Davila| 66| Floretta@unitec.edu| 0801-1974-60690| 21101| Soltero(a)| 27
-Richard| Howell| 47| Richard@unitec.edu| 0801-1974-72707| 31101| Casado(a)| 20
-Claudette| Mclean| 33| Claudette@unitec.edu| 0801-1976-30849| 21101| Comprometido(a)| 12
-Matilde| Montgomery| 7| Matilde@unitec.edu| 0801-1977-80966| 34101| Viudo(a)| 3
-Nestor| Pope| 59| Nestor@unitec.edu| 0801-1978-43926| 41202| Soltero(a)| 30
-Mel| Tate| 41| Mel@unitec.edu| 0801-1978-91695| 21112| Viudo(a)| 29
-Darren| Bailey| 54| Darren@unitec.edu| 0801-1979-52782| 21101| Comprometido(a)| 5
-Floretta| Crawford| 3| Floretta@unitec.edu| 0801-1983-93626| 12101| Divorciado(a)| 17
-Deloras| Montgomery| 58| Deloras@unitec.edu| 0801-1984-39749| 51101| Comprometido(a)| 8
-Walter| House| 57| Walter@unitec.edu| 0801-1995-39256| 52101| Divorciado(a)| 15
-Nana| Reed| 76| Nana@unitec.edu| 0801-1995-45288| 51201| Viudo(a)| 26
-Richard| Bright| 65| Richard@unitec.edu| 0801-1995-85715| 13201| Casado(a)| 21
-Ela| Maldonado| 78| Ela@unitec.edu| 0801-1997-25814| 33101| Comprometido(a)| 27
-Lakeesha| Howell| 75| Lakeesha@unitec.edu| 0801-2003-12066| 41202| Soltero(a)| 14
-Rheba| Davila| 29| Rheba@unitec.edu| 0801-2004-59587| 42201| Casado(a)| 29
-Cyrstal| Rodgers| 49| Cyrstal@unitec.edu| 0801-2004-82715| 16201| Soltero(a)| 12
-Rheba| Landry| 86| Rheba@unitec.edu| 0801-2006-78681| 21112| Comprometido(a)| 4
-Adelia| Montes| 57| Adelia@unitec.edu| 0801-2011-51457| 14101| Viudo(a)| 15
-Adrianna| House| 58| Adrianna@unitec.edu| 0801-2012-24595| 42101| Casado(a)| 18
-Buena| Maldonado| 48| Buena@unitec.edu| 0801-2013-29494| 31301| Viudo(a)| 10
-Eloisa| Dudley| 69| Eloisa@unitec.edu| 0801-2017-73869| 21104| Comprometido(a)| 3
-Augusta| Parker| 82| Augusta@unitec.edu| 0801-2018-83105| 12101| Divorciado(a)| 7
-Collene| Pope| 65| Collene@unitec.edu| 1001-1900-35471| 42101| Comprometido(a)| 22
-Walter| Mclean| 23| Walter@unitec.edu| 1001-1904-32624| 21101| Comprometido(a)| 12
-Olimpia| Avery| 42| Olimpia@unitec.edu| 1001-1904-58657| 52102| Casado(a)| 15
-Adelia| Galvan| 31| Adelia@unitec.edu| 1001-1907-78197| 31101| Soltero(a)| 21
-Richard| Ritter| 25| Richard@unitec.edu| 1001-1914-50874| 43101| Comprometido(a)| 16
-Matilde| Bond| 68| Matilde@unitec.edu| 1001-1914-80922| 21301| Divorciado(a)| 16
-Walter| Maldonado| 16| Walter@unitec.edu| 1001-1915-38759| 21104| Soltero(a)| 23
-Darren| Howell| 16| Darren@unitec.edu| 1001-1916-25470| 33101| Comprometido(a)| 11
-Jeanelle| House| 32| Jeanelle@unitec.edu| 1001-1920-68483| 11101| Comprometido(a)| 1
-Richard| Rivera| 45| Richard@unitec.edu| 1001-1922-62514| 21301| Divorciado(a)| 26
-Stacy| Rowe| 22| Stacy@unitec.edu| 1001-1926-32576| 43201| Soltero(a)| 3
-Arlette| Bright| 58| Arlette@unitec.edu| 1001-1927-34811| 31301| Soltero(a)| 13
-Suzan| Ortiz| 17| Suzan@unitec.edu| 1001-1928-18354| 41202| Comprometido(a)| 24
-Latoya| Huynh| 30| Latoya@unitec.edu| 1001-1928-30378| 21101| Divorciado(a)| 16
-Augusta| Mcgrath| 49| Augusta@unitec.edu| 1001-1929-79085| 51101| Viudo(a)| 1
-Nidia| House| 77| Nidia@unitec.edu| 1001-1937-28363| 13101| Soltero(a)| 27
-Latoya| Crawford| 80| Latoya@unitec.edu| 1001-1943-94617| 12101| Divorciado(a)| 30
-Malorie| Howell| 23| Malorie@unitec.edu| 1001-1949-84909| 14201| Comprometido(a)| 25
-Eloisa| Adams| 20| Eloisa@unitec.edu| 1001-1952-25119| 42101| Comprometido(a)| 21
-Sunni| Dudley| 83| Sunni@unitec.edu| 1001-1956-88817| 31301| Viudo(a)| 8
-Ela| Mendoza| 13| Ela@unitec.edu| 1001-1965-52424| 11101| Comprometido(a)| 4
-Nidia| Bradshaw| 70| Nidia@unitec.edu| 1001-1967-64105| 12111| Comprometido(a)| 23
-Carla| Baker| 68| Carla@unitec.edu| 1001-1973-20793| 33101| Divorciado(a)| 26
-Lakeesha| Davila| 67| Lakeesha@unitec.edu| 1001-1974-27746| 41101| Casado(a)| 13
-Walter| Maldonado| 21| Walter@unitec.edu| 1001-1985-63135| 42101| Comprometido(a)| 26
-Lakeesha| Crawford| 76| Lakeesha@unitec.edu| 1001-1988-79484| 31101| Divorciado(a)| 2
-Claudette| Bailey| 17| Claudette@unitec.edu| 1001-1997-35564| 11101| Comprometido(a)| 23
-Eloisa| Fritz| 34| Eloisa@unitec.edu| 1001-2000-40788| 14201| Casado(a)| 7
-Deloras| Galvan| 2| Deloras@unitec.edu| 1001-2005-13952| 42201| Casado(a)| 21
-Normand| Parker| 83| Normand@unitec.edu| 1001-2005-71296| 51201| Soltero(a)| 14
-Wilford| Bond| 26| Wilford@unitec.edu| 1001-2010-67227| 43101| Divorciado(a)| 19
-Allene| Maldonado| 66| Allene@unitec.edu| 1001-2018-70516| 52101| Viudo(a)| 3
-Edwina| Durham| 22| Edwina@unitec.edu| 1006-1904-93955| 21102| Divorciado(a)| 27
-Louella| Phelps| 75| Louella@unitec.edu| 1006-1905-22785| 16101| Divorciado(a)| 26
-Ela| Morrow| 25| Ela@unitec.edu| 1006-1908-13452| 21112| Casado(a)| 24
-Micheline| Ritter| 20| Micheline@unitec.edu| 1006-1912-33664| 22101| Soltero(a)| 12
-Collene| Howell| 64| Collene@unitec.edu| 1006-1914-76871| 21102| Comprometido(a)| 25
-Louella| Chase| 77| Louella@unitec.edu| 1006-1919-73627| 15101| Soltero(a)| 22
-Laveta| Rivera| 61| Laveta@unitec.edu| 1006-1921-26301| 13101| Divorciado(a)| 18
-Walter| Ritter| 87| Walter@unitec.edu| 1006-1921-96205| 51101| Viudo(a)| 8
-Micheline| Lynn| 54| Micheline@unitec.edu| 1006-1923-46239| 31301| Viudo(a)| 23
-Deloras| Montes| 39| Deloras@unitec.edu| 1006-1925-20300| 21104| Casado(a)| 22
-Laveta| Morrow| 61| Laveta@unitec.edu| 1006-1925-26187| 23201| Comprometido(a)| 4
-Micheline| Bailey| 63| Micheline@unitec.edu| 1006-1925-30033| 21103| Viudo(a)| 20
-Stacy| House| 66| Stacy@unitec.edu| 1006-1927-58960| 15201| Soltero(a)| 8
-Edwina| Goodwin| 18| Edwina@unitec.edu| 1006-1930-29783| 21101| Comprometido(a)| 27
-Suzan| Davila| 75| Suzan@unitec.edu| 1006-1933-58168| 41202| Viudo(a)| 9
-Robin| Ritter| 33| Robin@unitec.edu| 1006-1935-82701| 12101| Casado(a)| 4
-Walter| Marshall| 19| Walter@unitec.edu| 1006-1937-60995| 43201| Casado(a)| 24
-Robin| Parker| 3| Robin@unitec.edu| 1006-1937-83645| 31101| Divorciado(a)| 12
-Diane| Tate| 8| Diane@unitec.edu| 1006-1937-93448| 43201| Comprometido(a)| 9
-Malorie| Chase| 27| Malorie@unitec.edu| 1006-1939-79163| 11101| Comprometido(a)| 19
-Olimpia| Landry| 12| Olimpia@unitec.edu| 1006-1942-68135| 21102| Casado(a)| 11
-Harrison| Robles| 67| Harrison@unitec.edu| 1006-1942-80409| 23101| Divorciado(a)| 23
-Shirleen| Rowe| 50| Shirleen@unitec.edu| 1006-1943-91949| 22101| Viudo(a)| 28
-Sunni| Dunlap| 57| Sunni@unitec.edu| 1006-1951-58436| 13101| Soltero(a)| 22
-Matilde| House| 48| Matilde@unitec.edu| 1006-1956-17043| 51101| Viudo(a)| 5
-Micheline| Rivera| 65| Micheline@unitec.edu| 1006-1958-97311| 23101| Casado(a)| 22
-Claudette| Mcgrath| 41| Claudette@unitec.edu| 1006-1967-90603| 11101| Divorciado(a)| 14
-Nestor| Avery| 7| Nestor@unitec.edu| 1006-1971-42922| 31301| Casado(a)| 13
-Buena| Church| 88| Buena@unitec.edu| 1006-1973-77031| 21112| Viudo(a)| 8
-Arlette| Henson| 9| Arlette@unitec.edu| 1006-1974-12361| 32101| Casado(a)| 28
-Roxane| Adams| 47| Roxane@unitec.edu| 1006-1976-93559| 21104| Comprometido(a)| 8
-Rufina| Hess| 58| Rufina@unitec.edu| 1006-1978-49756| 21101| Viudo(a)| 1
-Deloras| Ritter| 71| Deloras@unitec.edu| 1006-1981-40333| 52102| Casado(a)| 14
-Buena| Mcgrath| 66| Buena@unitec.edu| 1006-1981-71807| 12101| Viudo(a)| 10
-Wilford| Wilson| 81| Wilford@unitec.edu| 1006-1984-83477| 32301| Soltero(a)| 29
-Micheline| Dudley| 13| Micheline@unitec.edu| 1006-1990-90665| 13101| Viudo(a)| 26
-Augusta| Church| 49| Augusta@unitec.edu| 1006-1993-83952| 21301| Soltero(a)| 30
-Stacy| Watkins| 81| Stacy@unitec.edu| 1006-1997-58192| 34101| Comprometido(a)| 21
-Matilde| Henson| 37| Matilde@unitec.edu| 1006-1999-45363| 21101| Soltero(a)| 1
-Jeanelle| Wilson| 24| Jeanelle@unitec.edu| 1006-2000-35509| 15201| Viudo(a)| 26
-Darren| Bailey| 65| Darren@unitec.edu| 1006-2009-60620| 42201| Casado(a)| 10
-Darren| Chase| 5| Darren@unitec.edu| 1006-2010-31156| 21112| Divorciado(a)| 12
-Augusta| Church| 16| Augusta@unitec.edu| 1006-2011-24694| 23201| Soltero(a)| 4
-Allene| Rowe| 17| Allene@unitec.edu| 1006-2012-76595| 33101| Soltero(a)| 15
-Robin| Lynn| 48| Robin@unitec.edu| 1101-1901-16974| 33101| Comprometido(a)| 10
-Nestor| Montes| 63| Nestor@unitec.edu| 1101-1902-32934| 21301| Casado(a)| 3
-Normand| Ritter| 14| Normand@unitec.edu| 1101-1902-44076| 31301| Soltero(a)| 14
-Allene| Avery| 29| Allene@unitec.edu| 1101-1909-22280| 15101| Viudo(a)| 17
-Deloras| Mcgrath| 75| Deloras@unitec.edu| 1101-1910-16601| 43201| Viudo(a)| 6
-Stacy| Bailey| 32| Stacy@unitec.edu| 1101-1910-89577| 16201| Divorciado(a)| 24
-Mel| Baker| 74| Mel@unitec.edu| 1101-1918-64589| 51201| Viudo(a)| 10
-Nestor| Galvan| 26| Nestor@unitec.edu| 1101-1919-38917| 21301| Casado(a)| 7
-Nikki| Dudley| 6| Nikki@unitec.edu| 1101-1920-25311| 21104| Casado(a)| 28
-Augusta| Davila| 21| Augusta@unitec.edu| 1101-1921-44994| 11101| Divorciado(a)| 4
-Darren| Montes| 58| Darren@unitec.edu| 1101-1925-82043| 21101| Divorciado(a)| 27
-Jeanelle| Church| 40| Jeanelle@unitec.edu| 1101-1926-70590| 12101| Soltero(a)| 24
-Buena| Tate| 79| Buena@unitec.edu| 1101-1927-47088| 11101| Soltero(a)| 13
-Micheline| Morrow| 84| Micheline@unitec.edu| 1101-1928-34941| 51101| Comprometido(a)| 15
-Laveta| Mendoza| 87| Laveta@unitec.edu| 1101-1932-71572| 32301| Divorciado(a)| 29
-Rufina| Galvan| 9| Rufina@unitec.edu| 1101-1932-99582| 23201| Comprometido(a)| 1
-Hae| Parker| 68| Hae@unitec.edu| 1101-1935-54878| 31101| Casado(a)| 22
-Carla| Morrow| 3| Carla@unitec.edu| 1101-1938-44186| 12101| Viudo(a)| 22
-Edwina| Marshall| 7| Edwina@unitec.edu| 1101-1939-80104| 42201| Comprometido(a)| 16
-Adelia| Montgomery| 61| Adelia@unitec.edu| 1101-1942-93726| 23201| Comprometido(a)| 13
-Valarie| Montgomery| 36| Valarie@unitec.edu| 1101-1946-17810| 42201| Casado(a)| 5
-Latoya| Avery| 38| Latoya@unitec.edu| 1101-1949-53712| 32101| Soltero(a)| 24
-Collene| Galvan| 87| Collene@unitec.edu| 1101-1953-52200| 41101| Casado(a)| 11
-Hae| Pope| 40| Hae@unitec.edu| 1101-1955-76296| 21301| Soltero(a)| 20
-Eloisa| Dunlap| 38| Eloisa@unitec.edu| 1101-1960-34375| 21103| Comprometido(a)| 16
-Matilde| Pope| 77| Matilde@unitec.edu| 1101-1960-96538| 15201| Comprometido(a)| 29
-Harrison| Tate| 15| Harrison@unitec.edu| 1101-1961-89772| 12101| Comprometido(a)| 10
-Eloisa| Watkins| 12| Eloisa@unitec.edu| 1101-1963-34792| 14201| Divorciado(a)| 5
-Yolonda| Hess| 74| Yolonda@unitec.edu| 1101-1964-34414| 21104| Comprometido(a)| 25
-Mel| Henson| 47| Mel@unitec.edu| 1101-1965-19414| 21102| Comprometido(a)| 29
-Mel| Marshall| 37| Mel@unitec.edu| 1101-1967-18653| 23101| Comprometido(a)| 2
-Wilford| Morrow| 43| Wilford@unitec.edu| 1101-1968-67778| 21104| Casado(a)| 1
-Shirleen| Mcgrath| 81| Shirleen@unitec.edu| 1101-1974-32195| 33101| Soltero(a)| 19
-Ela| Galvan| 18| Ela@unitec.edu| 1101-1975-19898| 22101| Divorciado(a)| 30
-Suzan| Bright| 36| Suzan@unitec.edu| 1101-1977-28842| 51101| Divorciado(a)| 3
-Lakeesha| Marshall| 40| Lakeesha@unitec.edu| 1101-1981-98347| 31301| Soltero(a)| 18
-Corrine| Reed| 74| Corrine@unitec.edu| 1101-1984-51906| 13101| Divorciado(a)| 19
-Nikki| Dudley| 75| Nikki@unitec.edu| 1101-1987-45888| 21112| Viudo(a)| 9
-Wilford| Baker| 33| Wilford@unitec.edu| 1101-1990-29149| 12101| Casado(a)| 24
-Buena| Crawford| 74| Buena@unitec.edu| 1101-1991-12538| 14201| Soltero(a)| 9
-Richard| Montes| 74| Richard@unitec.edu| 1101-1997-78018| 23201| Divorciado(a)| 17
-Ela| Huynh| 72| Ela@unitec.edu| 1101-1999-43393| 15101| Comprometido(a)| 12
-Yolonda| Reed| 78| Yolonda@unitec.edu| 1101-1999-92304| 21112| Casado(a)| 11
-Corrine| Montes| 19| Corrine@unitec.edu| 1101-2004-77111| 15201| Soltero(a)| 14
-Nestor| Durham| 25| Nestor@unitec.edu| 1101-2010-68773| 12101| Casado(a)| 15
-Carla| Bailey| 55| Carla@unitec.edu| 1101-2011-64639| 22101| Comprometido(a)| 25
-Floretta| Bright| 31| Floretta@unitec.edu| 1101-2012-13894| 32101| Soltero(a)| 29
-Matilde| Montgomery| 60| Matilde@unitec.edu| 1101-2012-53444| 32301| Viudo(a)| 14
-Nidia| Watkins| 67| Nidia@unitec.edu| 1101-2013-35707| 31101| Soltero(a)| 16
-Nidia| Rodgers| 67| Nidia@unitec.edu| 1101-2014-52924| 43101| Viudo(a)| 5
-Rufina| Maldonado| 64| Rufina@unitec.edu| 1101-2015-38644| 21112| Divorciado(a)| 22
-Wilford| Goodwin| 40| Wilford@unitec.edu| 1101-2016-57133| 43101| Divorciado(a)| 9
-Malorie| Ortiz| 19| Malorie@unitec.edu| 1104-1900-38909| 51201| Soltero(a)| 18
-Nestor| Hess| 15| Nestor@unitec.edu| 1104-1901-57285| 13101| Comprometido(a)| 28
-Nidia| Ritter| 30| Nidia@unitec.edu| 1104-1901-80226| 23201| Comprometido(a)| 27
-Jeanelle| Durham| 19| Jeanelle@unitec.edu| 1104-1911-98919| 43201| Casado(a)| 15
-Rheba| Rodgers| 40| Rheba@unitec.edu| 1104-1917-10417| 51201| Divorciado(a)| 22
-Edwina| Strickland| 68| Edwina@unitec.edu| 1104-1918-70715| 51101| Divorciado(a)| 24
-Corrine| Strickland| 29| Corrine@unitec.edu| 1104-1923-11053| 52101| Divorciado(a)| 3
-Walter| Henson| 51| Walter@unitec.edu| 1104-1926-25438| 41101| Viudo(a)| 2
-Rheba| Montes| 11| Rheba@unitec.edu| 1104-1927-66289| 41202| Divorciado(a)| 19
-Hae| Avery| 78| Hae@unitec.edu| 1104-1928-53161| 21104| Casado(a)| 2
-Eloisa| Landry| 58| Eloisa@unitec.edu| 1104-1930-37556| 43201| Casado(a)| 11
-Adelia| Robles| 33| Adelia@unitec.edu| 1104-1935-25977| 32301| Comprometido(a)| 9
-Suzan| Page| 61| Suzan@unitec.edu| 1104-1941-67533| 21301| Divorciado(a)| 11
-Darren| Tate| 67| Darren@unitec.edu| 1104-1942-14386| 23201| Comprometido(a)| 18
-Allene| Chase| 35| Allene@unitec.edu| 1104-1943-36867| 32101| Comprometido(a)| 2
-Walter| Dudley| 70| Walter@unitec.edu| 1104-1944-89499| 52101| Soltero(a)| 5
-Buena| Pope| 29| Buena@unitec.edu| 1104-1951-70688| 21102| Divorciado(a)| 13
-Valarie| Maldonado| 8| Valarie@unitec.edu| 1104-1951-95001| 22101| Soltero(a)| 16
-Matilde| Adams| 55| Matilde@unitec.edu| 1104-1952-35724| 13101| Divorciado(a)| 21
-Diane| Bond| 16| Diane@unitec.edu| 1104-1958-52068| 42101| Divorciado(a)| 21
-Allene| Tate| 18| Allene@unitec.edu| 1104-1962-91800| 32101| Divorciado(a)| 14
-Edwina| Bailey| 21| Edwina@unitec.edu| 1104-1963-56338| 41101| Divorciado(a)| 10
-Darren| Mitchell| 6| Darren@unitec.edu| 1104-1965-31834| 52102| Divorciado(a)| 17
-Malorie| Hess| 79| Malorie@unitec.edu| 1104-1966-61450| 21112| Casado(a)| 18
-Rufina| Adams| 24| Rufina@unitec.edu| 1104-1968-66534| 22114| Comprometido(a)| 17
-Eloisa| Galvan| 23| Eloisa@unitec.edu| 1104-1972-60514| 52101| Soltero(a)| 9
-Ela| Montgomery| 42| Ela@unitec.edu| 1104-1978-51125| 51201| Comprometido(a)| 29
-Collene| Bright| 78| Collene@unitec.edu| 1104-1978-79184| 43201| Soltero(a)| 29
-Diane| Baker| 36| Diane@unitec.edu| 1104-1981-75712| 12101| Comprometido(a)| 11
-Shirleen| Reed| 49| Shirleen@unitec.edu| 1104-1984-12531| 43201| Divorciado(a)| 24
-Matilde| Mcgrath| 12| Matilde@unitec.edu| 1104-1986-14848| 11101| Soltero(a)| 4
-Richard| Bright| 80| Richard@unitec.edu| 1104-1986-97649| 16101| Divorciado(a)| 17
-Roxane| Ritter| 17| Roxane@unitec.edu| 1104-1991-80223| 42101| Viudo(a)| 30
-Darren| Page| 61| Darren@unitec.edu| 1104-1992-82455| 52102| Viudo(a)| 4
-Nidia| Vaughan| 78| Nidia@unitec.edu| 1104-1997-57651| 14101| Soltero(a)| 4
-Nikki| Baker| 35| Nikki@unitec.edu| 1104-2003-48379| 33101| Divorciado(a)| 15
-Cyrstal| Ritter| 85| Cyrstal@unitec.edu| 1104-2010-63576| 32301| Casado(a)| 11
-Stacy| Rowe| 42| Stacy@unitec.edu| 1104-2012-37605| 21101| Soltero(a)| 17
-Wilford| Bright| 27| Wilford@unitec.edu| 1104-2013-70435| 13101| Soltero(a)| 8
-Collene| Ortiz| 39| Collene@unitec.edu| 1104-2015-64398| 33101| Divorciado(a)| 27
-Olimpia| Hess| 33| Olimpia@unitec.edu| 1104-2016-31731| 16201| Casado(a)| 29
-Allene| Watkins| 40| Allene@unitec.edu| 1104-2018-36054| 13101| Comprometido(a)| 11
-Augusta| Marshall| 84| Augusta@unitec.edu| 1401-1904-18277| 31301| Divorciado(a)| 18
-Claudette| Goodwin| 51| Claudette@unitec.edu| 1401-1904-35440| 13201| Divorciado(a)| 26
-Lakeesha| Bradshaw| 11| Lakeesha@unitec.edu| 1401-1905-60637| 52102| Soltero(a)| 3
-Harrison| Chase| 26| Harrison@unitec.edu| 1401-1916-73903| 23101| Comprometido(a)| 26
-Claudette| Rowe| 10| Claudette@unitec.edu| 1401-1919-26730| 42101| Viudo(a)| 14
-Deloras| Fritz| 59| Deloras@unitec.edu| 1401-1922-82098| 51201| Soltero(a)| 4
-Hae| Parker| 52| Hae@unitec.edu| 1401-1924-70942| 12111| Divorciado(a)| 10
-Olimpia| Phelps| 41| Olimpia@unitec.edu| 1401-1927-46558| 52102| Comprometido(a)| 22
-Augusta| Parker| 16| Augusta@unitec.edu| 1401-1936-28997| 15101| Casado(a)| 13
-Malorie| Montgomery| 37| Malorie@unitec.edu| 1401-1937-48831| 21103| Viudo(a)| 29
-Claudette| Bailey| 9| Claudette@unitec.edu| 1401-1940-40669| 32101| Casado(a)| 16
-Matilde| Lynn| 54| Matilde@unitec.edu| 1401-1945-99777| 15101| Viudo(a)| 25
-Diane| Bailey| 75| Diane@unitec.edu| 1401-1946-15809| 13101| Viudo(a)| 10
-Normand| Cohen| 69| Normand@unitec.edu| 1401-1947-50771| 21104| Divorciado(a)| 26
-Valarie| Dudley| 75| Valarie@unitec.edu| 1401-1947-52292| 12101| Casado(a)| 11
-Sunni| Huynh| 33| Sunni@unitec.edu| 1401-1947-55432| 21112| Casado(a)| 24
-Wilford| Bradshaw| 62| Wilford@unitec.edu| 1401-1949-43630| 14101| Divorciado(a)| 14
-Cyrstal| Morrow| 39| Cyrstal@unitec.edu| 1401-1951-65980| 15101| Casado(a)| 25
-Collene| Phelps| 23| Collene@unitec.edu| 1401-1952-29596| 22114| Casado(a)| 26
-Collene| Montes| 7| Collene@unitec.edu| 1401-1953-53430| 52101| Soltero(a)| 4
-Armanda| Watkins| 25| Armanda@unitec.edu| 1401-1954-35342| 21301| Casado(a)| 4
-Rufina| Rowe| 6| Rufina@unitec.edu| 1401-1958-24925| 33101| Divorciado(a)| 6
-Robin| Rivera| 76| Robin@unitec.edu| 1401-1958-76450| 33101| Viudo(a)| 26
-Wilford| Baker| 78| Wilford@unitec.edu| 1401-1960-24561| 43101| Casado(a)| 22
-Richard| Bailey| 49| Richard@unitec.edu| 1401-1960-91320| 12101| Divorciado(a)| 29
-Arlette| Montes| 79| Arlette@unitec.edu| 1401-1968-81304| 13101| Divorciado(a)| 16
-Mel| Mcgrath| 38| Mel@unitec.edu| 1401-1971-57184| 41202| Divorciado(a)| 26
-Adrianna| Church| 28| Adrianna@unitec.edu| 1401-1972-38911| 14101| Casado(a)| 19
-Jeanelle| Chase| 69| Jeanelle@unitec.edu| 1401-1972-41962| 16101| Casado(a)| 22
-Jeanelle| Goodwin| 68| Jeanelle@unitec.edu| 1401-1976-78537| 15201| Casado(a)| 13
-Adrianna| Montes| 41| Adrianna@unitec.edu| 1401-1979-88637| 41202| Soltero(a)| 24
-Roxane| Bright| 2| Roxane@unitec.edu| 1401-1982-79196| 34101| Casado(a)| 1
-Collene| Dudley| 19| Collene@unitec.edu| 1401-1983-75870| 21102| Comprometido(a)| 5
-Armanda| Bright| 74| Armanda@unitec.edu| 1401-1984-87226| 22101| Comprometido(a)| 9
-Valarie| Landry| 25| Valarie@unitec.edu| 1401-1987-97191| 14201| Viudo(a)| 30
-Nidia| Strickland| 22| Nidia@unitec.edu| 1401-1994-17275| 52102| Soltero(a)| 4
-Deloras| Page| 51| Deloras@unitec.edu| 1401-1996-47120| 43101| Casado(a)| 22
-Allene| Rodgers| 2| Allene@unitec.edu| 1401-1998-43534| 43101| Divorciado(a)| 10
-Latoya| Vaughan| 11| Latoya@unitec.edu| 1401-2000-15761| 42101| Viudo(a)| 2
-Adrianna| Rivera| 67| Adrianna@unitec.edu| 1401-2000-35008| 23201| Divorciado(a)| 9
-Olimpia| Pope| 81| Olimpia@unitec.edu| 1401-2002-97679| 43201| Divorciado(a)| 14
-Carla| Marshall| 64| Carla@unitec.edu| 1401-2006-46561| 41202| Viudo(a)| 29
-Walter| Crawford| 1| Walter@unitec.edu| 1401-2007-48363| 52101| Viudo(a)| 23
-Adelia| Ritter| 19| Adelia@unitec.edu| 1401-2007-54562| 52102| Divorciado(a)| 4
-Augusta| Tate| 51| Augusta@unitec.edu| 1401-2008-51168| 52102| Casado(a)| 9
-Carla| Montgomery| 17| Carla@unitec.edu| 1401-2009-69592| 23201| Soltero(a)| 18
-Nikki| Bond| 70| Nikki@unitec.edu| 1401-2013-51050| 32101| Comprometido(a)| 1
-Darren| Marshall| 82| Darren@unitec.edu| 1501-1911-14192| 52101| Viudo(a)| 12
-Robin| Ritter| 68| Robin@unitec.edu| 1501-1912-93778| 12111| Viudo(a)| 1
-Augusta| Goodwin| 9| Augusta@unitec.edu| 1501-1912-94931| 33101| Divorciado(a)| 1
-Matilde| Cohen| 13| Matilde@unitec.edu| 1501-1914-61946| 15201| Comprometido(a)| 19
-Buena| Church| 37| Buena@unitec.edu| 1501-1918-82378| 23201| Viudo(a)| 27
-Olimpia| Adams| 2| Olimpia@unitec.edu| 1501-1919-11260| 33101| Comprometido(a)| 20
-Harrison| Page| 53| Harrison@unitec.edu| 1501-1929-41064| 51201| Soltero(a)| 17
-Rufina| Goodwin| 39| Rufina@unitec.edu| 1501-1932-20728| 42101| Casado(a)| 30
-Hae| Davila| 79| Hae@unitec.edu| 1501-1932-30699| 41202| Soltero(a)| 27
-Nikki| House| 62| Nikki@unitec.edu| 1501-1934-19669| 21112| Viudo(a)| 10
-Sunni| Adams| 65| Sunni@unitec.edu| 1501-1935-61129| 21103| Casado(a)| 16
-Hannelore| Church| 46| Hannelore@unitec.edu| 1501-1936-91524| 12101| Divorciado(a)| 3
-Latoya| Pope| 22| Latoya@unitec.edu| 1501-1937-35642| 34101| Casado(a)| 30
-Adrianna| Bond| 81| Adrianna@unitec.edu| 1501-1941-34461| 42201| Comprometido(a)| 26
-Darren| Cohen| 39| Darren@unitec.edu| 1501-1942-90726| 21101| Divorciado(a)| 8
-Robin| Page| 12| Robin@unitec.edu| 1501-1944-81885| 43101| Viudo(a)| 14
-Matilde| Baker| 85| Matilde@unitec.edu| 1501-1946-16357| 42201| Divorciado(a)| 15
-Deloras| Baker| 45| Deloras@unitec.edu| 1501-1949-21635| 12111| Comprometido(a)| 3
-Darren| Cohen| 54| Darren@unitec.edu| 1501-1952-54843| 21102| Comprometido(a)| 4
-Yolonda| Phelps| 40| Yolonda@unitec.edu| 1501-1954-14747| 14201| Viudo(a)| 22
-Augusta| Church| 41| Augusta@unitec.edu| 1501-1965-44053| 21102| Soltero(a)| 20
-Armanda| Bond| 82| Armanda@unitec.edu| 1501-1976-31107| 52102| Casado(a)| 10
-Lakeesha| House| 16| Lakeesha@unitec.edu| 1501-1976-58360| 14101| Divorciado(a)| 14
-Shirleen| Adams| 69| Shirleen@unitec.edu| 1501-1979-56222| 12101| Viudo(a)| 28
-Hae| Baker| 13| Hae@unitec.edu| 1501-1980-21304| 23101| Viudo(a)| 23
-Claudette| Page| 3| Claudette@unitec.edu| 1501-1981-83932| 22114| Soltero(a)| 17
-Allene| Rivera| 7| Allene@unitec.edu| 1501-1988-59858| 51201| Comprometido(a)| 17
-Nana| Rodgers| 17| Nana@unitec.edu| 1501-1995-67363| 15201| Casado(a)| 12
-Armanda| Morrow| 22| Armanda@unitec.edu| 1501-1997-89117| 41101| Soltero(a)| 3
-Augusta| Lynn| 57| Augusta@unitec.edu| 1501-2003-74956| 22101| Casado(a)| 4
-Latoya| Huynh| 61| Latoya@unitec.edu| 1501-2004-80070| 42201| Casado(a)| 6
-Arlette| Parker| 89| Arlette@unitec.edu| 1501-2004-86063| 41101| Soltero(a)| 19
-Walter| Rivera| 4| Walter@unitec.edu| 1501-2006-89255| 16201| Casado(a)| 18
-Rufina| Tate| 60| Rufina@unitec.edu| 1501-2006-89940| 33101| Comprometido(a)| 26
-Deloras| Watkins| 46| Deloras@unitec.edu| 1501-2010-82488| 42201| Soltero(a)| 15
-Laveta| Bright| 28| Laveta@unitec.edu| 1501-2011-82056| 52102| Soltero(a)| 2
-Roxane| Crawford| 8| Roxane@unitec.edu| 1501-2012-47663| 31101| Viudo(a)| 7
-Arlette| Phelps| 71| Arlette@unitec.edu| 1501-2013-30052| 41202| Soltero(a)| 13
-Roxane| Phelps| 84| Roxane@unitec.edu| 1501-2013-68507| 21104| Divorciado(a)| 15
-Claudette| Huynh| 23| Claudette@unitec.edu| 1501-2015-14538| 23101| Comprometido(a)| 25
-Diane| Morrow| 32| Diane@unitec.edu| 1514-1909-98818| 14101| Casado(a)| 1
-Eloisa| Mcgrath| 52| Eloisa@unitec.edu| 1514-1915-22085| 22114| Viudo(a)| 28
-Floretta| Montgomery| 41| Floretta@unitec.edu| 1514-1916-56459| 22101| Casado(a)| 23
-Adrianna| Goodwin| 86| Adrianna@unitec.edu| 1514-1918-63185| 52102| Divorciado(a)| 4
-Armanda| Rivera| 3| Armanda@unitec.edu| 1514-1922-84606| 32301| Divorciado(a)| 4
-Hannelore| Robles| 2| Hannelore@unitec.edu| 1514-1925-11215| 16101| Viudo(a)| 17
-Arlette| Cohen| 25| Arlette@unitec.edu| 1514-1928-14807| 11101| Soltero(a)| 19
-Jeanelle| Lynn| 41| Jeanelle@unitec.edu| 1514-1929-77189| 33101| Viudo(a)| 7
-Nidia| Wilson| 16| Nidia@unitec.edu| 1514-1938-32388| 12101| Viudo(a)| 17
-Allene| Hess| 80| Allene@unitec.edu| 1514-1941-13930| 15101| Comprometido(a)| 29
-Floretta| Mclean| 67| Floretta@unitec.edu| 1514-1942-69626| 21102| Divorciado(a)| 13
-Nestor| House| 44| Nestor@unitec.edu| 1514-1946-13791| 22101| Casado(a)| 26
-Rheba| Morrow| 49| Rheba@unitec.edu| 1514-1950-62430| 21102| Casado(a)| 20
-Hae| Phelps| 42| Hae@unitec.edu| 1514-1954-67192| 13101| Divorciado(a)| 6
-Shirleen| Rowe| 29| Shirleen@unitec.edu| 1514-1958-64231| 12101| Divorciado(a)| 8
-Jeanelle| Fritz| 2| Jeanelle@unitec.edu| 1514-1969-94195| 51201| Comprometido(a)| 19
-Ela| Page| 83| Ela@unitec.edu| 1514-1974-25134| 15201| Casado(a)| 7
-Malorie| Watkins| 39| Malorie@unitec.edu| 1514-1974-50645| 21102| Divorciado(a)| 24
-Olimpia| Wilson| 21| Olimpia@unitec.edu| 1514-1979-21522| 11101| Casado(a)| 6
-Nestor| Marshall| 36| Nestor@unitec.edu| 1514-1980-24815| 21301| Viudo(a)| 18
-Buena| Strickland| 72| Buena@unitec.edu| 1514-1984-41157| 43201| Casado(a)| 20
-Eloisa| Rivera| 23| Eloisa@unitec.edu| 1514-1985-40495| 21101| Divorciado(a)| 28
-Malorie| Montgomery| 3| Malorie@unitec.edu| 1514-1990-46146| 21301| Divorciado(a)| 7
-Micheline| Page| 68| Micheline@unitec.edu| 1514-1991-23827| 43201| Soltero(a)| 29
-Hannelore| Marshall| 15| Hannelore@unitec.edu| 1514-1992-81986| 52101| Soltero(a)| 9
-Nana| Maldonado| 16| Nana@unitec.edu| 1514-1998-20645| 12111| Divorciado(a)| 9
-Nidia| Howell| 29| Nidia@unitec.edu| 1514-2002-77333| 51101| Comprometido(a)| 30
-Suzan| Landry| 20| Suzan@unitec.edu| 1514-2005-66976| 11101| Casado(a)| 20
-Lakeesha| Mitchell| 5| Lakeesha@unitec.edu| 1514-2008-74577| 32101| Divorciado(a)| 23
-Nikki| Montgomery| 10| Nikki@unitec.edu| 1514-2009-94824| 52102| Soltero(a)| 21
-Floretta| Ortiz| 6| Floretta@unitec.edu| 1514-2011-75387| 15201| Comprometido(a)| 6
-Suzan| Church| 78| Suzan@unitec.edu| 1514-2011-86218| 22101| Soltero(a)| 8
-Suzan| Mendoza| 35| Suzan@unitec.edu| 1514-2013-19383| 16201| Soltero(a)| 4
-Rheba| House| 68| Rheba@unitec.edu| 1514-2013-42307| 12101| Comprometido(a)| 24
-Roxane| Landry| 62| Roxane@unitec.edu| 1514-2013-48603| 15101| Divorciado(a)| 22
-Darren| Ritter| 74| Darren@unitec.edu| 1514-2015-10688| 21101| Comprometido(a)| 29
-Matilde| Mcgrath| 38| Matilde@unitec.edu| 1514-2015-55282| 16101| Casado(a)| 9
-Floretta| Watkins| 12| Floretta@unitec.edu| 1601-1906-34159| 33101| Soltero(a)| 11
-Nidia| Galvan| 6| Nidia@unitec.edu| 1601-1911-90772| 34101| Viudo(a)| 7
-Richard| Cohen| 15| Richard@unitec.edu| 1601-1914-26169| 22114| Soltero(a)| 20
-Buena| Landry| 15| Buena@unitec.edu| 1601-1915-34205| 11101| Divorciado(a)| 21
-Mel| Rowe| 48| Mel@unitec.edu| 1601-1923-98784| 41202| Casado(a)| 3
-Armanda| Cohen| 7| Armanda@unitec.edu| 1601-1925-38731| 31301| Divorciado(a)| 9
-Louella| Bond| 50| Louella@unitec.edu| 1601-1930-17071| 12111| Comprometido(a)| 5
-Normand| Mcgrath| 54| Normand@unitec.edu| 1601-1930-29934| 14201| Casado(a)| 13
-Ela| Montes| 69| Ela@unitec.edu| 1601-1931-43730| 42101| Viudo(a)| 2
-Valarie| Robles| 1| Valarie@unitec.edu| 1601-1938-56891| 16101| Comprometido(a)| 27
-Olimpia| Avery| 64| Olimpia@unitec.edu| 1601-1940-54702| 21101| Comprometido(a)| 4
-Adrianna| Maldonado| 81| Adrianna@unitec.edu| 1601-1944-13993| 52102| Comprometido(a)| 30
-Armanda| Tate| 72| Armanda@unitec.edu| 1601-1955-69327| 42201| Soltero(a)| 16
-Buena| Watkins| 80| Buena@unitec.edu| 1601-1956-70735| 15201| Viudo(a)| 21
-Lakeesha| Dudley| 45| Lakeesha@unitec.edu| 1601-1961-37311| 52101| Soltero(a)| 10
-Deloras| House| 1| Deloras@unitec.edu| 1601-1970-69113| 16201| Comprometido(a)| 29
-Latoya| Strickland| 41| Latoya@unitec.edu| 1601-1972-64206| 15101| Soltero(a)| 25
-Arlette| Mclean| 81| Arlette@unitec.edu| 1601-1977-46936| 51201| Soltero(a)| 1
-Carla| Tate| 36| Carla@unitec.edu| 1601-2000-15625| 22114| Casado(a)| 7
-Darren| Davila| 87| Darren@unitec.edu| 1601-2001-39201| 41202| Divorciado(a)| 4
-Carla| Avery| 66| Carla@unitec.edu| 1601-2002-35937| 32301| Viudo(a)| 19
-Louella| Davila| 36| Louella@unitec.edu| 1601-2004-43959| 43201| Viudo(a)| 22
-Laveta| Morrow| 10| Laveta@unitec.edu| 1601-2005-12631| 12111| Casado(a)| 24
-Armanda| Hess| 38| Armanda@unitec.edu| 1601-2011-24055| 31101| Casado(a)| 5
-Edwina| Ritter| 30| Edwina@unitec.edu| 1601-2012-26287| 21103| Soltero(a)| 24
-Sunni| Bright| 48| Sunni@unitec.edu| 1601-2018-99661| 33101| Divorciado(a)| 16
-Hae| Landry| 82| Hae@unitec.edu| 1801-1900-26352| 14101| Comprometido(a)| 8
-Rheba| Dudley| 20| Rheba@unitec.edu| 1801-1901-63444| 41101| Soltero(a)| 8
-Hae| House| 67| Hae@unitec.edu| 1801-1903-73351| 22101| Casado(a)| 27
-Arlette| Page| 75| Arlette@unitec.edu| 1801-1910-17670| 21103| Soltero(a)| 20
-Walter| Mitchell| 80| Walter@unitec.edu| 1801-1910-50547| 42101| Comprometido(a)| 19
-Harrison| Howell| 31| Harrison@unitec.edu| 1801-1912-36031| 31301| Soltero(a)| 20
-Matilde| Page| 86| Matilde@unitec.edu| 1801-1912-77717| 16201| Divorciado(a)| 13
-Darren| Davila| 68| Darren@unitec.edu| 1801-1914-37523| 31301| Viudo(a)| 10
-Armanda| Reed| 30| Armanda@unitec.edu| 1801-1914-88002| 34101| Casado(a)| 20
-Malorie| Montgomery| 76| Malorie@unitec.edu| 1801-1918-32145| 32101| Comprometido(a)| 26
-Louella| Rivera| 50| Louella@unitec.edu| 1801-1918-35994| 23201| Divorciado(a)| 30
-Corrine| Lynn| 83| Corrine@unitec.edu| 1801-1918-99990| 15101| Soltero(a)| 16
-Nestor| Phelps| 22| Nestor@unitec.edu| 1801-1921-46278| 13201| Viudo(a)| 10
-Corrine| Rodgers| 4| Corrine@unitec.edu| 1801-1922-81939| 51201| Divorciado(a)| 19
-Adelia| Montes| 41| Adelia@unitec.edu| 1801-1925-97316| 15101| Soltero(a)| 5
-Harrison| Adams| 31| Harrison@unitec.edu| 1801-1930-62368| 23101| Soltero(a)| 28
-Carla| Baker| 34| Carla@unitec.edu| 1801-1933-61865| 21102| Viudo(a)| 22
-Yolonda| Bond| 71| Yolonda@unitec.edu| 1801-1946-74133| 22114| Divorciado(a)| 17
-Jeanelle| Chase| 23| Jeanelle@unitec.edu| 1801-1949-74951| 21103| Divorciado(a)| 8
-Diane| Phelps| 62| Diane@unitec.edu| 1801-1955-49314| 12101| Casado(a)| 30
-Nidia| Wilson| 8| Nidia@unitec.edu| 1801-1957-50495| 31101| Soltero(a)| 3
-Ela| Watkins| 39| Ela@unitec.edu| 1801-1960-40398| 52102| Viudo(a)| 13
-Latoya| Wilson| 54| Latoya@unitec.edu| 1801-1964-48380| 22101| Viudo(a)| 4
-Louella| Ritter| 48| Louella@unitec.edu| 1801-1964-94039| 21301| Divorciado(a)| 3
-Cyrstal| Montgomery| 26| Cyrstal@unitec.edu| 1801-1968-96992| 23101| Divorciado(a)| 4
-Mel| Vaughan| 72| Mel@unitec.edu| 1801-1969-64907| 21301| Comprometido(a)| 27
-Wilford| Ritter| 49| Wilford@unitec.edu| 1801-1972-34058| 22114| Divorciado(a)| 18
-Sunni| Lynn| 69| Sunni@unitec.edu| 1801-1972-69558| 41101| Divorciado(a)| 23
-Latoya| Church| 21| Latoya@unitec.edu| 1801-1974-63578| 21104| Viudo(a)| 22
-Carla| Robles| 54| Carla@unitec.edu| 1801-1976-55761| 12101| Divorciado(a)| 4
-Cyrstal| Pope| 89| Cyrstal@unitec.edu| 1801-1978-30103| 23101| Soltero(a)| 18
-Robin| Avery| 25| Robin@unitec.edu| 1801-1980-40611| 52101| Viudo(a)| 24
-Louella| Goodwin| 3| Louella@unitec.edu| 1801-1983-14703| 16201| Casado(a)| 21
-Nidia| Mclean| 75| Nidia@unitec.edu| 1801-1983-23754| 15201| Comprometido(a)| 21
-Suzan| Dunlap| 23| Suzan@unitec.edu| 1801-1986-36562| 12111| Soltero(a)| 26
-Laveta| Ritter| 32| Laveta@unitec.edu| 1801-1987-74189| 15201| Viudo(a)| 9
-Hae| Ortiz| 68| Hae@unitec.edu| 1801-1993-83096| 11101| Casado(a)| 9
-Nikki| House| 3| Nikki@unitec.edu| 1801-1995-71982| 52102| Viudo(a)| 4
-Nestor| Dudley| 17| Nestor@unitec.edu| 1801-2016-18823| 32301| Viudo(a)| 28
-Edwina| House| 52| Edwina@unitec.edu| 1801-2016-49994| 42201| Viudo(a)| 5
-Mel| Bright| 17| Mel@unitec.edu| 1801-2017-25755| 22101| Soltero(a)| 19
-Cyrstal| Bailey| 12| Cyrstal@unitec.edu| 1804-1901-55699| 21301| Comprometido(a)| 28
-Deloras| Ortiz| 42| Deloras@unitec.edu| 1804-1901-65864| 42101| Viudo(a)| 13
-Normand| Watkins| 86| Normand@unitec.edu| 1804-1902-29206| 51201| Soltero(a)| 6
-Micheline| Mcgrath| 53| Micheline@unitec.edu| 1804-1904-26994| 12111| Divorciado(a)| 26
-Rheba| Davila| 17| Rheba@unitec.edu| 1804-1905-67272| 21112| Casado(a)| 30
-Allene| Landry| 69| Allene@unitec.edu| 1804-1907-91647| 33101| Divorciado(a)| 17
-Micheline| Mitchell| 52| Micheline@unitec.edu| 1804-1909-36516| 32101| Divorciado(a)| 8
-Lakeesha| Vaughan| 83| Lakeesha@unitec.edu| 1804-1909-81565| 14201| Casado(a)| 26
-Floretta| Vaughan| 55| Floretta@unitec.edu| 1804-1914-69118| 15201| Casado(a)| 22
-Deloras| Bailey| 23| Deloras@unitec.edu| 1804-1914-72487| 33101| Comprometido(a)| 12
-Nikki| Montes| 32| Nikki@unitec.edu| 1804-1914-91659| 21301| Divorciado(a)| 18
-Arlette| Page| 29| Arlette@unitec.edu| 1804-1916-17077| 34101| Comprometido(a)| 3
-Hae| Rivera| 63| Hae@unitec.edu| 1804-1917-18269| 43101| Casado(a)| 29
-Richard| Pope| 53| Richard@unitec.edu| 1804-1918-33084| 41101| Casado(a)| 27
-Robin| Hess| 20| Robin@unitec.edu| 1804-1918-46596| 42201| Divorciado(a)| 23
-Sunni| Morrow| 57| Sunni@unitec.edu| 1804-1918-66371| 15201| Viudo(a)| 8
-Nidia| Avery| 63| Nidia@unitec.edu| 1804-1919-45156| 51201| Comprometido(a)| 10
-Stacy| Bradshaw| 69| Stacy@unitec.edu| 1804-1920-49931| 31101| Soltero(a)| 4
-Edwina| Durham| 51| Edwina@unitec.edu| 1804-1921-30698| 21301| Divorciado(a)| 15
-Collene| Bradshaw| 87| Collene@unitec.edu| 1804-1922-69814| 21102| Divorciado(a)| 7
-Armanda| Mcgrath| 15| Armanda@unitec.edu| 1804-1924-36690| 43101| Soltero(a)| 13
-Nidia| Page| 73| Nidia@unitec.edu| 1804-1928-12284| 51201| Soltero(a)| 13
-Robin| Dunlap| 38| Robin@unitec.edu| 1804-1930-86292| 51201| Comprometido(a)| 12
-Nestor| Landry| 61| Nestor@unitec.edu| 1804-1933-64953| 16101| Divorciado(a)| 6
-Laveta| Mclean| 70| Laveta@unitec.edu| 1804-1933-84104| 21112| Divorciado(a)| 4
-Edwina| Howell| 51| Edwina@unitec.edu| 1804-1934-45991| 43201| Casado(a)| 23
-Adrianna| Marshall| 63| Adrianna@unitec.edu| 1804-1937-35458| 52101| Soltero(a)| 6
-Shirleen| Morrow| 62| Shirleen@unitec.edu| 1804-1938-16062| 21104| Soltero(a)| 3
-Wilford| Crawford| 87| Wilford@unitec.edu| 1804-1938-45853| 51201| Casado(a)| 16
-Suzan| Crawford| 80| Suzan@unitec.edu| 1804-1938-98180| 16101| Soltero(a)| 29
-Carla| Fritz| 35| Carla@unitec.edu| 1804-1939-32475| 32101| Casado(a)| 9
-Nikki| Huynh| 64| Nikki@unitec.edu| 1804-1939-37435| 23201| Viudo(a)| 30
-Latoya| Mclean| 34| Latoya@unitec.edu| 1804-1939-39401| 14101| Divorciado(a)| 28
-Malorie| Avery| 71| Malorie@unitec.edu| 1804-1942-41623| 22114| Comprometido(a)| 17
-Cyrstal| Baker| 88| Cyrstal@unitec.edu| 1804-1942-91288| 32101| Soltero(a)| 25
-Cyrstal| Cohen| 37| Cyrstal@unitec.edu| 1804-1944-71144| 52101| Comprometido(a)| 12
-Nidia| Strickland| 71| Nidia@unitec.edu| 1804-1945-52397| 31101| Viudo(a)| 17
-Arlette| Avery| 67| Arlette@unitec.edu| 1804-1945-92486| 11101| Viudo(a)| 8
-Suzan| Parker| 35| Suzan@unitec.edu| 1804-1946-55236| 34101| Comprometido(a)| 24
-Robin| Durham| 74| Robin@unitec.edu| 1804-1946-56200| 15101| Divorciado(a)| 6
-Micheline| Parker| 29| Micheline@unitec.edu| 1804-1948-15663| 13201| Soltero(a)| 24
-Eloisa| Bradshaw| 67| Eloisa@unitec.edu| 1804-1948-21420| 51101| Casado(a)| 8
-Malorie| Hess| 54| Malorie@unitec.edu| 1804-1948-23385| 13201| Soltero(a)| 25
-Shirleen| Mendoza| 36| Shirleen@unitec.edu| 1804-1949-40142| 41101| Viudo(a)| 11
-Claudette| Bradshaw| 85| Claudette@unitec.edu| 1804-1950-93107| 12111| Divorciado(a)| 6
-Nidia| Howell| 6| Nidia@unitec.edu| 1804-1951-81481| 41202| Divorciado(a)| 29
-Floretta| Marshall| 12| Floretta@unitec.edu| 1804-1953-38610| 21101| Soltero(a)| 25
-Hae| Crawford| 62| Hae@unitec.edu| 1804-1954-34673| 31301| Viudo(a)| 22
-Roxane| Dudley| 32| Roxane@unitec.edu| 1804-1954-47011| 43101| Soltero(a)| 6
-Armanda| Watkins| 83| Armanda@unitec.edu| 1804-1954-69482| 11101| Divorciado(a)| 15
-Nestor| Davila| 21| Nestor@unitec.edu| 1804-1959-21742| 22101| Viudo(a)| 29
-Robin| Rodgers| 32| Robin@unitec.edu| 1804-1961-47216| 21301| Soltero(a)| 15
-Corrine| Galvan| 4| Corrine@unitec.edu| 1804-1961-60619| 51101| Viudo(a)| 18
-Carla| Henson| 46| Carla@unitec.edu| 1804-1962-85937| 31301| Viudo(a)| 20
-Richard| Hess| 76| Richard@unitec.edu| 1804-1962-88122| 14101| Divorciado(a)| 12
-Edwina| Durham| 45| Edwina@unitec.edu| 1804-1963-81548| 32301| Divorciado(a)| 3
-Matilde| Strickland| 29| Matilde@unitec.edu| 1804-1964-70759| 22101| Comprometido(a)| 1
-Claudette| Marshall| 40| Claudette@unitec.edu| 1804-1965-45386| 32301| Comprometido(a)| 16
-Yolonda| Bradshaw| 39| Yolonda@unitec.edu| 1804-1966-43237| 41101| Viudo(a)| 30
-Normand| Phelps| 78| Normand@unitec.edu| 1804-1966-61209| 32301| Comprometido(a)| 12
-Yolonda| Bailey| 11| Yolonda@unitec.edu| 1804-1968-16993| 31101| Casado(a)| 8
-Adelia| Tate| 61| Adelia@unitec.edu| 1804-1971-91277| 41202| Viudo(a)| 3
-Carla| Howell| 77| Carla@unitec.edu| 1804-1972-85579| 31101| Divorciado(a)| 2
-Arlette| Watkins| 64| Arlette@unitec.edu| 1804-1973-28171| 12111| Comprometido(a)| 5
-Jeanelle| Mcgrath| 76| Jeanelle@unitec.edu| 1804-1975-94372| 52101| Casado(a)| 8
-Mel| Rowe| 33| Mel@unitec.edu| 1804-1976-56997| 14201| Divorciado(a)| 24
-Eloisa| Rowe| 22| Eloisa@unitec.edu| 1804-1978-93373| 16201| Divorciado(a)| 14
-Walter| Henson| 27| Walter@unitec.edu| 1804-1979-73322| 14201| Soltero(a)| 3
-Claudette| Morrow| 63| Claudette@unitec.edu| 1804-1980-70383| 14201| Soltero(a)| 29
-Jeanelle| Chase| 16| Jeanelle@unitec.edu| 1804-1981-50818| 32301| Soltero(a)| 21
-Nikki| Marshall| 4| Nikki@unitec.edu| 1804-1986-80035| 32101| Divorciado(a)| 7
-Darren| Bradshaw| 60| Darren@unitec.edu| 1804-1989-40011| 21301| Soltero(a)| 12
-Suzan| Watkins| 10| Suzan@unitec.edu| 1804-1990-17970| 13101| Casado(a)| 11
-Hannelore| Church| 63| Hannelore@unitec.edu| 1804-1991-15130| 23201| Comprometido(a)| 15
-Harrison| Rivera| 52| Harrison@unitec.edu| 1804-1993-96115| 42101| Viudo(a)| 6
-Adrianna| Marshall| 40| Adrianna@unitec.edu| 1804-1996-39346| 52101| Comprometido(a)| 21
-Richard| Bright| 23| Richard@unitec.edu| 1804-1996-79960| 21104| Soltero(a)| 20
-Lakeesha| Lynn| 18| Lakeesha@unitec.edu| 1804-1999-61445| 51201| Viudo(a)| 3
-Edwina| Hess| 17| Edwina@unitec.edu| 1804-2003-39813| 13101| Viudo(a)| 8
-Armanda| Fritz| 44| Armanda@unitec.edu| 1804-2003-44282| 42201| Viudo(a)| 25
-Suzan| Watkins| 21| Suzan@unitec.edu| 1804-2010-43219| 15101| Soltero(a)| 6
-Arlette| Crawford| 34| Arlette@unitec.edu| 1804-2012-55309| 22101| Viudo(a)| 18
-Valarie| Parker| 53| Valarie@unitec.edu| 1804-2015-62746| 51101| Divorciado(a)| 24
-Diane| Strickland| 22| Diane@unitec.edu| 1808-1906-33757| 43201| Comprometido(a)| 15
-Rheba| Ortiz| 84| Rheba@unitec.edu| 1808-1909-97546| 12101| Casado(a)| 8
-Arlette| Pope| 40| Arlette@unitec.edu| 1808-1910-92826| 52101| Casado(a)| 3
-Lakeesha| Mcgrath| 72| Lakeesha@unitec.edu| 1808-1912-13263| 12101| Viudo(a)| 20
-Diane| Pope| 8| Diane@unitec.edu| 1808-1914-46358| 41101| Viudo(a)| 20
-Micheline| Mcgrath| 81| Micheline@unitec.edu| 1808-1917-40535| 14101| Comprometido(a)| 28
-Micheline| Rowe| 31| Micheline@unitec.edu| 1808-1922-35140| 13101| Soltero(a)| 4
-Wilford| Chase| 4| Wilford@unitec.edu| 1808-1925-71105| 32101| Viudo(a)| 11
-Malorie| Davila| 17| Malorie@unitec.edu| 1808-1926-31616| 14201| Casado(a)| 16
-Wilford| Robles| 65| Wilford@unitec.edu| 1808-1932-50537| 13101| Casado(a)| 28
-Armanda| Baker| 64| Armanda@unitec.edu| 1808-1933-74980| 21102| Casado(a)| 2
-Buena| Bradshaw| 63| Buena@unitec.edu| 1808-1936-60263| 42101| Comprometido(a)| 4
-Buena| Page| 23| Buena@unitec.edu| 1808-1937-18311| 11101| Divorciado(a)| 19
-Olimpia| Dudley| 70| Olimpia@unitec.edu| 1808-1937-56394| 22114| Comprometido(a)| 23
-Claudette| Marshall| 85| Claudette@unitec.edu| 1808-1938-37271| 21112| Comprometido(a)| 23
-Harrison| Pope| 60| Harrison@unitec.edu| 1808-1939-15162| 12101| Casado(a)| 15
-Robin| Howell| 42| Robin@unitec.edu| 1808-1942-76352| 13101| Comprometido(a)| 11
-Malorie| Bradshaw| 63| Malorie@unitec.edu| 1808-1949-94151| 13101| Viudo(a)| 3
-Deloras| Ritter| 2| Deloras@unitec.edu| 1808-1951-94994| 31101| Viudo(a)| 27
-Micheline| Fritz| 41| Micheline@unitec.edu| 1808-1951-97436| 21103| Casado(a)| 29
-Yolonda| Howell| 27| Yolonda@unitec.edu| 1808-1958-90137| 14201| Divorciado(a)| 8
-Micheline| Bradshaw| 5| Micheline@unitec.edu| 1808-1959-49105| 23201| Casado(a)| 25
-Allene| Galvan| 21| Allene@unitec.edu| 1808-1963-12936| 22114| Comprometido(a)| 6
-Latoya| Avery| 73| Latoya@unitec.edu| 1808-1963-25456| 43201| Casado(a)| 12
-Rheba| Landry| 23| Rheba@unitec.edu| 1808-1963-86168| 15101| Comprometido(a)| 10
-Wilford| Pope| 32| Wilford@unitec.edu| 1808-1966-42546| 51201| Viudo(a)| 10
-Louella| Bailey| 27| Louella@unitec.edu| 1808-1970-85546| 13201| Viudo(a)| 15
-Diane| Mitchell| 17| Diane@unitec.edu| 1808-1971-51980| 11101| Comprometido(a)| 23
-Shirleen| Avery| 73| Shirleen@unitec.edu| 1808-1972-82336| 15201| Viudo(a)| 8
-Robin| Rivera| 85| Robin@unitec.edu| 1808-1973-50353| 52102| Divorciado(a)| 21
-Nidia| Avery| 62| Nidia@unitec.edu| 1808-1975-76297| 42101| Comprometido(a)| 11
-Louella| Bond| 5| Louella@unitec.edu| 1808-1982-91708| 21102| Divorciado(a)| 28
-Latoya| Henson| 15| Latoya@unitec.edu| 1808-1993-95359| 51101| Divorciado(a)| 17
-Lakeesha| Mitchell| 3| Lakeesha@unitec.edu| 1808-1994-92173| 15101| Casado(a)| 11
-Nana| Mclean| 56| Nana@unitec.edu| 1808-1997-44571| 43101| Soltero(a)| 12
-Buena| Mendoza| 24| Buena@unitec.edu| 1808-2005-40273| 43201| Casado(a)| 16
-Roxane| Adams| 61| Roxane@unitec.edu| 1808-2005-80888| 41101| Comprometido(a)| 12
-Richard| Church| 56| Richard@unitec.edu| 1808-2018-79141| 15101| Divorciado(a)| 15
-Jeanelle| Morrow| 79| Jeanelle@unitec.edu| 1811-1910-66525| 12101| Divorciado(a)| 1
-Nana| Henson| 29| Nana@unitec.edu| 1811-1913-34699| 12101| Soltero(a)| 19
-Roxane| Rowe| 48| Roxane@unitec.edu| 1811-1914-58227| 23101| Casado(a)| 3
-Adrianna| Avery| 34| Adrianna@unitec.edu| 1811-1915-20497| 43101| Casado(a)| 26
-Armanda| Mendoza| 25| Armanda@unitec.edu| 1811-1919-40357| 16101| Comprometido(a)| 2
-Darren| Page| 61| Darren@unitec.edu| 1811-1922-34805| 42201| Divorciado(a)| 14
-Shirleen| Pope| 48| Shirleen@unitec.edu| 1811-1922-52820| 42101| Divorciado(a)| 25
-Arlette| Huynh| 3| Arlette@unitec.edu| 1811-1926-45514| 22101| Viudo(a)| 29
-Corrine| Vaughan| 29| Corrine@unitec.edu| 1811-1930-74188| 21301| Viudo(a)| 30
-Buena| Watkins| 81| Buena@unitec.edu| 1811-1935-70194| 51101| Soltero(a)| 21
-Laveta| Phelps| 59| Laveta@unitec.edu| 1811-1937-90074| 22114| Comprometido(a)| 18
-Rheba| Henson| 24| Rheba@unitec.edu| 1811-1940-64295| 21301| Divorciado(a)| 27
-Nidia| Bond| 84| Nidia@unitec.edu| 1811-1943-27057| 21104| Soltero(a)| 29
-Augusta| Montgomery| 66| Augusta@unitec.edu| 1811-1949-10178| 43101| Divorciado(a)| 28
-Buena| Maldonado| 66| Buena@unitec.edu| 1811-1954-85935| 31101| Soltero(a)| 28
-Richard| Pope| 58| Richard@unitec.edu| 1811-1960-92893| 15101| Divorciado(a)| 18
-Malorie| Davila| 86| Malorie@unitec.edu| 1811-1962-47579| 13201| Soltero(a)| 18
-Malorie| Bond| 44| Malorie@unitec.edu| 1811-1963-18180| 22114| Soltero(a)| 16
-Armanda| Marshall| 31| Armanda@unitec.edu| 1811-1963-29726| 43101| Soltero(a)| 3
-Lakeesha| Rodgers| 40| Lakeesha@unitec.edu| 1811-1967-37262| 32101| Soltero(a)| 1
-Corrine| Baker| 40| Corrine@unitec.edu| 1811-1970-28662| 21301| Viudo(a)| 26
-Louella| Church| 76| Louella@unitec.edu| 1811-1975-87362| 31301| Soltero(a)| 18
-Walter| Vaughan| 28| Walter@unitec.edu| 1811-1983-99649| 12111| Soltero(a)| 23
-Jeanelle| Howell| 66| Jeanelle@unitec.edu| 1811-1986-33780| 16101| Casado(a)| 12
-Mel| Baker| 82| Mel@unitec.edu| 1811-1988-58998| 43201| Viudo(a)| 27
-Claudette| Howell| 16| Claudette@unitec.edu| 1811-1995-57808| 43201| Casado(a)| 2
-Buena| Ortiz| 21| Buena@unitec.edu| 1811-1995-86190| 34101| Comprometido(a)| 2
-Rheba| Wilson| 68| Rheba@unitec.edu| 1811-2001-94384| 22101| Casado(a)| 25
-Augusta| Crawford| 87| Augusta@unitec.edu| 1811-2004-86766| 16201| Divorciado(a)| 5
-Arlette| Morrow| 14| Arlette@unitec.edu| 1811-2010-45409| 15201| Casado(a)| 8
-Diane| Henson| 40| Diane@unitec.edu| 1811-2014-11809| 33101| Casado(a)| 13
-Buena| Church| 40| Buena@unitec.edu| 1811-2016-51017| 21101| Comprometido(a)| 1
-Micheline| Goodwin| 27| Micheline@unitec.edu| 1811-2017-20331| 22114| Soltero(a)| 13
-Armanda| Ortiz| 59| Armanda@unitec.edu| 1811-2017-78428| 15101| Casado(a)| 8
+Cyrstal| Rowe
+Olimpia| Howell
+Corrine| Ortiz
+Nana| Mitchell
+Adelia| Avery
+Hannelore| Landry
+Jeanelle| Galvan
+Lakeesha| Baker
+Buena| Lynn
+Louella| Goodwin
+Latoya| Phelps
+Rheba| Watkins
+Collene| Pope
+Latoya| Robles
+Ela| Goodwin
+Walter| Watkins
+Robin| Huynh
+Harrison| Ritter
+Micheline| Mitchell
+Eloisa| Goodwin
+Matilde| Church
+Adelia| Davila
+Adelia| Bailey
+Deloras| Avery
+Latoya| Maldonado
+Floretta| Lynn
+Richard| Rivera
+Latoya| Goodwin
+Matilde| Dudley
+Malorie| Bright
+Darren| Rowe
+Suzan| Dunlap
+Allene| Mitchell
+Rheba| Watkins
+Louella| Morrow
+Shirleen| Baker
+Walter| Chase
+Allene| Mcgrath
+Deloras| Adams
+Harrison| Davila
+Cyrstal| Hess
+Adrianna| Church
+Cyrstal| Dunlap
+Collene| Dudley
+Edwina| Bright
+Rheba| Mendoza
+Arlette| Davila
+Darren| Bond
+Rufina| Baker
+Latoya| Goodwin
+Micheline| Bradshaw
+Jeanelle| Wilson
+Darren| Morrow
+Augusta| Vaughan
+Richard| Galvan
+Darren| Cohen
+Rheba| Ritter
+Augusta| Davila
+Augusta| Dunlap
+Walter| Page
+Edwina| Dunlap
+Armanda| Marshall
+Robin| Mclean
+Valarie| Mclean
+Deloras| Mclean
+Eloisa| Mclean
+Buena| Bradshaw
+Hae| Watkins
+Nikki| Pope
+Armanda| Bright
+Robin| Dunlap
+Hannelore| Bailey
+Yolonda| Avery
+Ela| Church
+Lakeesha| Page
+Collene| Montgomery
+Louella| Vaughan
+Rufina| Maldonado
+Richard| House
+Richard| Galvan
+Arlette| Maldonado
+Suzan| Howell
+Cyrstal| Landry
+Sunni| Montes
+Micheline| Adams
+Olimpia| Ortiz
+Nidia| Maldonado
+Jeanelle| Davila
+Adrianna| Marshall
+Robin| Montes
+Harrison| Montgomery
+Eloisa| Howell
+Mel| Adams
+Cyrstal| Phelps
+Corrine| Fritz
+Valarie| Wilson
+Latoya| Bond
+Matilde| Baker
+Allene| Goodwin
+Sunni| Reed
+Hae| Fritz
+Nikki| Tate
+Olimpia| Galvan
+Olimpia| Crawford
+Robin| Chase
+Robin| Howell
+Armanda| Page
+Rufina| Lynn
+Harrison| Lynn
+Nikki| Montes
+Suzan| Mcgrath
+Wilford| Dudley
+Allene| Montgomery
+Carla| Landry
+Edwina| Phelps
+Nestor| Rivera
+Walter| House
+Adelia| Tate
+Nikki| Tate
+Carla| Rowe
+Matilde| Bright
+Nikki| Rodgers
+Buena| Avery
+Suzan| Robles
+Hae| Robles
+Hae| Bailey
+Yolonda| Church
+Deloras| Chase
+Carla| Landry
+Laveta| Parker
+Hannelore| Maldonado
+Corrine| Dudley
+Sunni| Montgomery
+Jeanelle| Mendoza
+Collene| Crawford
+Walter| Watkins
+Olimpia| Wilson
+Wilford| Mitchell
+Corrine| Montes
+Micheline| Parker
+Edwina| Fritz
+Corrine| Avery
+Jeanelle| Montes
+Nikki| Marshall
+Nidia| Hess
+Hae| Lynn
+Claudette| Lynn
+Robin| Durham
+Olimpia| Henson
+Eloisa| Galvan
+Rufina| Baker
+Edwina| Rowe
+Armanda| Mclean
+Diane| House
+Darren| Tate
+Louella| Morrow
+Rheba| Crawford
+Collene| Fritz
+Latoya| Mcgrath
+Shirleen| Mcgrath
+Laveta| Phelps
+Matilde| Huynh
+Adelia| Morrow
+Diane| Rodgers
+Shirleen| Church
+Carla| Reed
+Adrianna| Mcgrath
+Augusta| Crawford
+Robin| Marshall
+Diane| Adams
+Matilde| Rivera
+Robin| Galvan
+Richard| Pope
+Armanda| Davila
+Valarie| Chase
+Darren| Parker
+Richard| Morrow
+Sunni| Rowe
+Corrine| Ritter
+Claudette| Lynn
+Hannelore| Strickland
+Laveta| Page
+Rufina| Parker
+Robin| Rowe
+Armanda| Cohen
+Harrison| House
+Allene| Pope
+Floretta| House
+Laveta| Mclean
+Suzan| Lynn
+Laveta| Howell
+Hae| Bond
+Hannelore| Rivera
+Lakeesha| Bright
+Allene| Ortiz
+Malorie| Durham
+Carla| Page
+Edwina| Landry
+Normand| Montes
+Laveta| Crawford
+Collene| Mitchell
+Nikki| Wilson
+Yolonda| Bond
+Mel| Robles
+Nidia| Watkins
+Normand| Mcgrath
+Micheline| Rowe
+Roxane| Durham
+Sunni| Huynh
+Adrianna| Chase
+Sunni| Howell
+Matilde| Page
+Richard| Landry
+Armanda| Rodgers
+Rheba| Rowe
+Latoya| Mclean
+Valarie| Chase
+Nikki| Pope
+Nidia| Ritter
+Normand| Bond
+Stacy| Rivera
+Rheba| Lynn
+Darren| Bond
+Shirleen| Wilson
+Nikki| Pope
+Latoya| Cohen
+Micheline| Bradshaw
+Rheba| Goodwin
+Micheline| Adams
+Collene| Pope
+Robin| Huynh
+Diane| Pope
+Suzan| Tate
+Normand| Goodwin
+Hannelore| Chase
+Shirleen| Maldonado
+Suzan| Maldonado
+Augusta| Montes
+Adrianna| Robles
+Buena| Phelps
+Buena| Howell
+Claudette| Watkins
+Buena| Howell
+Armanda| Bailey
+Ela| Church
+Walter| Tate
+Buena| Marshall
+Floretta| Adams
+Olimpia| Rivera
+Claudette| Lynn
+Matilde| Montes
+Armanda| Crawford
+Hae| Pope
+Allene| Dudley
+Adrianna| Baker
+Richard| Bright
+Collene| Page
+Eloisa| Bond
+Wilford| Parker
+Nikki| Galvan
+Rheba| Dunlap
+Wilford| Dudley
+Deloras| Rodgers
+Latoya| Rodgers
+Rheba| Rivera
+Arlette| Dunlap
+Diane| Rodgers
+Nestor| Phelps
+Floretta| Reed
+Nana| Mitchell
+Deloras| Mendoza
+Floretta| Henson
+Lakeesha| Montes
+Lakeesha| Fritz
+Nidia| Huynh
+Buena| Church
+Eloisa| Bradshaw
+Richard| Huynh
+Adelia| Page
+Stacy| Mitchell
+Harrison| Bailey
+Matilde| Parker
+Walter| Bright
+Olimpia| Rodgers
+Matilde| Vaughan
+Lakeesha| Hess
+Collene| Fritz
+Yolonda| Baker
+Matilde| Henson
+Adelia| Avery
+Stacy| Pope
+Suzan| Henson
+Armanda| Watkins
+Richard| Adams
+Rheba| Fritz
+Normand| Landry
+Richard| Cohen
+Collene| Ritter
+Roxane| Ritter
+Nidia| Durham
+Sunni| Morrow
+Floretta| Dunlap
+Hae| Tate
+Olimpia| Henson
+Jeanelle| Mitchell
+Augusta| Landry
+Carla| Marshall
+Laveta| Crawford
+Eloisa| Henson
+Allene| Landry
+Collene| Reed
+Collene| Watkins
+Nikki| Maldonado
+Hae| Montgomery
+Buena| Robles
+Harrison| Rivera
+Edwina| Goodwin
+Louella| Bradshaw
+Buena| Landry
+Mel| Dudley
+Ela| Hess
+Rufina| Rodgers
+Micheline| Maldonado
+Walter| Huynh
+Darren| Dunlap
+Mel| Reed
+Rheba| Dudley
+Darren| Goodwin
+Floretta| Dunlap
+Rufina| Ortiz
+Allene| Pope
+Deloras| Baker
+Eloisa| Rivera
+Rufina| Huynh
+Malorie| Pope
+Mel| Marshall
+Stacy| Ritter
+Arlette| Maldonado
+Floretta| Cohen
+Diane| Pope
+Cyrstal| Montes
+Edwina| Cohen
+Ela| Tate
+Collene| Bradshaw
+Armanda| Mitchell
+Carla| Vaughan
+Rufina| Mcgrath
+Buena| Bradshaw
+Lakeesha| Church
+Ela| Galvan
+Harrison| Dudley
+Latoya| Tate
+Edwina| Galvan
+Yolonda| Mitchell
+Nikki| House
+Hannelore| Mendoza
+Louella| Howell
+Hannelore| Durham
+Armanda| Lynn
+Roxane| Davila
+Lakeesha| Galvan
+Rufina| Rowe
+Walter| Robles
+Augusta| Phelps
+Yolonda| Reed
+Latoya| House
+Laveta| Lynn
+Walter| Durham
+Nidia| Morrow
+Nidia| Adams
+Laveta| Galvan
+Nana| Maldonado
+Deloras| Parker
+Eloisa| Mendoza
+Latoya| Bradshaw
+Ela| Lynn
+Nidia| Galvan
+Hannelore| Watkins
+Adelia| Maldonado
+Richard| Page
+Corrine| Reed
+Carla| Crawford
+Micheline| Maldonado
+Diane| Cohen
+Walter| Henson
+Malorie| Ortiz
+Arlette| Page
+Corrine| Henson
+Eloisa| Tate
+Matilde| Reed
+Nana| Maldonado
+Suzan| Mcgrath
+Lakeesha| Davila
+Suzan| Mclean
+Laveta| Mclean
+Mel| Wilson
+Stacy| Ortiz
+Nana| Mclean
+Rufina| Galvan
+Cyrstal| Mendoza
+Wilford| Ritter
+Jeanelle| Watkins
+Allene| Wilson
+Olimpia| Wilson
+Nana| Durham
+Rufina| Goodwin
+Collene| Avery
+Jeanelle| Tate
+Arlette| Rodgers
+Nidia| Howell
+Louella| Durham
+Nestor| Tate
+Sunni| Durham
+Mel| Dunlap
+Eloisa| Pope
+Shirleen| Chase
+Corrine| Chase
+Hannelore| Watkins
+Richard| Robles
+Harrison| Galvan
+Floretta| Tate
+Nana| Vaughan
+Augusta| Adams
+Stacy| Wilson
+Walter| Ritter
+Harrison| Bailey
+Adelia| Maldonado
+Carla| Adams
+Darren| Wilson
+Malorie| Fritz
+Diane| Bailey
+Augusta| Wilson
+Latoya| Bond
+Rufina| Reed
+Nestor| Baker
+Jeanelle| Ortiz
+Allene| Mcgrath
+Arlette| Chase
+Deloras| Montgomery
+Adelia| Mendoza
+Roxane| Avery
+Latoya| Mcgrath
+Harrison| Henson
+Allene| Mitchell
+Normand| Hess
+Stacy| Maldonado
+Wilford| Fritz
+Roxane| Tate
+Hannelore| Galvan
+Lakeesha| Bailey
+Nikki| Mcgrath
+Buena| Huynh
+Mel| Chase
+Hae| Bright
+Floretta| Fritz
+Eloisa| Cohen
+Collene| Ortiz
+Edwina| Tate
+Olimpia| Bradshaw
+Adrianna| Galvan
+Ela| Wilson
+Arlette| Rivera
+Buena| Davila
+Allene| Howell
+Latoya| Mclean
+Arlette| Montgomery
+Jeanelle| Pope
+Lakeesha| Tate
+Micheline| Bailey
+Roxane| Crawford
+Latoya| Montgomery
+Eloisa| House
+Corrine| Reed
+Nestor| Bright
+Hannelore| Maldonado
+Ela| Howell
+Yolonda| Davila
+Louella| Rodgers
+Robin| Landry
+Roxane| Montes
+Roxane| House
+Eloisa| Maldonado
+Arlette| Dudley
+Hannelore| Parker
+Malorie| Pope
+Roxane| Mclean
+Carla| Avery
+Shirleen| Galvan
+Collene| Ritter
+Hannelore| Bond
+Normand| Maldonado
+Hannelore| Howell
+Nestor| House
+Mel| Rivera
+Suzan| Rowe
+Cyrstal| Bright
+Roxane| Ortiz
+Walter| Huynh
+Richard| Mcgrath
+Armanda| House
+Normand| Crawford
+Walter| Howell
+Mel| Adams
+Jeanelle| Dudley
+Buena| Mendoza
+Corrine| Bradshaw
+Jeanelle| Baker
+Rheba| Davila
+Rufina| Maldonado
+Nestor| Crawford
+Nikki| Bailey
+Buena| Fritz
+Latoya| Galvan
+Laveta| Parker
+Stacy| Bond
+Ela| Maldonado
+Darren| Durham
+Wilford| Phelps
+Claudette| Morrow
+Diane| Ritter
+Augusta| Howell
+Hae| Chase
+Sunni| Rivera
+Harrison| Ritter
+Nana| Lynn
+Nikki| Montes
+Valarie| Morrow
+Latoya| Bailey
+Normand| House
+Stacy| Goodwin
+Laveta| Davila
+Nana| Ritter
+Harrison| Marshall
+Roxane| Parker
+Micheline| Tate
+Augusta| Chase
+Matilde| Landry
+Nikki| Robles
+Claudette| Rowe
+Olimpia| Dunlap
+Yolonda| House
+Carla| Rivera
+Carla| Mcgrath
+Ela| Avery
+Richard| Church
+Deloras| Henson
+Suzan| Adams
+Valarie| Hess
+Allene| Ritter
+Normand| Mcgrath
+Armanda| Wilson
+Cyrstal| Dudley
+Roxane| Church
+Richard| Watkins
+Hannelore| Henson
+Rheba| Wilson
+Edwina| Bailey
+Augusta| Chase
+Suzan| Church
+Rheba| Rowe
+Collene| Lynn
+Darren| Montes
+Rheba| Ritter
+Malorie| Avery
+Nestor| Mcgrath
+Louella| Bailey
+Floretta| Baker
+Allene| Galvan
+Nestor| Dudley
+Matilde| Davila
+Valarie| Montes
+Lakeesha| Church
+Shirleen| Tate
+Edwina| Morrow
+Olimpia| Mendoza
+Stacy| Galvan
+Olimpia| Parker
+Nikki| Morrow
+Walter| Marshall
+Valarie| Montgomery
+Normand| Montgomery
+Nestor| Avery
+Claudette| Galvan
+Suzan| Pope
+Floretta| Dunlap
+Cyrstal| Pope
+Adelia| Tate
+Harrison| Watkins
+Laveta| Hess
+Latoya| Henson
+Nestor| Marshall
+Micheline| Morrow
+Nidia| Mcgrath
+Rheba| Galvan
+Adelia| Bright
+Hae| Marshall
+Diane| Reed
+Eloisa| Dudley
+Yolonda| Baker
+Corrine| Crawford
+Normand| Montes
+Laveta| Huynh
+Suzan| Reed
+Valarie| Montes
+Nestor| Durham
+Arlette| Bailey
+Allene| Bright
+Armanda| Montgomery
+Carla| Watkins
+Deloras| Rodgers
+Mel| Maldonado
+Harrison| Goodwin
+Deloras| Ortiz
+Mel| Hess
+Nana| Ritter
+Harrison| Durham
+Nestor| Rodgers
+Stacy| Strickland
+Floretta| Strickland
+Roxane| Henson
+Walter| Montes
+Adelia| Avery
+Sunni| Landry
+Lakeesha| Robles
+Mel| Page
+Adrianna| Tate
+Micheline| Chase
+Richard| Dudley
+Nikki| Pope
+Stacy| Maldonado
+Sunni| Adams
+Collene| Bond
+Matilde| Tate
+Richard| Bailey
+Diane| Mitchell
+Corrine| Hess
+Augusta| Adams
+Adrianna| Galvan
+Eloisa| Montgomery
+Edwina| Bright
+Carla| Baker
+Darren| Reed
+Louella| Mcgrath
+Lakeesha| Bright
+Nikki| Ritter
+Claudette| Page
+Stacy| Vaughan
+Nana| Baker
+Collene| Ritter
+Cyrstal| Rowe
+Sunni| Bright
+Valarie| Ortiz
+Hannelore| Hess
+Mel| Watkins
+Rufina| Marshall
+Yolonda| Goodwin
+Hannelore| Bradshaw
+Arlette| Chase
+Roxane| Rowe
+Matilde| Fritz
+Nikki| Parker
+Darren| Phelps
+Sunni| Parker
+Diane| Montgomery
+Collene| Bailey
+Claudette| Lynn
+Hannelore| Bailey
+Malorie| Cohen
+Latoya| Dudley
+Yolonda| Huynh
+Allene| Bradshaw
+Shirleen| Morrow
+Adrianna| Phelps
+Jeanelle| Montes
+Darren| Watkins
+Stacy| Rowe
+Laveta| Rivera
+Wilford| Baker
+Allene| Bailey
+Augusta| Montes
+Latoya| Mcgrath
+Ela| Church
+Nana| Chase
+Wilford| Goodwin
+Shirleen| Montes
+Carla| Bright
+Darren| Dudley
+Collene| Bright
+Augusta| Landry
+Deloras| Strickland
+Harrison| Page
+Shirleen| Rodgers
+Roxane| Vaughan
+Malorie| Rivera
+Lakeesha| Pope
+Nikki| Marshall
+Diane| Crawford
+Arlette| Ritter
+Suzan| Tate
+Nana| Montgomery
+Cyrstal| Bond
+Carla| Marshall
+Matilde| Ritter
+Laveta| Goodwin
+Matilde| Cohen
+Claudette| Church
+Hae| Adams
+Hae| Page
+Shirleen| Goodwin
+Suzan| Davila
+Normand| House
+Adelia| Adams
+Nana| Church
+Wilford| Pope
+Suzan| Bond
+Robin| Cohen
+Floretta| Page
+Richard| Baker
+Floretta| Baker
+Hae| Cohen
+Richard| Phelps
+Adelia| Church
+Normand| Bond
+Jeanelle| House
+Deloras| Adams
+Adrianna| Baker
+Yolonda| Page
+Laveta| Rivera
+Nana| Rodgers
+Latoya| Morrow
+Nikki| Lynn
+Arlette| Huynh
+Harrison| Parker
+Rufina| Rivera
+Micheline| Tate
+Nestor| Watkins
+Edwina| Bright
+Harrison| Crawford
+Latoya| Phelps
+Collene| Phelps
+Rufina| Huynh
+Nestor| Morrow
+Diane| Mcgrath
+Rufina| Montgomery
+Harrison| Goodwin
+Lakeesha| Rivera
+Harrison| Robles
+Adrianna| Cohen
+Mel| Lynn
+Arlette| Wilson
+Buena| Hess
+Laveta| Mclean
+Adrianna| House
+Richard| Morrow
+Nestor| Phelps
+Allene| Rowe
+Edwina| Fritz
+Buena| Page
+Lakeesha| Watkins
+Harrison| Wilson
+Yolonda| Marshall
+Edwina| Strickland
+Allene| Rivera
+Hae| Montgomery
+Valarie| Page
+Robin| Marshall
+Diane| Maldonado
+Malorie| Howell
+Malorie| Landry
+Micheline| Mitchell
+Valarie| Montgomery
+Corrine| Ortiz
+Lakeesha| Church
+Rufina| Mendoza
+Rheba| House
+Nidia| Landry
+Nikki| Ritter
+Latoya| Mcgrath
+Adelia| Watkins
+Hae| Galvan
+Wilford| Cohen
+Augusta| Landry
+Stacy| Rowe
+Armanda| Cohen
+Allene| Bond
+Collene| Mcgrath
+Rheba| Montes
+Mel| Robles
+Claudette| Avery
+Corrine| Maldonado
+Latoya| Tate
+Suzan| Watkins
+Rufina| Dudley
+Nidia| House
+Adrianna| Strickland
+Darren| Mclean
+Walter| Tate
+Nestor| Davila
+Nana| Avery
+Richard| Davila
+Stacy| Morrow
+Arlette| Hess
+Deloras| Ritter
+Shirleen| Bright
+Latoya| Landry
+Augusta| Dudley
+Latoya| House
+Wilford| Page
+Eloisa| Mitchell
+Micheline| Howell
+Walter| Page
+Collene| Davila
+Walter| Reed
+Hae| Montgomery
+Yolonda| Rivera
+Darren| Lynn
+Nana| Phelps
+Walter| Rodgers
+Nidia| Montes
+Deloras| Adams
+Stacy| Baker
+Micheline| Bond
+Nestor| Chase
+Roxane| Phelps
+Harrison| Wilson
+Hae| Watkins
+Walter| Wilson
+Nikki| Ritter
+Eloisa| Montgomery
+Laveta| Vaughan
+Lakeesha| Ritter
+Cyrstal| Lynn
+Hannelore| Church
+Adrianna| Robles
+Mel| Pope
+Jeanelle| Avery
+Stacy| Goodwin
+Richard| Mclean
+Floretta| Dunlap
+Corrine| Ritter
+Shirleen| Ortiz
+Lakeesha| House
+Eloisa| Dudley
+Floretta| House
+Richard| Bright
+Cyrstal| Bailey
+Rheba| Ortiz
+Rheba| Watkins
+Hae| Mcgrath
+Yolonda| Davila
+Claudette| Landry
+Diane| Mitchell
+Yolonda| Vaughan
+Louella| Vaughan
+Buena| Bailey
+Arlette| Montes
+Rufina| Page
+Deloras| Rivera
+Allene| Pope
+Valarie| Hess
+Darren| Morrow
+Hae| Avery
+Olimpia| Bradshaw
+Eloisa| Durham
+Robin| Bradshaw
+Shirleen| Mcgrath
+Collene| Page
+Hae| Dunlap
+Normand| Landry
+Louella| Mclean
+Normand| Howell
+Wilford| Marshall
+Darren| Morrow
+Nikki| Crawford
+Cyrstal| Crawford
+Latoya| Fritz
+Louella| Huynh
+Nana| Mclean
+Olimpia| Avery
+Hae| Baker
+Augusta| Cohen
+Diane| Strickland
+Eloisa| Avery
+Arlette| Parker
+Matilde| Durham
+Laveta| Parker
+Malorie| Bradshaw
+Adelia| Hess
+Roxane| Mendoza
+Claudette| Bradshaw
+Edwina| Howell
+Yolonda| Marshall
+Cyrstal| Crawford
+Nidia| Dudley
+Stacy| Watkins
+Louella| Davila
+Lakeesha| Rodgers
+Nestor| Galvan
+Corrine| Henson
+Arlette| Hess
+Stacy| Durham
+Sunni| Strickland
+Walter| Marshall
+Nikki| Bradshaw
+Sunni| Phelps
+Augusta| Bailey
+Nana| Tate
+Nikki| Howell
+Olimpia| Watkins
+Rufina| Mcgrath
+Edwina| Rowe
+Buena| Rowe
+Augusta| Henson
+Claudette| Morrow
+Armanda| Chase
+Latoya| Marshall
+Adelia| Bradshaw
+Suzan| Watkins
+Carla| Church
+Darren| Rivera
+Rufina| Marshall
+Shirleen| Bright
+Augusta| Lynn
+Corrine| Hess
+Robin| Fritz
+Yolonda| Watkins
+Armanda| Crawford
+Normand| Parker
+Lakeesha| Strickland
+Rufina| Ortiz
+Stacy| Pope
+Yolonda| Mcgrath
+Malorie| Pope
+Valarie| Mcgrath
+Nestor| Rowe
+Hannelore| Chase
+Mel| Davila
+Darren| Robles
+Hannelore| Baker
+Eloisa| Bradshaw
+Malorie| Page
+Cyrstal| Dudley
+Eloisa| Marshall
+Augusta| Pope
+Hae| Howell
+Hannelore| Bradshaw
+Carla| Ritter
+Buena| Fritz
+Claudette| Howell
+Louella| Bradshaw
+Olimpia| Galvan
+Stacy| Avery
+Hannelore| Landry
+Collene| Pope
+Hae| Bailey
+Eloisa| Mitchell
+Diane| Avery
+Jeanelle| Rivera
+Lakeesha| Avery
+Normand| Bond
+Malorie| Henson
+Valarie| Mitchell
+Allene| Mclean
+Stacy| Mendoza
+Deloras| Adams
+Shirleen| Church
+Latoya| Morrow
+Suzan| Henson
+Richard| Rowe
+Latoya| Avery
+Nestor| Mendoza
+Hae| Page
+Richard| Pope
+Olimpia| Huynh
+Mel| Vaughan
+Normand| Watkins
+Armanda| Phelps
+Louella| Henson
+Nestor| Bond
+Arlette| Montgomery
+Adelia| Maldonado
+Suzan| Pope
+Claudette| Davila
+Cyrstal| Bond
+Walter| Marshall
+Matilde| Rodgers
+Matilde| Baker
+Buena| Church
+Diane| Vaughan
+Diane| Howell
+Stacy| Baker
+Deloras| Howell
+Floretta| Ortiz
+Deloras| Wilson
+Edwina| Crawford
+Harrison| Morrow
+Richard| Henson
+Ela| Church
+Adelia| Goodwin
+Olimpia| Ortiz
