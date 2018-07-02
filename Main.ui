@@ -121,7 +121,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../Python/Edd2/save.png</normaloff>../Python/Edd2/save.png</iconset>
+      <normaloff>Images/save.png</normaloff>Images/save.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -154,7 +154,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../Python/Edd2/emergency-exit (1).png</normaloff>../Python/Edd2/emergency-exit (1).png</iconset>
+      <normaloff>Images/emergency-exit (1).png</normaloff>Images/emergency-exit (1).png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -203,7 +203,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../Python/Edd2/3d-forward-arrow.png</normaloff>../Python/Edd2/3d-forward-arrow.png</iconset>
+      <normaloff>Images/3d-forward-arrow.png</normaloff>Images/3d-forward-arrow.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -233,7 +233,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../Python/Edd2/left-arrow-sketch.png</normaloff>../Python/Edd2/left-arrow-sketch.png</iconset>
+      <normaloff>Images/left-arrow-sketch.png</normaloff>Images/left-arrow-sketch.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -269,7 +269,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../Python/Edd2/round-add-button.png</normaloff>../Python/Edd2/round-add-button.png</iconset>
+      <normaloff>Images/round-add-button.png</normaloff>Images/round-add-button.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -302,7 +302,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../Python/Edd2/round-remove-button.png</normaloff>../Python/Edd2/round-remove-button.png</iconset>
+      <normaloff>Images/round-remove-button.png</normaloff>Images/round-remove-button.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -335,7 +335,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../Python/Edd2/musica-searcher.png</normaloff>../Python/Edd2/musica-searcher.png</iconset>
+      <normaloff>Images/musica-searcher.png</normaloff>Images/musica-searcher.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -368,7 +368,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../Python/Edd2/edit.png</normaloff>../Python/Edd2/edit.png</iconset>
+      <normaloff>Images/edit.png</normaloff>Images/edit.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -401,7 +401,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../Python/Edd2/rubbish.png</normaloff>../Python/Edd2/rubbish.png</iconset>
+      <normaloff>Images/rubbish.png</normaloff>Images/rubbish.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -434,7 +434,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../Python/Edd2/excel.png</normaloff>../Python/Edd2/excel.png</iconset>
+      <normaloff>Images/excel.png</normaloff>Images/excel.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -467,7 +467,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../Python/Edd2/xml.png</normaloff>../Python/Edd2/xml.png</iconset>
+      <normaloff>Images/xml.png</normaloff>Images/xml.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -500,7 +500,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../Python/Edd2/archive.png</normaloff>../Python/Edd2/archive.png</iconset>
+      <normaloff>Images/archive.png</normaloff>Images/archive.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -533,7 +533,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../Python/Edd2/algorithm.png</normaloff>../Python/Edd2/algorithm.png</iconset>
+      <normaloff>Images/algorithm.png</normaloff>Images/algorithm.png</iconset>
     </property>
     <property name="iconSize">
      <size>
