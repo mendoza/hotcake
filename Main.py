@@ -215,17 +215,18 @@ class Ui_MainWindow(QtGui.QMainWindow):
     def set_entries(self, file, cant):
         self.tableWidget.setRowCount(0)
         self.tableWidget.setRowCount(cant)
-        n=0
+        n = 0
         lastn = 0
         for i in range(cant):
             temp = file.readline()
             temp = self.remove_chars(["\n", " "], temp)
             aux = temp.split("|")
             if '*' in aux[0]:
-                n+=1
+                n += 1
             for j in range(self.tableWidget.columnCount()):
                 if '*' not in aux[0]:
-                    self.tableWidget.setItem(i-n, j, QtGui.QTableWidgetItem(aux[j]))
+                    self.tableWidget.setItem(
+                        i-n, j, QtGui.QTableWidgetItem(aux[j]))
         self.tableWidget.resizeColumnsToContents()
     """calcula la siguiente ronda de registros, junto con el byte que se agrega al stack"""
 
@@ -273,8 +274,9 @@ class Ui_MainWindow(QtGui.QMainWindow):
             temp = self.remove_chars(["\n", " "], temp)
             aux = temp.split("|")
             for j in range(len(self.lista_nombres)):
-                et.SubElement(register, str(
-                    self.lista_nombres[j]).replace(" ", "")).text = aux[j]
+                if '*' not in aux[0]:
+                    et.SubElement(register, str(
+                        self.lista_nombres[j]).replace(" ", "")).text = aux[j]
             del aux
             del temp
             root.append(register)
@@ -308,12 +310,16 @@ class Ui_MainWindow(QtGui.QMainWindow):
         rows = f.readline()
         rows = self.remove_chars(["\n"], rows)
         self.cantidad = int(rows)
+        n = 0
         for i in range(self.cantidad):
             temp = f.readline()
             temp = self.remove_chars(["\n", " "], temp)
             aux = temp.split("|")
+            if '*' in aux[0]:
+                n += 1
             for j in range(len(self.lista_nombres)):
-                worksheet.write_string(i + 1, j, aux[j])
+                if '*' not in aux[0]:
+                    worksheet.write_string(i - n + 1, j, aux[j])
             del aux
             del temp
         f.close()
@@ -427,7 +433,6 @@ class Ui_MainWindow(QtGui.QMainWindow):
             msg.setWindowTitle("Exit")
             retval = msg.exec_()
 
-        
     def remove_entry(self):
         text, ok = QtGui.QInputDialog.getText(
             self, 'Search', 'Enter the primary key of the entry you are searching:')
@@ -444,12 +449,22 @@ class Ui_MainWindow(QtGui.QMainWindow):
         i = 0
         for value in self.B_tree:
             if value != text:
-                i+=1
-        with open(self.direccion,"r+") as file:
+                i += 1
+        with open(self.direccion, "r+") as file:
             for j in range(i+3):
                 text = file.readline()
-            file.seek(-len(text),1)
+            file.seek(-len(text), 1)
             file.write("*")
+            file.seek(0)
+            aux = ""
+            for i in range(3):
+                aux = file.readline()
+            aux = int(aux)
+            par = '%' + str(10) + 'd'
+            total = int(aux)-1
+            new_size = (par % total)
+            file.seek(-11, 1)
+            file.write(new_size)
 
     def __init__(self):
         QtGui.QMainWindow.__init__(self)
@@ -458,6 +473,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.actionOpen.triggered.connect(self.indexando)
         self.actionNew_Structure.triggered.connect(partial(self.new_entry))
         self.actionXML.triggered.connect(partial(self.exportxml, self))
+        self.actionExcel.triggered.connect(partial(self.exportxlsx, self))
         self.actionNew_File.triggered.connect(
             partial(self.new_file, self))
         self.Previous_button.clicked.connect(partial(self.previous_batch))

@@ -1,6 +1,6 @@
 ['String', 'String', 'Int', 'String', 'Int', 'Int', 'Int']
 ['No.Idenitdad', 'Nombre', 'CodigoPostal', 'EstadoCivil', 'Hijos', 'Casas', 'Carros']
-        10
+         9
 0301-1954-34324|Malorie|42201|Comprometido(a)|20|8|6
 0801-1975-41323|Louella|23101|Viudo(a)|26|6|0
 1001-1932-60219|Latoya|52101|Comprometido(a)|21|10|0
@@ -10,4 +10,4 @@
 1801-1953-65500|Yolonda|52101|Casado(a)|7|5|9
 1804-1918-73349|Rheba|43101|Viudo(a)|21|0|0
 1804-1963-62130|Normand|21112|Viudo(a)|4|6|5
-1808-1931-31598|Roxane|42101|Divorciado(a)|25|5|3
+*808-1931-31598|Roxane|42101|Divorciado(a)|25|5|3
