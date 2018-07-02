@@ -43,6 +43,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
     direccion = ""
     batch = 20
     archivo = None
+    buffer = []
 
     def mod_campos(self):
         if self.cantidad != 0:
@@ -73,9 +74,51 @@ class Ui_MainWindow(QtGui.QMainWindow):
                     par = '%' + str(10) + 'd'
                     new_size = (par % 0)
                     file.write(new_size)
+                    end = (par % -1)
+                    file.write('&'+end)
                     file.write('\n')
                     self.tableWidget.setHorizontalHeaderLabels(
                         self.lista_nombres)
+
+    def getAvailList(self):
+        with open(self.direccion, "r+") as file:
+            file.readline()
+            file.readline()
+            metadata = file.readline()
+            metadata = metadata.split("&")
+            metadata = metadata[1]
+
+            print metadata
+            
+
+            if int(metadata) < 0:
+                print "No hay HEAD"
+            elif int(metadata) > 0:
+                self.avail_list.append(int(metadata))
+                self.agregar(metadata)
+    def agregar(self, lastOne):
+        file = open(self.direccion, "r+")
+        file.seek(0)
+
+        for i in range(3):
+            file.readline()
+
+        nextOne =""
+        for i in range(int(lastOne)):
+            nextOne = file.readline()
+            if nextOne[0]=='*':
+                nextOne= nextOne.split("&")
+                nextOne= nextOne[0]
+                nextOne= nextOne.replace("*","")
+                nextOne= int(nextOne)
+        self.avail_list.append(nextOne)
+        if nextOne!= -1:
+            self.agregar(nextOne)
+        
+        file.close()
+
+        print "--------------------->"+str(self.avail_list)
+        print "--------------------->"+str(self.avail_list)
 
     def del_campos(self):
         if self.cantidad != 0:
@@ -101,6 +144,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
                     par = '%' + str(10) + 'd'
                     new_size = (par % 0)
                     file.write(new_size)
+                    end = (par % -1)
+                    file.write('&'+end)
                     file.write('\n')
                     self.tableWidget.setColumnCount(len(self.lista_nombres))
                     self.tableWidget.setHorizontalHeaderLabels(
@@ -128,7 +173,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
             file.readline()
             file.readline()
             # 3ra linea del archivo siempre es la cantidad de registros guardados
-            totales = file.readline()
+            aux = file.readline().split("&")
+            totales,head = aux[0],aux[1]
             # realizamos n cantidad de repeticiones que dependen de la cantidad de registros guardados
             for i in range(int(totales)):
                 # temp: Es la variable que toma cada registro
@@ -156,7 +202,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def save(self):
         if len(self.archivo.buffer) != 0:
-            self.archivo.write_entry()
+            self.archivo.write_entry(buffer)
             msg = QtGui.QMessageBox()
             msg.setIcon(QtGui.QMessageBox.Information)
             msg.setText("Saving Done")
@@ -190,7 +236,9 @@ class Ui_MainWindow(QtGui.QMainWindow):
         file.write('\n')
         par = '%' + str(10) + 'd'
         new_size = (par % 0)
-        file.write(new_size+'\n')
+        end = (par%-1)
+        file.write(new_size+'&'+end+'\n')
+        
 
     def new_entry(self):
         nuevo = []
@@ -199,7 +247,17 @@ class Ui_MainWindow(QtGui.QMainWindow):
                 self, 'New Entry', 'Enter your new '+str(self.lista_nombres[_])+':')
             nuevo.append(str(text))
         self.cantidad += 1
-        self.archivo.buffer_add(nuevo)
+        if len(self.avail_list)-1 == 0:
+            self.archivo.write_entry([nuevo])
+        else:
+            with open(self.direccion,'r+') as file:
+                for offset in self.avail_list:
+                    if offset != -1:
+                        for i in range(offset+3):
+                            aux = file.readline()
+                        
+                        file.seek(0)
+
 
     def calculate_next_byte(self, file, lastbyte, batch):
         total = ""
@@ -264,7 +322,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         cadena = self.remove_chars(["[", "]", "\'", "\n"], cadena)
         self.lista_nombres = cadena.split(",")
         #######################
-        rows = f.readline()
+        rows = f.readline().split()[0]
         rows = self.remove_chars(["\n"], rows)
         self.cantidad = int(rows)
         root = et.Element("Root")
@@ -307,7 +365,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         #######################
         bold = workbook.add_format({'bold': True})
         worksheet.write_row(0, 0, self.lista_nombres, bold)
-        rows = f.readline()
+        rows = f.readline().split()[0]
         rows = self.remove_chars(["\n"], rows)
         self.cantidad = int(rows)
         n = 0
@@ -339,6 +397,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def open_File(self, window, dire=None):
         try:
+            self.avail_list= []
             self.actual = 0
             self.proximo = 0
             self.stack = []
@@ -360,12 +419,12 @@ class Ui_MainWindow(QtGui.QMainWindow):
             cadena = self.remove_chars(["[", "]", "\'", "\n"], cadena)
             self.lista_nombres = cadena.split(",")
             #######################
-            rows = f.readline()
+            rows = f.readline().split()[0]
             self.actual += len(rows)
             rows = self.remove_chars(["\n"], rows)
             self.tableWidget.setColumnCount(len(self.lista_tipos))
             self.tableWidget.setHorizontalHeaderLabels(self.lista_nombres)
-            self.cantidad = int(rows)
+            self.cantidad = int(rows.split("&")[0])
             if self.batch >= self.cantidad:
                 self.Previous_button.setVisible(False)
                 self.Next_button.setVisible(False)
@@ -444,29 +503,52 @@ class Ui_MainWindow(QtGui.QMainWindow):
         tabla = search_table()
         tabla.set_table(temp)
         tabla.show()
+        text = ""
         if tabla.exec_():
             lista = tabla.selected(self.lista_tipos)
-        i = 0
-        for value in self.B_tree:
-            if value != text:
-                i += 1
+        for i in range(len(lista)):
+            if i == len(lista)-1:
+                text+=lista[i]+"\n"
+            else:
+                text+=lista[i]+"|"
+        line = 1
         with open(self.direccion, "r+") as file:
-            for j in range(i+3):
+            aux = ""
+            file.readline()
+            file.readline()
+            file.readline()
+            print(line)
+            for value in self.B_tree:
+                if file.readline() != text:
+                    line += 1
+                else:
+                    break
+            print(line)
+            file.seek(0)
+            for i in range(3):
+                aux = file.readline()
+            auxn,auxend = aux.split('&')[0],aux.split('&')[1]
+
+            file.seek(0)
+            for j in range(line+3):
                 text = file.readline()
-            file.seek(-len(text), 1)
-            file.write("*")
+            file.seek(-len(text), 1)            
+            file.write("*"+str(int(auxend))+"&")
+
             file.seek(0)
             aux = ""
             for i in range(3):
                 aux = file.readline()
-            aux = int(aux)
+            auxint = int(auxn)
             par = '%' + str(10) + 'd'
-            total = int(aux)-1
+            total = int(auxint)-1
             new_size = (par % total)
-            file.seek(-11, 1)
-            file.write(new_size)
+            end = (par%line)
+            file.seek(-22, 1)
+            file.write(new_size+"&"+end)
 
     def __init__(self):
+        self.avail_list = []
         QtGui.QMainWindow.__init__(self)
         uic.loadUi("Main.ui", self)
         self.actionOpen.triggered.connect(partial(self.open_File, self))
@@ -486,6 +568,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.actionRe_Index_Files.triggered.connect(self.reindexar)
         self.actionSearch.triggered.connect(self.search)
         self.actionEdit_Structure.triggered.connect(self.remove_entry)
+        self.actionOpen.triggered.connect(self.getAvailList)
 
 
 if __name__ == "__main__":
