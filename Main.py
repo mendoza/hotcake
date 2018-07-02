@@ -42,7 +42,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
     stack = []
     direccion = ""
     batch = 20
-    file = None
+    archivo = None
 
     def mod_campos(self):
         if self.cantidad != 0:
@@ -172,8 +172,8 @@ except AttributeError:
             retval = msg.exec_()
 
     def save(self):
-        if len(file.buffer) != 0:
-            file.write_entry()
+        if len(self.archivo.buffer) != 0:
+            self.archivo.write_entry()
             msg = QtGui.QMessageBox()
             msg.setIcon(QtGui.QMessageBox.Information)
             msg.setText("Saving Done")
@@ -213,10 +213,10 @@ except AttributeError:
         nuevo = []
         for _ in range(len(self.lista_nombres)):
             text, ok = QtGui.QInputDialog.getText(
-                self, 'Text Input Dialog', 'Enter your new '+str(self.lista_nombres[_])+':')
+                self, 'New Entry', 'Enter your new '+str(self.lista_nombres[_])+':')
             nuevo.append(str(text))
         self.cantidad += 1
-        self.file.buffer_add(nuevo)
+        self.archivo.buffer_add(nuevo)
 
     def calculate_next_byte(self, file, lastbyte, batch):
         total = ""
@@ -350,9 +350,10 @@ except AttributeError:
             self.stack = []
             self.direccion = ""
             self.batch = 20
-            self.file = None
+            self.archivo = None
             name = QtGui.QFileDialog.getOpenFileName(window, 'Open File')
             self.direccion = str(name)
+            self.archivo = File(name)
             f = open(name, "r+")
             cadena = f.readline()
             self.actual += len(cadena)

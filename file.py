@@ -16,18 +16,14 @@ class File(object):
 
     def buffer_add(self, cos):
         self.buffer.append(cos)
-        print(self.buffer)
         if len(self.buffer) >= 5:
-            print("entre")
             self.write_entry()
 
     def write_tree(self, BTree):
         B_tree = BTree
-        print("inicie  :v")
         with open("Index_Tree.txt", "w+") as f:
             f.write(str(B_tree))
         #print (B_tree)
-        print("termine")
 
     def getRecords(self):
         lista_records = []

@@ -1,24 +1,4 @@
-Root---[ G4C1F0|Allene|Lynn|52|Allene@unitec.edu|0
-, N9Q0E5|Hae|Page|77|Hae@unitec.edu|0
-]---
-  Hoja [ B0R3W7|Floretta|Durham|83|Floretta@unitec.edu|0
-, E5C1K6|Deloras|Bradshaw|5|Deloras@unitec.edu|0
-, E5Q3E0|Armanda|Rivera|57|Armanda@unitec.edu|1
-, E9G5L7|Shirleen|Church|67|Shirleen@unitec.edu|0
-, F4H9H6|Lakeesha|Montgomery|75|Lakeesha@unitec.edu|0
-, F6O6B6|Suzan|Robles|87|Suzan@unitec.edu|0
-]
-  Hoja [ G8U5G8|Cyrstal|Dunlap|61|Cyrstal@unitec.edu|0
-, J2C1A9|Diane|Montes|51|Diane@unitec.edu|1
-, L7S7R7|Normand|Robles|72|Normand@unitec.edu|1
-, L9I7D6|Rufina|Davila|83|Rufina@unitec.edu|0
-, M4F7I0|Armanda|Baker|52|Armanda@unitec.edu|0
-, N4I7P5|Robin|Landry|57|Robin@unitec.edu|0
-]
-  Hoja [ O2V2B9|Corrine|Crawford|33|Corrine@unitec.edu|1
-, S6A6T5|Nestor|Mitchell|21|Nestor@unitec.edu|0
-, T0D9Z2|Laveta|Huynh|64|Laveta@unitec.edu|1
-, T8W1Y6|Lakeesha|Rodgers|64|Lakeesha@unitec.edu|1
-, V3L9N9|Arlette|Fritz|23|Arlette@unitec.edu|1
-, Y2I2Y0|Rufina|Montgomery|35|Rufina@unitec.edu|1
+Hoja [ das|das|das
+, pene|pene|pene
+, vagina|vagina|vagina
 ]
